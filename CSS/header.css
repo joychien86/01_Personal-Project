@@ -1,0 +1,124 @@
+@import url(./reset.css);
+
+/*=====================上層選單===================*/
+header {
+    background-color: #FF881A;
+    color: white;
+    padding: 0;
+    height: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "DM Sans";
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    /* padding-right: 30px; */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    /* width: 300px; */
+}
+
+header .logo img {
+    width: 200px;
+    height: auto;
+    padding-left: 120px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-right: 120px;
+}
+
+header nav ul li {
+    position: relative;
+    /* 重要，讓子選單能夠定位於此 */
+    margin: 0;
+}
+
+header nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #f79e39;
+}
+
+/* 當子選單顯示時，保持主選單項目的 hover 樣式 */
+header nav ul li:hover>a {
+    background-color:  rgba(255, 255, 255, 0.9);
+    color: #f79e39;
+}
+
+/* header nav ul li a:active {
+    background-color: #FFF;
+    color: #f79e39;
+} */
+
+/* header nav ul li a::after{
+    background-color: #FFF;
+    color: #f79e39;
+}  */
+
+.submenu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    /* 預設不顯示 */
+    background-color: #fff;
+    padding: 2px 0;
+    min-width: 190px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    /* padding-left: -50px; */
+    border-radius: 20px;
+    font-family: "DM Sans";
+}
+
+.submenu .submenu {
+    left: 100%;
+    top: 0;
+}
+
+
+
+.submenu li a {
+    color: #333;
+    padding: 15px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    /* Remove padding-left and width settings */
+}
+
+.submenu li a:hover {
+    background-color: #ffefcc;
+    border-radius: 20px;
+    /* Remove width and height settings */
+}
+
+header nav ul li:hover > .submenu {
+    display: block;
+}

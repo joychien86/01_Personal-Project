@@ -1,0 +1,66 @@
+@import url(./reset.css);
+/*=================下層選單===============================*/
+
+.footer {
+    background-color: #F6B756; /* 背景顏色 */
+    width: 100%; /* 全寬 */
+    padding: 20px 0; /* 上下內距 */
+    text-align: center; /* 文字置中 */
+}
+
+.footer-top {
+    display: flex; /* 使用 Flex 排列 */
+    align-items: center; /* 垂直置中 */
+    justify-content: center; /* 水平置中 */
+    gap: 20px; /* 間距 */
+    margin-bottom: 10px; /* 與下方文字分隔 */
+}
+
+.logo-section {
+    display: flex; /* 使用 Flex 排列 */
+    align-items: center; /* 讓 Logo 與文字垂直置中 */
+    gap: 10px; /* Logo 與文字之間的間距 */
+}
+
+.footer-logo {
+    width: 200px; /* 設定 Logo 大小，可調整 */
+    height: auto; /* 高度自適應 */
+    margin-right: 600px;
+}
+
+.icons {
+    display: flex; /* 使用 Flex 來水平排列圖標 */
+    gap: 10px; /* 圖標之間的間距 */
+}
+
+.icon-link {
+    display: inline-block;
+    transition: opacity 0.3s ease; /* 添加淡出效果的過渡 */
+}
+
+.icon-link:hover {
+    opacity: 0.7; /* hover 時透明度降低 */
+}
+
+.icon-link:active {
+    opacity: 0.5; /* 點擊時透明度進一步降低 */
+}
+
+.fb, .tw, .ig {
+    width: 24px; /* 圖標寬度 */
+    height: 24px; /* 圖標高度 */
+    transition: transform 0.3s ease; /* 添加縮放過渡效果 */
+}
+
+.icon-link:hover img {
+    transform: scale(1.1); /* hover 時放大 */
+}
+
+.footer p {
+    color: #FFF; /* 字體顏色 */
+    font-family: "DM Sans"; /* 字體 */
+    font-size: 16px; /* 字體大小 */
+    line-height: 24px; /* 行高 */
+    margin-top: 0; /* 移除上方間距 */
+    margin-bottom: 0; /* 移除下方間距 */
+}

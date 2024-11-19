@@ -1,0 +1,272 @@
+@import url(./reset.css);
+
+
+*{
+    font-family: "DM Sans";
+}
+
+.wrapper{
+
+max-width: 1200px;
+margin:0 auto;
+}
+
+
+.logo .logo-image{
+    margin-top: 20px;
+}
+
+/* 圓形裝飾 */
+.circle-container {
+    position: relative;
+    width: 800px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    z-index: -1;
+    margin:0 auto;
+  }
+  
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  
+  .gray-circle {
+    width: 120px;
+    height: 120px;
+    background-color: #e0e0e0;
+    top: 20px;
+    left: 200px;
+    z-index: -1;
+  }
+  
+  .yellow-circle {
+    width: 100px;
+    height: 100px;
+    background-color: #f4b400;
+    top: 100px;
+    right: 250px;
+    z-index: -1;}
+
+  .text{
+    color: var(--Text_Black, #333);
+    font-family: "DM Sans";
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 40px;
+    text-align: center;
+    /* border: 2px solid orange; */
+    /* padding: 10px 500px; */
+      }
+
+
+
+/* body {
+    font-family: Arial, sans-serif; */
+/* } */
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 100px;
+}
+
+.carousel {
+    position: relative;
+    width: 500px;
+    margin-bottom: 10px;
+    
+}
+
+.carousel-item {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.carousel img:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+/* 調整切換按鈕 */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+/* 將左側按鈕固定到左邊 */
+.carousel-control-prev {
+    left: 10px; /* 確保按鈕距離圖片左邊10px*/
+    color:#FF8819;
+    background-color:  rgb(255, 255, 255, 0.3);
+}
+
+/* 將右側按鈕固定到右邊 */
+.carousel-control-next {
+    right: 10px; /* 確保按鈕距離圖片右邊10px */
+    color:#FF8819;
+    background-color:  rgb(255, 255, 255, 0.3);
+
+}
+
+.text-content {
+    max-width: 300px;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+}
+
+/* .text-slide {
+    display: none;
+    color: var(--Text_Black, #999);
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.text-slide.active {
+    display: block;
+    color: var(--Text_Black, #999);
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    text-align: left;
+    margin-bottom: 50px;
+} */
+
+
+/* 動畫背景 */
+
+.shape-ex11 {
+    width: 100px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #FF881A;
+    background-color: transparent;
+    /* border: 1px solid #FF881A; */
+    position: relative;
+    transition: all .3s linear;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left:100px;
+    margin-top: 20px;
+}
+
+
+.shape-ex11 > p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    font-weight: bold;
+}
+
+.shape-ex11::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    box-sizing: border-box;
+    border-top: 1px solid #f6b756;
+    border-left: 1px solid #f6b756;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .3s linear;
+}
+
+.shape-ex11::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    box-sizing: border-box;
+    border-bottom: 1px solid #FF881A;
+    border-right: 1px solid #FF881A;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all .3s ease;
+}
+
+.shape-ex11:hover::before,
+.shape-ex11:hover::after {
+    width: 100%;
+    height: 100%;
+}
+.text-slide.active > h3{
+    color: var(--Text_Black, #333);
+    font-family: "DM Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.text-slide {
+    display: none;
+    color: var(--Text_Black, #999);
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    text-align: left;
+    margin-bottom: 50px;
+
+}
+
+.text-slide.active {
+    display: block;
+    color: var(--Text_Black, #999);
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    text-align: left;
+    margin-bottom: 50px;
+
+}

@@ -1,0 +1,577 @@
+@import url(./reset.css);
+
+
+/* =============================================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* 從稍微下方移動進來 */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* 初始狀態 */
+header,
+.circle-container1,
+.hero,
+.text-content h1,
+.text-content h2,
+.text-content h3,
+ .explore-button
+.section199 {
+    opacity: 0;
+    animation: none; /* 初始狀態無動畫 */
+}
+
+/* 當頁面加載完成後，應用動畫 */
+body.loaded header{
+    animation: fadeIn 1s ease-in-out 0.5s forwards; /* 0.5秒延遲，1秒完成 */ 
+}
+
+body.loaded .hero{
+    animation: fadeIn 1s ease-in-out 1s forwards; /* 0.5秒延遲，1秒完成 */ 
+}
+
+body.loaded .circle-container1{
+    animation: fadeIn 1s ease-in-out 1.5s forwards; /* 0.5秒延遲，1秒完成 */
+}   
+
+
+
+body.loaded .text-content h1 {
+    animation: fadeIn 1s ease-in-out 2s forwards; /* 0.5秒延遲，1秒完成 */
+}
+
+body.loaded .text-content h2 {
+    animation: fadeIn 1s ease-in-out 2.5s forwards; /* 1秒延遲，1秒完成 */
+}
+
+body.loaded .text-content h3 {
+    animation: fadeIn 1s ease-in-out 3s forwards; /* 1.5秒延遲，1秒完成 */
+}
+
+/* body.loaded .text-content .explore-button  {
+    animation: fadeIn 1s ease-in-out 4.5s forwards; /* 2秒延遲，1秒完成 */
+body.loaded .section199 {
+    animation: fadeIn 1s ease-in-out 3.5s forwards; /* 2秒延遲，1秒完成 */
+}
+ 
+
+.hero {
+    display: flex; /* 使用 flex 排列主視覺區 */
+    align-items: center; /* 垂直置中 */
+    justify-content: center; /* 水平置中 */
+    background-image: url("../網站圖/首頁圖/final.png"); /* 設定背景圖片 */
+    background-size: cover; /* 背景圖片填滿 */
+    background-position:  center; /* 背景圖片右側偏移 */
+    height:550px; /* 設定主視覺區高度 */
+    width: 100%; /* 設定主視覺區寬度 */
+    position: relative; /* 讓子元素的絕對定位生效 */
+    z-index: -2;
+}
+
+.text-content {
+    position: absolute; /* 絕對定位文字區 */
+    top: 50%; /* 垂直居中 */
+    left: 18%; /* 左側偏移 10% */
+    transform: translateY(-50%); /* 垂直置中對齊 */
+    max-width: 100%; /* 設定最大寬度 */
+    color: white; /* 文字顏色為白色 */
+    z-index: 1; /* 設定 z-index 使文字區在前 */
+    text-align: left; /* 文字左對齊 */
+}
+
+.text-content h1 {
+    font-size: 64px; /* 標題字體大小 */
+    font-weight: bold; /* 字體加粗 */
+    color: #333; /* 文字顏色為深灰色 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* 加上陰影提高可讀性 */
+    margin-bottom: 30px; /* 下方外距 30px */
+   font-family: "DM Sans";
+
+}
+
+.text-content h2 {
+    font-size: 64px; /* 副標題字體大小 */
+    font-style: italic; /* 斜體字 */
+    color: #333; /* 文字顏色為深灰色 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* 加上陰影 */
+    margin-bottom: 20px; /* 下方外距 */
+    font-family: "DM Sans";
+    font-weight: bold;
+}
+
+.text-content h3 {
+    font-size: 24px; /* 子標題字體大小 */
+    color: #666; /* 顏色設為灰色 */
+    margin-bottom: 50px; /* 下方外距 */
+    text-align: left; /* 左對齊 */
+}
+
+
+/* .explore-button {
+    background-color: #fa7a3d; /* 背景色為橙色 */
+    /* color: white; /* 文字顏色為白色 */
+    /* padding: 10px 20px; 設定內距 */
+    /* text-decoration: none; 移除下劃線 */
+    /* font-weight: bold; /* 文字加粗 */
+    /* border-radius: 30px; 圓角 */ 
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 字體 */
+
+
+/* .explore-button:hover {
+    background-color: #FFD970; /* 滑鼠懸停時背景顏色 */
+    /* color: #333; /* 滑鼠懸停時文字顏色 */
+
+.circle-container1 {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* 可根據需要調整寬度 */
+   
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.gray-circle2 {
+    width: 100px;
+    height: 100px;
+    background-color: #ff881a; 
+    top: 220px;
+    left: -30px;
+    /* padding-top: 30px; */
+    /* margin-top: 30px; */
+    z-index: -1;
+}
+
+.yellow-circle2 {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(244, 180, 0, 1); /* 黃色 */
+    top: -60px;
+    right: 480px;
+    z-index: -1;
+}
+
+.gray-circle3 {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(244, 180, 0, 1); /* 黃色 */
+    top: 280px;
+    left: 200px;
+    /* padding-top: 30px; */
+    /* margin-top: 30px; */
+    z-index: -1;
+}
+
+.yellow-circle3 {
+    width: 200px;
+    height: 200px;
+    background-color: #ff881a;
+    top: -100px;
+    right: 100px;
+    z-index: -1;
+}
+
+/* .gray-circle4 {
+    width: 200px;
+    height: 200px;
+    /* background-color: rgba(224, 224, 224, 1); /* 灰色 */
+    /* padding-top: 30px; */
+    /* margin-top: 30px; */
+    
+
+.yellow-circle4 {
+    width: 100px;
+    height: 100px;
+    background-color: #f2f2f2;
+    top: 180px;
+    right: 550px;
+    z-index: -1;
+}
+
+
+
+/* =======================================網站理念區塊樣式=========================== */
+
+
+.section199 h4 {
+    color: var(--Text_Black, #333);
+    font-family: "DM Sans";
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 5px;
+    text-align: center;
+    margin: 0; /* 避免預設 margin 影響布局 */
+    margin-top: 200px;
+    margin-bottom: 50px;
+    /* border: 2px solid red; */
+}
+
+/* #section2 h2 {
+    color: var(--Text_Black, #333);
+    font-family: "DM Sans";
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 48px;
+    text-align: center;
+    margin: 0; 避免預設 margin 影響布局 */
+    /* margin-top: 130px; */
+    /* border: 2px solid red; */
+
+/* 針對 FURRY PLANET LOGO 設計理念的 h1 標題 */
+/* .logo-description h3 {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--Text_Black, #333);
+    font-family: "DM Sans";
+    text-align: left; /* 如果需要置中可改成 center */
+    /* line-height: 40px;
+    padding-left: 40px;
+    margin-bottom: 20px; */
+.circle-container199 {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* 可根據需要調整寬度 */
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    /* border: 3px solid blue; */
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.gray-circle199 {
+    width: 120px;
+    height: 120px;
+    background-color: rgba(224, 224, 224, .8); /* 灰色 */
+    top: 10px;
+    left: 300px;
+    /* padding-top: 30px; */
+    /* margin-top: 30px; */
+    z-index: -1;
+}
+
+.yellow-circle199 {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(244, 180, 0, .8); /* 黃色 */
+    top: 60px;
+    right: 300px;
+    z-index: -1;
+}
+
+#section199 {
+    text-align: center;
+    padding: 0 120px;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+
+#section199 h4 {
+
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: 900;
+    font-family: "DM Sans";
+    font-style: italic;
+    color: var(--Text_Black, #333);
+}
+
+.purpose-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.purpose-item {
+    display: flex;
+    align-items: center;
+    width: 48%; /* 每行兩個項目，各佔 48% 的寬度 */
+    margin-bottom: 20px;
+}
+
+.purpose-item img {
+    height: 250px;
+    width: 50%;
+    object-fit: cover;
+    border-radius: 30px;
+    /* transition: transform 0.3s ease; 添加過渡效果 */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* 添加陰影和平滑過渡效果 */
+}
+
+.purpose-item img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* 懸停時添加陰影效果 */
+    transform: translateY(-5px); /* 輕微上移效果 */
+    z-index: 1; /* 增加層級，確保陰影顯示 */
+}
+
+.purpose-item .text {
+    width: 50%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* 將 reverse 類名的項目設置為 row-reverse */
+
+
+.purpose-item h5 {
+    font-size: 20px;
+    font-weight: 900;
+    margin: 10px 0;
+    font-family: "DM Sans";
+}
+
+.purpose-item p {
+    font-size: 16px;
+    color: #333;
+    line-height: 24px;
+}
+
+.circle00, .circle01, .circle02, .circle03 {
+    width: 40px;
+    height: 40px;
+    background-color: #F6B756;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+/*=======================LOGO==============================*/
+/* LOGO 設計理念區塊樣式 */
+.logo-design-section {
+    margin-top: 100px;
+    display: flex; /* 使用 flex 排列 LOGO 區塊和描述區塊 */
+    justify-content: center; /* 水平置中 LOGO 和描述區塊 */
+    align-items: center; /* 垂直置中 */
+    padding: 60px 20px; /* 區塊的上下內距為 60px，左右內距為 20px */
+    background-color: transparent; /* 設置為透明，避免遮擋 */
+    max-width: 100%; /* 設定最大寬度 */
+}
+
+.logo-content {
+    
+    display: flex; /* 使用 flex 將 LOGO 和文字區塊並排 */
+    align-items: flex-start; /* 將內容置於頂部對齊 */
+    max-width: 1200px; /* 限制內容最大寬度為 1200px */
+    gap: 200px; /* LOGO 和文字區塊之間的間距 */
+}
+
+
+/* 左側 LOGO 區塊樣式 */
+.logo-image88 {
+    display: flex; /* 使用 flex 排列 LOGO 和品牌名稱 */
+    flex-direction: column; /* 垂直排列 LOGO 和品牌名稱 */
+    align-items: center; /* 水平置中 LOGO 和品牌名稱 */
+    transition:  transform 0.3s ease; /* 添加陰影和平滑過渡效果 */
+}
+
+.logo-image88:hover{
+    transform: scale(12.0);
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 懸停時添加陰影效果 */
+    transform: translateY(-5px); /* 輕微上移效果 */
+    z-index: 1; /* 增加層級，確保陰影顯示 */
+}
+
+.logo-image88 img:first-child {
+    width: 200px; /* LOGO 圖片寬度 */
+    height: 200px; /* LOGO 圖片高度 */
+    object-fit: contain; /* 確保圖片保持比例 */
+}
+
+.logo-text {
+    margin-top: 20px; /* 與 LOGO 圖片的間距 */
+    width: 500px; /* 品牌名稱圖片的寬度 */
+    height: auto; /* 高度自動調整以保持比例 */
+    
+}
+
+/* 右側 LOGO 設計理念文字區塊樣式 */
+.logo-description {
+    max-width: 450px; /* 限制文字區塊的最大寬度為 450px */
+    text-align: left; /* 文字靠左對齊 */
+}
+
+.logo-description h1 {
+   
+    font-weight: bold; /* 字體加粗 */
+
+    margin-bottom: 20px; /* 與下一段文字的間距 */
+color: var(--Text_Black, #333);
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: "DM Sans";
+font-weight: bold;
+font-size: 40px;
+font-style: normal;
+
+line-height: 64px; /* 114.286% */
+
+font-weight: bold;
+text-align: center;
+
+padding-right: 15px;
+/* border:2px solid blue; */
+}
+
+.logo-description p {
+margin-bottom: 15px; /* 每段之間的間距 */
+color: var(--Text_Gray, #999);
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: "DM Sans";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 208.333% */
+/* margin-right: 100px; */
+/* border:1px solid red; */
+text-align: center;
+}
+.circle-container3 {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* 可根據需要調整寬度 */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.gray-circle8 {
+    width: 100px;
+    height: 100px;
+    background-color: #F2F2F2;
+    top: 300px;
+    left: 200px;
+    /* padding-top: 30px; */
+    /* margin-top: 30px; */
+
+}
+.gray-circle9 {
+    width: 100px;
+    height: 100px;
+    background-color: #FF881A;
+    top: -40px;
+    left: -10px;
+    /* padding-top: 30px; */
+    /* margin-top: 30px; */
+
+}
+.gray-circle10 {
+    width: 100px;
+    height: 100px;
+    background-color:  #F6B756;
+    top: 70px;
+    left: 300px;
+    /* padding-top: 30px; */
+    /* margin-top: 30px; */
+
+}
+
+
+.circle00 {
+    width: 40px; /* 圓點的寬度，可根據需求調整 */
+    height: 40px; /* 圓點的高度 */
+    background-color: #F6B756; /* 圓點顏色 */
+    border-radius: 50%; /* 使元素變成圓形 */
+    margin-bottom: 10px; /* 與文字的間距 */
+    margin-left: 20px;
+}
+
+.circle01 {
+    width: 40px; /* 圓點的寬度，可根據需求調整 */
+    height: 40px; /* 圓點的高度 */
+    background-color: #F6B756; /* 圓點顏色 */
+    border-radius: 50%; /* 使元素變成圓形 */
+    margin-bottom: 10px; /* 與文字的間距 */
+}
+
+.circle02 {
+    width: 40px; /* 圓點的寬度，可根據需求調整 */
+    height: 40px; /* 圓點的高度 */
+    background-color: #F6B756; /* 圓點顏色 */
+    border-radius: 50%; /* 使元素變成圓形 */
+    margin-bottom: 10px; /* 與文字的間距 */
+}
+
+.circle03 {
+    width: 40px; /* 圓點的寬度，可根據需求調整 */
+    height: 40px; /* 圓點的高度 */
+    background-color: #F6B756; /* 圓點顏色 */
+    border-radius: 50%; /* 使元素變成圓形 */
+    margin-bottom: 10px; /* 與文字的間距 */
+}
+
+
+
+.header0 {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: bold;
+    font-weight: 900;
+    color: #333;
+    margin: 10px 0;
+    font-family:"DM Sans" ;
+    font-style: italic;
+}
+
+.subtitle {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin: 10px 0;
+    position: relative;
+    display: inline-block;
+}
+
+.large-circle {
+    position: absolute;
+    top: -20px; /* 根據需要調整位置 */
+    left: -80px; /* 根據需要調整位置 */
+    width: 100px;
+    height: 100px;
+    background-color: #FFA500; /* 大圓點的顏色 */
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.small-circle {
+    position: absolute;
+    bottom: -30; /* 根據需要調整位置 */
+    right: 10px; /* 根據需要調整位置 */
+    width: 80px;
+    height: 80px;
+    background-color: #F6B756; /* 小圓點的顏色 */
+    border-radius: 50%;
+    z-index: -1;
+}
+
+
+

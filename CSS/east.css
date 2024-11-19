@@ -1,0 +1,287 @@
+@import url(./reset.css); /* 引入 reset.css，這是一個重置樣式的檔案，用來消除各瀏覽器預設的不同樣式 */
+
+/*=========================================================================================*/
+/* ======================<!-- 4個按鈕 -->========================================= */
+*{
+    font-family: "DM Sans";
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.container01 {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.button {
+    width: 120px; /* 設置按鈕的寬度為 120px */
+    height: 120px; /* 設置按鈕的高度為 120px */
+    border-radius: 50%; /* 設置圓角為 50%，使按鈕呈現圓形 */
+    display: flex; /* 使用 flex 排版，使內容可以垂直居中 */
+    flex-direction: column; /* 設定為縱向排列，讓圖標和文字垂直排列 */
+    align-items: center; /* 水平置中對齊內容 */
+    justify-content: center; /* 垂直置中對齊內容 */
+    text-align: center; /* 設置文字置中 */
+    font-size: 16px; /* 設置字體大小為 16px */
+    font-weight: bold; /* 設置字體為粗體 */
+    cursor: pointer; /* 鼠標移上按鈕時，顯示為點擊指針狀 */
+    transition: background-color 0.3s; /* 背景顏色的過渡效果，持續時間為 0.3 秒 */
+    
+}
+
+.active {
+    background-color: #FF7A45; /* 設置按鈕的背景色為橙色 */
+    color: white; /* 設置文字顏色為白色 */
+}
+
+.inactive {
+    background-color: #FFECD9; /* 設置按鈕的背景色為淺橙色 */
+    color: #333; /* 設置文字顏色為深灰色 */
+}
+
+.button img {
+    width: 40px; /* 設置圖片的寬度為 40px */
+    height: 40px; /* 設置圖片的高度為 40px */
+    margin-bottom: 24px; /* 圖片和文字之間的間距設置為 8px */
+}
+.inactive.button:hover {
+    background-color: #FF7A45; /* 深一點的橙色 */
+}
+/* Recommendation Section */
+.recommendation-section {
+    max-width: 1440px; /* 設置最大寬度為 1440px */
+    /* width: 100%; 設置寬度為 100% */
+    /* display: flex; */
+    justify-content: center; /* 將內容置中 */
+    align-items: center;
+    position: relative;
+    text-align: center; /* 讓文字置中對齊 */
+    padding: 60px 120px; /* 上下內距 60px，左右內距 120px */
+    margin: 0 auto;
+}
+
+/* Text Container - 包含標題文字和背景元素 */
+.text-container {
+    position: relative; /* 作為背景元素的定位基準 */
+    display: inline-block; /* 讓內部元素根據其內容自適應寬度 */
+    margin-right: 20px;
+}
+
+/* Background Circles - 背景圓形樣式 */
+.background-circle {
+    position: absolute; /* 絕對定位，依據 .text-container 定位 */
+    border-radius: 50%; /* 設置為 50% 以形成圓形 */
+    background-color: #FFC966; /* 設置背景顏色為淺橙色 */
+}
+
+.background-circle.large {
+    width: 127px; /* 大圓的寬度 */
+    height: 127px; /* 大圓的高度 */
+    top: -30px; /* 調整上方位置 */
+    left: -70px; /* 調整左邊位置，使其更靠近標題 */
+}
+
+.background-circle.small {
+    width: 60px; /* 小圓的寬度 */
+    height: 60px; /* 小圓的高度 */
+    background-color: #FF7A45; /* 橙色背景，覆蓋掉大圓的淺橙色 */
+    top: 30px; /* 向下移動 */
+    right: -50px; /* 調整右邊位置 */
+}
+
+/* Title Background - 標題背景矩形 */
+.title-background {
+    position: absolute; /* 絕對定位，確保背景矩形置於標題文字後 */
+    background-color: #FFECD9; /* 標題背景矩形的顏色為淺橙色 */
+    width: 415px; /* 背景矩形的寬度 */
+    height: 45px; /* 背景矩形的高度 */
+    top: 25%; /* 垂直位置為容器的 50% */
+    left: 50%; /* 水平位置為容器的 50% */
+    transform: translate(-50%, -50%); /* 使用 translate 將背景矩形置中 */
+    z-index: -1; /* 將背景矩形置於文字後面 */
+}
+
+/* Title - 標題文字 */
+.title {
+    font-size: 36px; /* 字體大小為 36px */
+    font-weight: 900; /* 字體加粗 */
+    color: #333; /* 深灰色文字 */
+    margin: 0; /* 移除預設的 margin */
+    position: relative; /* 讓文字相對於背景矩形的定位 */
+    /* margin-right: 300px; */
+    /* margin-top: 50px; */
+}
+
+/* Icon and Description Text - 圖示與描述文字 */
+.icon-text {
+    display: flex; /* 使用 flex 排版，讓圖示與文字在同一行 */
+    align-items: center; /* 圖示和文字垂直置中對齊 */
+    justify-content: center; /* 水平置中對齊 */
+    margin-top: 50px; /* 上方的間距 30px */
+    font-weight: 500px;
+}
+
+.icon {
+    font-size: 30px;
+    color: #FF7A45;
+    font-weight: 900;
+    text-shadow: 
+        1px 0 #FF7A45,  /* 右邊陰影 */
+       -1px 0 #FF7A45,  /* 左邊陰影 */
+        0 1px #FF7A45,  /* 下方陰影 */
+        0 -1px #FF7A45; /* 上方陰影 */
+        /* margin-top: 30px; */
+}
+
+.description {
+    font-size: 20px; /* 描述文字的字體大小 */
+    color: #FF7A45; /* 橙色文字 */
+    /* margin-top: 30px; */
+}
+/*------------------------------======================------------------*/
+.stats-section {
+    max-width: 1440px; /* 設置最大寬度，防止過度拉伸 */
+    /* width: 100%; 設置最大寬度為 1440px */
+    padding: 15px 120px; /* 上下 padding 為 15px，左右 padding 為 120px */
+    margin: 0 auto; /* 將容器置中 */
+    display: flex;
+    justify-content: center; /* 置中對齊 */
+    align-items: center ;
+    gap: 180px; /* 左右統計數字之間的間距 */
+    position: relative;
+    padding-bottom: 50px;
+    border-bottom: 1px dashed #ccc; /* 添加底部的虛線 */
+}
+
+/* Individual Stat Item */
+.stat-item {
+
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 62px; /* 顯示的數字大小 */
+    font-weight: bold; /* 加粗 */
+    color: #FFA94D; /* 橙色 */
+    margin: 0;
+    font-family: "DM Sans";
+}
+
+.stat-label {
+    
+    font-size: 16px; /* 標籤的字體大小 */
+    color: #333; /* 深灰色文字 */
+    font-weight: bold; /* 加粗 */
+}
+
+/* Date Section */
+.stat-date {
+    padding-right: 200px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 14px; /* 日期字體大小 */
+    color: #999; /* 灰色 */
+    display: flex;
+    align-items: center;
+    gap: 8px; /* 小圓點和文字之間的間距 */
+    margin-bottom: 50px;
+    font-family: "DM Sans";
+}
+
+.date-dot {
+    width: 20px;
+    height: 20px;
+    background-color: #FFA94D; /* 橙色圓點 */
+    border-radius: 50%; /* 圓形 */
+    /* margin-bottom: 20px; */
+}
+/*=============================== 卡片容器樣式 ============================*/
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 自動調整每行卡片數 */
+    gap: 20px; /* 卡片之間的間距 */
+    max-width: 1240px;
+    padding: 40px auto;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+/* 單張卡片樣式 */
+.card {
+    border: 1px solid #FFA94D; /* 橙色邊框 */
+    border-radius: 30px; /* 圓角邊框 */
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 添加陰影 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* 過渡效果 */
+    font-family:"DM Sans";
+    
+}
+
+.card:hover {
+    transform: scale(1.05); /* 放大 */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8); /* 加深陰影 */
+}
+
+/* 卡片標題 */
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* 卡片的加號圖標 */
+.card-icon {
+    font-size: 20px;
+    color: #FF7A45;
+    font-weight: 900;
+    text-shadow: 
+        1px 0 #FF7A45,  /* 右邊陰影 */
+       -1px 0 #FF7A45,  /* 左邊陰影 */
+        0 1px #FF7A45,  /* 下方陰影 */
+        0 -1px #FF7A45; /* 上方陰影 */
+}
+
+
+/* 卡片資訊文字 */
+.card-info {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Learn more 按鈕 */
+.card-button {
+    background-color: #FF7A45; /* 橙色背景 */
+    color: #fff; /* 白色文字 */
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    font-family: "DM Sans";
+}
+
+.card-button:hover {
+    background-color:#FFA94D; /* 深一點的橙色 */
+    color:#333
+}

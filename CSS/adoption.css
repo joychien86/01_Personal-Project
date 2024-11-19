@@ -1,0 +1,487 @@
+@import url(./reset.css);
+
+
+/* ================================ */
+
+/* *{
+     font-family: "DM Sans";
+} */
+
+
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* 圓形裝飾 */
+.circle-container {
+    position: relative;
+    width: 800px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    z-index: -1;
+    margin:0 auto;
+  }
+  
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  
+  .gray-circle {
+    width: 120px;
+    height: 120px;
+    background-color: #e0e0e0;
+    top: 20px;
+    left: 200px;
+    z-index: -1;
+  }
+  
+  .yellow-circle {
+    width: 100px;
+    height: 100px;
+    background-color: #f4b400;
+    top: 100px;
+    right: 210px;
+    z-index: -1;}
+
+  .text{
+    color: var(--Text_Black, #333);
+    font-family: "DM Sans";
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 40px;
+    text-align: center;
+    /* border: 2px solid orange; */
+    /* padding: 10px 500px; */
+      }
+
+/* 基本佈局 */
+.container12 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: calc(100% - 240px); /* 總寬度減去左右各 120px */
+    margin: 0 auto; /* 置中 */
+    /* padding: 0 120px; 左右各留 120px 空間 */
+    box-sizing: border-box; /* 確保 padding 不會影響寬度 */
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: center; /* 置中每行內容 */
+    text-align: left; /* 將文字區塊置於左對齊 */
+}
+
+.row.reverse {
+    flex-direction: row-reverse;
+    justify-content: center; /* 在反向排列時也置中每行內容 */
+}
+
+/* 文字區域 */
+.text-section12 {
+    max-width: 400px;
+    text-align: left;
+}
+
+.text-section12 .logo {
+    width: 40px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.text-section12 h5 {
+    color :#333;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "DM Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    /* line-height: 64px; 200% */
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+    
+
+
+.text-section12 p {
+    font-size: 16px;
+    color: #333;
+    line-height: 36px;
+}
+
+.text-section13 {
+    max-width: 400px;
+    text-align: left;
+}
+
+.text-section13 .logo {
+    width: 40px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.text-section13 h5 {
+    color :#333;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "DM Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    /* line-height: 64px; 200% */
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+    
+
+
+.text-section13 p {
+    font-size: 16px;
+    color: #333;
+    line-height: 36px;
+}
+
+.text-section14 {
+    max-width: 400px;
+    text-align: left;
+}
+
+.text-section14 .logo {
+    width: 40px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.text-section14 h5 {
+    color :#333;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "DM Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    /* line-height: 64px; 200% */
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+    
+
+
+.text-section14 p {
+    font-size: 16px;
+    color: #333;
+    line-height: 36px;
+}
+
+.text-section15 {
+    max-width: 400px;
+    text-align: left;
+}
+
+.text-section15 .logo {
+    width: 40px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.text-section15 h5 {
+    color :#333;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "DM Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    /* line-height: 64px; 200% */
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+    
+
+
+.text-section15 p {
+    font-size: 16px;
+    color: #333;
+    line-height: 36px;
+}
+.sub-text1 {
+    color :#333;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "DM Sans";
+    font-size: 24px;
+    font-style:italic;
+    font-weight: 700;
+    line-height: 52px; /* 200% */
+padding-bottom: 10px;
+font-weight: bold;
+
+}
+.sub-text2 {
+    color :#333;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "DM Sans";
+    font-size: 24px;
+    font-style:italic;
+    font-weight: 700;
+    line-height: 52px; /* 200% */
+padding-bottom: 10px;
+font-weight: bold;
+
+}
+.sub-text3 {
+    color :#333;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "DM Sans";
+    font-size: 24px;
+    font-style:italic;
+    font-weight: 700;
+    line-height: 52px; /* 200% */
+padding-bottom: 10px;
+font-weight: bold;
+
+}
+.sub-text4 {
+    color :#333;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "DM Sans";
+    font-size: 24px;
+    font-style:italic;
+    font-weight: 700;
+    line-height: 52px; /* 200% */
+padding-bottom: 10px;
+font-weight: bold;
+
+}
+
+/* 圖片區域 */
+.image-section12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section12 img {
+    width: 300px;
+    height: auto;
+    border-radius: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid rgba(244, 180, 0, .8);
+}
+
+.image-section12 img.hover-image:hover {
+    box-shadow: 0 20px 40px rgba(243, 153, 68, 0.5); /* 添加陰影效果 */
+    transform: scale(1.05);
+}
+
+.image-section13 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section13 img {
+    width: 300px;
+    height: auto;
+    border-radius: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid rgba(244, 180, 0, .8);
+}
+
+.image-section13 img.hover-image:hover {
+    box-shadow: 0 20px 40px rgba(243, 153, 68, 0.5); /* 添加陰影效果 */
+    transform: scale(1.05);
+}
+
+.image-section14 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section14 img {
+    width: 300px;
+    height: auto;
+    border-radius: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid rgba(244, 180, 0, .8);
+}
+
+.image-section14 img.hover-image:hover {
+    box-shadow: 0 20px 40px rgba(243, 153, 68, 0.5); /* 添加陰影效果 */
+    transform: scale(1.05);
+}
+
+.image-section15 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section15 img {
+    width: 300px;
+    height: auto;
+    border-radius: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid rgba(244, 180, 0, .8);
+}
+
+.image-section15 img.hover-image:hover {
+    box-shadow: 0 20px 40px rgba(243, 153, 68, 0.5); /* 添加陰影效果 */
+    transform: scale(1.05);
+}
+
+
+
+/* 按鈕樣式 */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.shape-ex11 {
+    width: 100px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #FF881A;
+    background-color: transparent;
+    /* border: 1px solid #FF881A; */
+    position: relative;
+    transition: all .3s linear;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "DM Sans";
+}
+
+.shape-ex11 > p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+}
+
+.shape-ex11::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    box-sizing: border-box;
+    border-top: 1px solid #f6b756;
+    border-left: 1px solid #f6b756;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .3s linear;
+}
+
+.shape-ex11::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    box-sizing: border-box;
+    border-bottom: 1px solid #FF881A;
+    border-right: 1px solid #FF881A;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all .3s ease;
+}
+
+.shape-ex11:hover::before,
+.shape-ex11:hover::after {
+    width: 100%;
+    height: 100%;
+}
+/* ====================back to home 按鈕效果=========================== */
+
+.back-home-button {
+    width: 120px;
+    display: block;
+    /* position: fixed; */
+    bottom: 40px; /* 距離底部 40px */
+    /* left: 50%; */
+    transform: translateX(-50%);
+    z-index: 10;
+    /* min-width: 60px; */
+    background: #FF881A; /* 橘色背景 */
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 30px; /* 圓角效果 */
+    overflow: hidden;
+    padding: 12px 0;
+    transition: 0.5s;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    
+    position: absolute;
+    left: 600px;
+    
+  }
+  
+  .back-home-button span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: #FFFFFF; /* 內部動畫的顏色 */
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+  }
+  
+  .back-home-button:hover,
+  .back-home-button:focus {
+    color: #FF881A; /* 懸停時的文字顏色 */
+  }
+  
+  .back-home-button:hover span {
+    transform: translateY(0) scale(2);
+  }
+  
+  .back-home-button span:nth-child(1) {
+    --n: 1;
+  }
+  
+  .back-home-button span:nth-child(2) {
+    --n: 2;
+  }
+  
+  .back-home-button span:nth-child(3) {
+    --n: 3;
+  }
+  
+  .back-home-button span:nth-child(4) {
+    --n: 4;
+  }
+  
+  
+  
+  /* .footer{
+      margin-top: 50px;
+  } */
+  
+  
+  .awrapper{
+    width: 1200px;
+    margin: 0  auto;
+    position: relative;
+    margin-top: 180px;
+  }
