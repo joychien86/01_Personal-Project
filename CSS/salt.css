@@ -102,19 +102,19 @@ main h2 {
 }
 
 .pic1 {
-    background-image: url(../網站圖/謝特蘭/free/new1.png);
+    background-image: url(../website/shelt/free/new1.png);
     flex-grow: 2;
     /* width:50px; */
     /* background-size: auto 100px; */
 }
 
 .pic2 {
-    background-image: url(../網站圖/謝特蘭/free/new2.png);
+    background-image: url(../website/shelt/free/new2.png);
     flex-grow: 2;
 }
 
 .pic3 {
-    background-image: url(../網站圖/謝特蘭/free/new3.png);
+    background-image: url(../website/shelt/free/new3.png);
     flex-grow: 2;
 }
 

@@ -102,19 +102,19 @@ main h2 {
 }
 
 .pic1 {
-    background-image: url(../網站圖/獅子兔/free/new01.png);
+    background-image: url(../website/lion/free/new01.png);
     flex-grow: 2;
     /* width:50px; */
     /* background-size: auto 100px; */
 }
 
 .pic2 {
-    background-image: url(../網站圖/獅子兔/free/new02.png);
+    background-image: url(../website/lion/free/new02.png);
     flex-grow: 2;
 }
 
 .pic3 {
-    background-image: url(../網站圖/獅子兔/free/new03.png);
+    background-image: url(../website/lion/free/new03.png);
     flex-grow: 2;
 }
 

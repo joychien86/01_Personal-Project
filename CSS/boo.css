@@ -105,19 +105,19 @@ main h2 {
 }
 
 .pic1 {
-    background-image: url(../網站圖/短毛天天/free/01-new.png);
+    background-image: url(../website/short/free/01-new.png);
     flex-grow: 2;
     /* width:50px; */
     /* background-size: auto 100px; */
 }
 
 .pic2 {
-    background-image: url(../網站圖/短毛天天/free/02-new.png);
+    background-image: url(../website/short/free/02-new.png);
     flex-grow: 2;
 }
 
 .pic3 {
-    background-image: url(../網站圖/短毛天天/free/03-new.png);
+    background-image: url(../website/short/free/03-new.png);
     flex-grow: 2;
 }
 

@@ -106,19 +106,19 @@ main h2 {
 }
 
 .pic1 {
-    background-image: url(../網站圖/阿比/free/01_new.png);
+    background-image: url(../website/carol/free/01_new.png);
     flex-grow: 2;
     /* width:50px; */
     /* background-size: auto 100px; */
 }
 
 .pic2 {
-    background-image: url(../網站圖/阿比/free/02_new.png);
+    background-image: url(../website/carol/free/02_new.png);
     flex-grow: 2;
 }
 
 .pic3 {
-    background-image: url(../網站圖/阿比/free/03_new.png);
+    background-image: url(../website/carol/free/03_new.png);
     flex-grow: 2;
 }
 

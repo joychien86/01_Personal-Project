@@ -70,7 +70,7 @@ body.loaded .section199 {
     display: flex; /* 使用 flex 排列主視覺區 */
     align-items: center; /* 垂直置中 */
     justify-content: center; /* 水平置中 */
-    background-image: url("../網站圖/首頁圖/final.png"); /* 設定背景圖片 */
+    background-image: url("../website/indeximage/final.png"); /* 設定背景圖片 */
     background-size: cover; /* 背景圖片填滿 */
     background-position:  center; /* 背景圖片右側偏移 */
     height:550px; /* 設定主視覺區高度 */
@@ -302,20 +302,21 @@ body.loaded .section199 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-left: 120px;
-    margin-right: 120px;
+    /* margin-left: 0px;
+    margin-right: 120px; */
+    margin: 0 auto;
 }
 
 .purpose-item {
     display: flex;
     align-items: center;
-    width: 48%; /* 每行兩個項目，各佔 48% 的寬度 */
+    width: 50%; /* 每行兩個項目，各佔 60% 的寬度 */
     margin-bottom: 20px;
 }
 
 .purpose-item img {
     height: 250px;
-    width: 50%;
+    width: 55%;
     object-fit: cover;
     border-radius: 30px;
     /* transition: transform 0.3s ease; 添加過渡效果 */
