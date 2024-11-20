@@ -151,7 +151,7 @@ body.loaded .section199 {
     width: 100px;
     height: 100px;
     background-color: #ff881a; 
-    top: 200px;
+    top: 220px;
     left: 10px;
     /* padding-top: 30px; */
     /* margin-top: 30px; */
@@ -171,8 +171,8 @@ body.loaded .section199 {
     width: 100px;
     height: 100px;
     background-color: rgba(244, 180, 0, 1); /* 黃色 */
-    top: 280px;
-    left: 200px;
+    top: 250px;
+    left: 280px;
     /* padding-top: 30px; */
     /* margin-top: 30px; */
     z-index: -1;
@@ -199,7 +199,7 @@ body.loaded .section199 {
     width: 100px;
     height: 100px;
     background-color: #f2f2f2;
-    top: 250px;
+    top: 280px;
     right: 550px;
     z-index: -1;
 }
