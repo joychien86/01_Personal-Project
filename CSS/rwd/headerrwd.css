@@ -1,0 +1,565 @@
+
+/* ====================1440px RWD========================= */
+@media screen and (max-width:1440px){
+    .wrapper{
+        width: auto;
+    }
+    .top > .fa{
+        display: none;
+    }
+
+    .toggle-submenu {
+        display: none; /* 預設隱藏 */}
+}
+/* ====================1200px RWD========================= */
+@media screen and (max-width:1200px){
+    .wrapper{
+        width: auto;
+    }
+    .top > .fa{
+        display: none;
+    }
+
+    .toggle-submenu {
+        display: none; /* 預設隱藏 */}
+}
+
+/* ====================820px RWD=========================漢堡選單出現+++++++++ */
+@media screen and (max-width: 820px) {
+
+    *,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* 避免頁面內容觸發水平滾動 */
+ html,  body {
+    margin: 0;
+    overflow-x: hidden; /* 禁止頁面水平滾動條 */
+}
+    /* 漢堡選單樣式 */
+
+       /* 漢堡選單樣式 */
+ .top > .fa {
+        display: block;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        right: 40px;
+        top: 40px;
+    }
+
+    header .logo {
+        margin: 0 auto;
+        text-align: center; 
+        margin-left: 180px;
+    }
+
+    header .logo img {
+        width: 300px; /* 縮小 logo */
+        /* margin: 0 auto; */
+        text-align: center; 
+    }
+    /* 調整選單樣式 */
+    header nav ul {
+    list-style: none;
+    flex-direction: column;
+    position: fixed;
+    top: 100px;
+    width: 80%;
+    height: 470px;
+    background-color: #fff;
+    color: #333;
+    transition: transform 0.5s ease;
+    transform: translateX(100%); /* 初始移出螢幕右側 */
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    text-align: center;
+    z-index: 999;
+    right: 0; /* 固定於右側，確保不溢出螢幕 */
+    overflow-x: hidden; /* 禁止水平滾動 */
+}
+    
+    /* 展開時 */
+    header nav ul.open {
+        transform: translateX(0); /* 回到可視區域 */
+        /* width: 40%; */
+    }
+
+    /* header nav ul.open::after {
+        background-color: #333;
+    } */
+
+    header nav ul li {
+        position: relative; 
+        padding: 10px 0px;
+        font-size: 20px;
+        line-height: 16px;
+        text-align: center;
+        border-top: 1px dashed  rgba(244, 180, 0, .5);
+        width: 700px;
+    
+    }
+    header nav ul li:nth-last-child() {
+
+        border-bottom: 0px
+    }
+
+    header nav ul > li > ul {
+        display: none; /* 初始隱藏子選單 */
+    }
+
+    header nav ul > li.open > ul {
+        display: block; /* 父選單展開時顯示子選單 */
+    }
+
+    header nav ul li a {
+        text-decoration: none;
+        color: #333;
+        display: inline-block;
+        /* padding: 10px 10px; */
+    }
+
+    /* 子選單的初始樣式 */
+    .submenu {
+        display: none; /* 初始隱藏子選單 */
+        padding-left: 20px; /* 子選單內縮 */
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+    }
+
+    .submenu.show {
+        display: block;
+        /* max-height: 100px; 足夠大的值支持展開 */
+        opacity: 1;
+    }
+
+
+/* 確保 my purpose 的區塊不影響選單層級 */
+#section199 {
+    position: relative; /* 確保此區塊不會干擾選單 */
+    z-index: -1; /* 設置比選單低的 z-index */
+}
+
+/* 防止文字或其他內容蓋住選單 */
+#section199 h4, #section199 .purpose-items {
+    z-index: -1; /* 確保文字內容在較低層級 */
+    position: relative; /* 保持區塊布局不影響其他元素 */
+}
+
+}
+
+
+/* ====================430px RWD========================= */
+
+@media screen and (max-width: 430px) {
+
+
+
+    *,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* 避免頁面內容觸發水平滾動 */
+ html,  body {
+    margin: 0;
+    overflow-x: hidden; /* 禁止頁面水平滾動條 */
+}
+    /* 漢堡選單樣式 */
+
+       /* 漢堡選單樣式 */
+ .top > .fa {
+        display: block;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        right: 40px;
+        top: 40px;
+    }
+
+    header .logo {
+        margin: 0 auto;
+        text-align: center; 
+        margin-left: 0px;
+    }
+
+    header .logo img {
+        width: 300px; /* 縮小 logo */
+        /* margin: 0 auto; */
+        text-align: center; 
+    }
+    /* 調整選單樣式 */
+    header nav ul {
+    list-style: none;
+    flex-direction: column;
+    position: fixed;
+    top: 100px;
+    width: 100%;
+    height: 530px;
+    background-color: #fff;
+    color: #333;
+    transition: transform 0.5s ease;
+    transform: translateX(100%); /* 初始移出螢幕右側 */
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    text-align: center;
+    z-index: 999;
+    right: 0; /* 固定於右側，確保不溢出螢幕 */
+    overflow-x: hidden; /* 禁止水平滾動 */
+}
+    
+    /* 展開時 */
+    header nav ul.open {
+        transform: translateX(0); /* 回到可視區域 */
+    }
+
+    header nav ul li {
+        position: relative;
+        padding: 10px 0; /* 移除 padding-right */
+        font-size: 20px;
+        text-align: center;
+        line-height: 24px; /* 确保文字垂直置中 */
+        border-top: 1px dashed rgba(244, 180, 0, 0.5);
+        width: 430px;
+    }
+
+    header nav ul li a {
+        text-decoration: none;
+        color: #333;
+        display: inline-block;
+        width: 100%; /* 确保文字在 a 元素内居中 */
+        text-align: center;
+    }
+    header nav ul li:nth-last-child() {
+
+        border-bottom: 0px
+    }
+
+    header nav ul li:nth-child(1) {
+
+        border-top: 0px
+    }
+
+    header nav ul > li > ul {
+        display: none; /* 初始隱藏子選單 */
+    }
+
+    header nav ul > li.open > ul {
+        display: block; /* 父選單展開時顯示子選單 */
+    }
+
+
+    /* 子選單的初始樣式 */
+    .submenu {
+        display: none; /* 初始隱藏子選單 */
+        padding-left: 20px; /* 子選單內縮 */
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+    }
+
+    .submenu.show {
+        display: block;
+        /* max-height: 100px; 足夠大的值支持展開 */
+        opacity: 1;
+    }
+
+
+/* 確保 my purpose 的區塊不影響選單層級 */
+#section199 {
+    position: relative; /* 確保此區塊不會干擾選單 */
+    z-index: -1; /* 設置比選單低的 z-index */
+}
+
+/* 防止文字或其他內容蓋住選單 */
+#section199 h4, #section199 .purpose-items {
+    z-index: -1; /* 確保文字內容在較低層級 */
+    position: relative; /* 保持區塊布局不影響其他元素 */
+}
+}
+
+
+/* ====================412px RWD========================= */
+
+@media screen and (max-width: 412px) {
+    *,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* 避免頁面內容觸發水平滾動 */
+ html,  body {
+    margin: 0;
+    overflow-x: hidden; /* 禁止頁面水平滾動條 */
+}
+    /* 漢堡選單樣式 */
+
+       /* 漢堡選單樣式 */
+ .top > .fa {
+        display: block;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        right: 40px;
+        top: 40px;
+    }
+
+    header .logo {
+        margin: 0 auto;
+        text-align: center; 
+        margin-left: 0px;
+    }
+
+    header .logo img {
+        width: 300px; /* 縮小 logo */
+        /* margin: 0 auto; */
+        text-align: center; 
+    }
+    /* 調整選單樣式 */
+    header nav ul {
+    list-style: none;
+    flex-direction: column;
+    position: fixed;
+    top: 100px;
+    width: 100%;
+    height: 530px;
+    background-color: #fff;
+    color: #333;
+    transition: transform 0.5s ease;
+    transform: translateX(100%); /* 初始移出螢幕右側 */
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    text-align: center;
+    z-index: 999;
+    right: 0; /* 固定於右側，確保不溢出螢幕 */
+    overflow-x: hidden; /* 禁止水平滾動 */
+}
+    
+    /* 展開時 */
+    header nav ul.open {
+        transform: translateX(0); /* 回到可視區域 */
+    }
+
+ 
+    header nav ul li:nth-last-child() {
+
+        border-bottom: 0px
+    }
+
+    header nav ul li:nth-child(1) {
+
+        border-top: 0px
+    }
+
+    header nav ul > li > ul {
+        display: none; /* 初始隱藏子選單 */
+    }
+
+    header nav ul > li.open > ul {
+        display: block; /* 父選單展開時顯示子選單 */
+    }
+
+    header nav ul li {
+        position: relative;
+        padding: 10px 0; /* 移除 padding-right */
+        font-size: 20px;
+        text-align: center;
+        line-height: 24px; /* 确保文字垂直置中 */
+        border-top: 1px dashed rgba(244, 180, 0, 0.5);
+        width: 412px;
+    }
+
+    header nav ul li a {
+        text-decoration: none;
+        color: #333;
+        display: inline-block;
+        width: 100%; /* 确保文字在 a 元素内居中 */
+        text-align: center;
+    }
+
+    /* 子選單的初始樣式 */
+    .submenu {
+        display: none; /* 初始隱藏子選單 */
+        padding-left: 20px; /* 子選單內縮 */
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+    }
+
+    .submenu.show {
+        display: block;
+        /* max-height: 100px; 足夠大的值支持展開 */
+        opacity: 1;
+    }
+
+
+/* 確保 my purpose 的區塊不影響選單層級 */
+#section199 {
+    position: relative; /* 確保此區塊不會干擾選單 */
+    z-index: -1; /* 設置比選單低的 z-index */
+}
+
+/* 防止文字或其他內容蓋住選單 */
+#section199 h4, #section199 .purpose-items {
+    z-index: -1; /* 確保文字內容在較低層級 */
+    position: relative; /* 保持區塊布局不影響其他元素 */
+}
+}
+
+/* ====================390px RWD========================= */
+@media screen and (max-width: 390px) {
+
+    *,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* 避免頁面內容觸發水平滾動 */
+ html,  body {
+    margin: 0;
+    overflow-x: hidden; /* 禁止頁面水平滾動條 */
+}
+    /* 漢堡選單樣式 */
+
+       /* 漢堡選單樣式 */
+ .top > .fa {
+        display: block;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        right: 40px;
+        top: 40px;
+    }
+
+    header .logo {
+        margin: 0 auto;
+        text-align: center; 
+        margin-left: -10px;
+        margin-top: 2px;
+    }
+
+    header .logo img {
+        width: 300px; /* 縮小 logo */
+        /* margin: 0 auto; */
+        text-align: center; 
+    }
+    /* 調整選單樣式 */
+    header nav ul {
+    list-style: none;
+    flex-direction: column;
+    position: fixed;
+    top: 100px;
+    width: 100%;
+    height: 530px;
+    background-color: #fff;
+    color: #333;
+    transition: transform 0.5s ease;
+    transform: translateX(100%); /* 初始移出螢幕右側 */
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    text-align: center;
+    z-index: 999;
+    right: 0; /* 固定於右側，確保不溢出螢幕 */
+    overflow-x: hidden; /* 禁止水平滾動 */
+}
+    
+    /* 展開時 */
+    header nav ul.open {
+        transform: translateX(0); /* 回到可視區域 */
+    }
+
+    header nav ul li {
+        position: relative;
+        padding: 10px 0; /* 調整上下內距 */
+        font-size: 20px;
+        text-align: center;
+        line-height: 24px; /* 確保文字垂直置中 */
+        border-top: 1px dashed rgba(244, 180, 0, 0.5);
+        /* padding-right: 30%; */
+    
+    }
+    header nav ul li:nth-last-child() {
+
+        border-bottom: 0px
+    }
+
+    header nav ul li:nth-child(1) {
+
+        border-top: 0px
+    }
+
+    header nav ul > li > ul {
+        display: none; /* 初始隱藏子選單 */
+    }
+
+    header nav ul > li.open > ul {
+        display: block; /* 父選單展開時顯示子選單 */
+    }
+
+    header nav ul li a {
+        text-decoration: none;
+        color: #333;
+        display: inline-block;
+        /* padding: 10px 10px; */
+        width: 100%; /* 占滿整個 li 寬度 */
+        text-align: center; /* 水平置中 */
+    }
+
+    /* 子選單的初始樣式 */
+    .submenu {
+        display: none; /* 初始隱藏子選單 */
+        padding-left: 20px; /* 子選單內縮 */
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+    }
+
+    .submenu.show {
+        display: block;
+        /* max-height: 100px; 足夠大的值支持展開 */
+        opacity: 1;
+    }
+
+
+/* 確保 my purpose 的區塊不影響選單層級 */
+#section199 {
+    position: relative; /* 確保此區塊不會干擾選單 */
+    z-index: -1; /* 設置比選單低的 z-index */
+}
+
+/* 防止文字或其他內容蓋住選單 */
+#section199 h4, #section199 .purpose-items {
+    z-index: -1; /* 確保文字內容在較低層級 */
+    position: relative; /* 保持區塊布局不影響其他元素 */
+}
+}

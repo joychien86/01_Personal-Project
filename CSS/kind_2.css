@@ -16,6 +16,11 @@ body {
 .wrapper{
   margin: 0 auto;
   max-width: 1200px;
+  display: flex;
+  flex-direction: column; /* 保持原有的垂直排列 */
+  align-items: center; /* 水平居中 */
+  justify-content: center; /* 垂直居中 */
+  min-height: 100vh; /* 占满屏幕高度 */
 }
 
 /* 圓形裝飾 */
@@ -71,7 +76,7 @@ body {
   padding: 60px;
   max-width: 1200px;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 
 /* 卡片樣式 */
@@ -83,7 +88,7 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   width: 470px;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
   margin: 0 auto;
 
 }
@@ -118,4 +123,54 @@ body {
   border-radius: 50px;
 }
 
+/* 動畫效果 */
+.btn11 {
+  position: relative;
+  display: inline-block;
+  background: #F6B756; /* 黄色背景 */
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+.btn11 div {
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 懸停時的文字變換效果 */
+.btn11:before {
+  content: attr(data-hover);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateX(-100%);
+  color: #faf6f6;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  white-space: nowrap;
+  font-family: "DM Sans";
+}
+
+.btn11:hover div {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.btn11:hover:before {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateX(0);
+}
 
