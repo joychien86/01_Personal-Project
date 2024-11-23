@@ -234,7 +234,7 @@ text-align: center;
             flex-direction: column; /* 讓文字和圖片垂直排列 */
             align-items: center; /* 水平置中 */
             justify-content: center; /* 垂直置中 */
-            background-image: url("/website/indeximage/web1.jpg"); /* 設定背景圖片 */
+            background-image: url("../../website/indeximage/web1.jpg"); /* 設定背景圖片 */
             background-size: cover; /* 背景圖片填滿 */
             background-position: center; /* 背景圖片置中 */
             height: 300px; /* 設定主視覺區高度 */
@@ -576,7 +576,7 @@ text-align: center;
             flex-direction: column; /* 讓文字和圖片垂直排列 */
             align-items: center; /* 水平置中 */
             justify-content: center; /* 垂直置中 */
-            background-image: url("/website/indeximage/web1.jpg"); /* 設定背景圖片 */
+            background-image: url("../../website/indeximage/web1.jpg"); /* 設定背景圖片 */
             background-size: cover; /* 背景圖片填滿 */
             background-position: center; /* 背景圖片置中 */
             height: 300px; /* 設定主視覺區高度 */
@@ -917,7 +917,7 @@ text-align: center;
         flex-direction: column; /* 讓文字和圖片垂直排列 */
         align-items: center; /* 水平置中 */
         justify-content: center; /* 垂直置中 */
-        background-image: url("/website/indeximage/web1.jpg"); /* 設定背景圖片 */
+        background-image: url("../../website/indeximage/web1.jpg"); /* 設定背景圖片 */
         background-size: cover; /* 背景圖片填滿 */
         background-position: center; /* 背景圖片置中 */
         height: 300px; /* 設定主視覺區高度 */
