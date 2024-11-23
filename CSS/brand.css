@@ -76,12 +76,18 @@ margin:0 auto;
     justify-content: center;
     padding: 20px;
     gap: 100px;
+    /* border: 2px solid red; */
+    position: relative;
+    min-height: 300px; /* 設置固定最小高度 */
 }
 
 .carousel {
     position: relative;
     width: 500px;
     margin-bottom: 10px;
+    height: 300px; /* 固定高度，避免按鈕位置受內容變動影響 */
+    /* border: 1px solid red; */
+    /* overflow: hidden; */
     
 }
 
@@ -89,9 +95,11 @@ margin:0 auto;
     display: none;
     width: 100%;
     height: auto;
+    /* border: 2px solid green; */
 }
 
 .carousel-item.active {
+    /* position: relative; */
     display: block;
 }
 
@@ -111,8 +119,8 @@ margin:0 auto;
 .carousel-control-prev,
 .carousel-control-next {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 70%; 
+    transform: translateY(-50%); 
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
@@ -121,6 +129,8 @@ margin:0 auto;
     cursor: pointer;
     z-index: 1;
     border-radius: 50%;
+    width: 50px;
+    height: 50px;
 }
 
 /* 將左側按鈕固定到左邊 */
