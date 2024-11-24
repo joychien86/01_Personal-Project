@@ -111,7 +111,7 @@ margin:0 auto;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 .carousel img:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     transform: translateY(-5px);
 }
 
@@ -137,14 +137,14 @@ margin:0 auto;
 .carousel-control-prev {
     left: 10px; /* 確保按鈕距離圖片左邊10px*/
     color:#FF8819;
-    background-color:  rgb(255, 255, 255, 0.3);
+    background-color:  rgb(255, 255, 255, 0.9);
 }
 
 /* 將右側按鈕固定到右邊 */
 .carousel-control-next {
     right: 10px; /* 確保按鈕距離圖片右邊10px */
     color:#FF8819;
-    background-color:  rgb(255, 255, 255, 0.3);
+    background-color:  rgb(255, 255, 255, 0.9);
 
 }
 
