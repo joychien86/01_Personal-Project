@@ -199,11 +199,7 @@ text-align: center;
         .text-content h1,
         .text-content h2,
         .text-content h3,
-        .explore-button,
-        #section199,
-        .purpose-items,
-        .logo-design-section, 
-       .footer {
+        .explore-button {
             opacity: 1 !important; /* 确保直接显示 */
         }
     
@@ -212,11 +208,8 @@ text-align: center;
         body.loaded .circle-container1,
         body.loaded .text-content h1,
         body.loaded .text-content h2,
-        body.loaded .text-content h3,
-        body.loaded #section199, 
-        body.loaded .purpose-items,
-        body.loaded .logo-design-section, 
-        body.loaded .footer{
+        body.loaded .text-content h3
+        {
             opacity: 1 !important;
         }
         .top > .fa {
@@ -547,11 +540,7 @@ text-align: center;
         .text-content h1,
         .text-content h2,
         .text-content h3,
-        .explore-button,
-        #section199,
-        .purpose-items,
-        .logo-design-section, 
-       .footer {
+        .explore-button {
             opacity: 1 !important; /* 确保直接显示 */
         }
     
@@ -560,11 +549,8 @@ text-align: center;
         body.loaded .circle-container1,
         body.loaded .text-content h1,
         body.loaded .text-content h2,
-        body.loaded .text-content h3,
-        body.loaded #section199, 
-    body.loaded .purpose-items,
-    body.loaded .logo-design-section, 
-    body.loaded .footer {
+        body.loaded .text-content h3
+  {
             opacity: 1 !important;
         }
         .top > .fa {
@@ -894,11 +880,8 @@ text-align: center;
     .text-content h1,
     .text-content h2,
     .text-content h3,
-    .explore-button,
-    #section199, 
-   .purpose-items,
-   .logo-design-section, 
-  .footer{
+    .explore-button
+    {
         opacity: 1 !important; /* 确保直接显示 */
     }
 
@@ -908,11 +891,8 @@ text-align: center;
     body.loaded .text-content h1,
     body.loaded .text-content h2,
     body.loaded .text-content h3,
-    body.loaded .purpose-items,
-    body.loaded #section199, 
-    body.loaded .purpose-items,
-    body.loaded .logo-design-section, 
-    body.loaded .footer{
+    body.loaded .purpose-items
+   {
         opacity: 1 !important;
     }
     .top > .fa {
