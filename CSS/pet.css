@@ -5,7 +5,7 @@ max-width: 1200px;
 margin: 0 auto;
 }
 .logo .logo-image {
-  width: 320px; 
+  width: 200px; 
   height: auto;}
 
 
@@ -346,7 +346,7 @@ transform: scale(1.05); /* 放大效果 */
 .card > p {
     font-size: 16px;
     color: #555;
-    line-height: 1.4 !important; */
+    line-height: 1.4 !important; 
     margin: 10px 10px  !important; /* 強制上下各留 10px 的距離*/
     text-align: left;
     width: 100%;

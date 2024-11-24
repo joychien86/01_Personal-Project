@@ -6,6 +6,10 @@
     font-family: "DM Sans";
 }
 
+.wrapper .owl-carousel{
+    display: none;
+}
+
 .wrapper{
     margin:0 auto;
     max-width: 1200px;

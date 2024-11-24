@@ -1,0 +1,125 @@
+/* ====================1440px RWD========================= */
+@media screen and (max-width:1440px){
+    .wrapper{
+        width: auto;
+    }
+    .top > .fa{
+        display: none;
+    }
+    .wrapper.owl-carousel{
+        display: none;
+    }
+
+}
+
+
+/* ====================1200px RWD========================= */
+@media screen and (max-width:1200px){
+    .wrapper{
+        width: auto;
+    }
+    .top > .fa{
+        display: none;
+    }
+    .wrapper.owl-carousel{
+        display: none;
+    }
+}
+
+
+/* ====================820px RWD========================= */
+@media screen and (max-width: 820px) {
+    .top > .fa {
+        display: block;
+    }
+
+    .wrapper{
+        max-width: 820px;
+        margin: 0 auto;
+        }
+
+        .wrapper.owl-carousel{
+            display: block;
+        }
+.p1, .p2, .p3{
+    display: none;
+}
+
+           
+}
+
+/* ====================430px RWD========================= */
+@media screen and (max-width: 430px) {
+
+    *{
+        transition: none;
+        transform: none;
+    }
+
+    .top > .fa {
+        display: block;
+    }
+    .wrapper{
+        max-width: 430px;
+        margin: 0 auto;
+        }
+
+        
+        .wrapper.owl-carousel{
+            display: block;
+        }
+     .p1, .p2, .p3{
+    display: none;
+}
+
+       
+
+}
+
+
+/* ====================412px RWD========================= */
+@media screen and (max-width: 412px) {
+
+
+    .top > .fa {
+        display: block;
+    }
+
+    .wrapper{
+        max-width: 412px;
+        margin: 0 auto;
+        }
+
+        .wrapper.owl-carousel{
+            display: block;
+        }
+      .p1, .p2, .p3{
+      display: none;
+}
+
+    
+
+}
+
+/* ====================390px RWD========================= */
+
+@media screen and (max-width: 390px) {
+
+    .top > .fa {
+        display: block;
+    }
+
+    .wrapper{
+        max-width: 390px;
+        margin: 0 auto;
+        }
+
+        .wrapper.owl-carousel{
+            display: block;
+        }
+     .p1, .p2, .p3{
+    display: none;
+}
+
+
+}
