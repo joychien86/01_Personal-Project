@@ -36,7 +36,7 @@ header .logo {
 header .logo img {
     width: 200px;
     height: auto;
-    padding-left: 120px;
+    margin-left: 120px;
 }
 
 header nav ul {
@@ -44,7 +44,7 @@ header nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    padding-right: 120px;
+    margin-right: 120px;
 }
 
 header nav ul li {
