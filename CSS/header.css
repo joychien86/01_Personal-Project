@@ -27,7 +27,7 @@ header .container {
 }
 
 header .logo {
-    display: flex;
+    /* display: flex; */
     align-items: center;
     margin-left: 40px;
     /* width: 300px; */

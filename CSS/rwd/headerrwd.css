@@ -68,6 +68,7 @@
     }
     /* 調整選單樣式 */
     header nav ul {
+        margin: 0 auto;
     list-style: none;
     flex-direction: column;
     position: fixed;
@@ -205,6 +206,7 @@
     }
     /* 調整選單樣式 */
     header nav ul {
+        margin: 0 auto;
     list-style: none;
     flex-direction: column;
     position: fixed;
@@ -233,9 +235,10 @@
         padding: 10px 0; /* 移除 padding-right */
         font-size: 20px;
         text-align: center;
-        line-height: 24px; /* 确保文字垂直置中 */
+        line-height: 20px; /* 确保文字垂直置中 */
         border-top: 1px dashed rgba(244, 180, 0, 0.5);
         width: 430px;
+        text-align: center;
     }
 
     header nav ul li a {
