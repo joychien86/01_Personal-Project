@@ -26,8 +26,12 @@ header,
 .text-content h1,
 .text-content h2,
 .text-content h3,
- .explore-button
-.section199 {
+ .explore-button,
+#section199, 
+.purpose-items,
+.logo-design-section, 
+.footer
+ {
     opacity: 0;
     animation: none; /* 初始狀態無動畫 */
 }
@@ -61,9 +65,12 @@ body.loaded .text-content h3 {
 
 /* body.loaded .text-content .explore-button  {
     animation: fadeIn 1s ease-in-out 4.5s forwards; /* 2秒延遲，1秒完成 */
-body.loaded .section199 {
+body.loaded #section199 {
     animation: fadeIn 1s ease-in-out 3.5s forwards; /* 2秒延遲，1秒完成 */
 }
+body.loaded .purpose-items{animation: fadeIn 1s ease-in-out 4s forwards;}
+body.loaded .logo-design-section {animation: fadeIn 1s ease-in-out 4.5s forwards;}
+body.loaded .footer{animation: fadeIn 1s ease-in-out 5s forwards;}
  
 
 .hero {
