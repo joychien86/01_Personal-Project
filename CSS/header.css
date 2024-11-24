@@ -1,6 +1,11 @@
 @import url(./reset.css);
 
 /*=====================上層選單===================*/
+
+.top > .fa {
+    display: none; /* 隱藏漢堡選單 */
+}
+
 header {
     background-color: #FF881A;
     color: white;
