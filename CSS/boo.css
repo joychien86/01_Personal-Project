@@ -11,6 +11,37 @@
     max-width: 1200px;
     margin: 0 auto;
 }
+/* OwlCarousel 默認隱藏 */
+.owl-carousel {
+    display: none !important;
+}
+
+/* 預設 .owl-carousel 樣式 */
+.owl-carousel {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.owl-carousel .owl-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: auto; /* 確保容器高度根據內容調整 */
+}
+
+.owl-carousel .owl-item img {
+    width: 100%; /* 預設圖片寬度填滿父容器 */
+    height: auto; /* 確保圖片按比例縮放 */
+    object-fit: contain; /* 確保圖片完整顯示 */
+}
+
+/* 原始圖片默認顯示 */
+.animal ul li {
+    display: block;
+}
+
 
 
 body {

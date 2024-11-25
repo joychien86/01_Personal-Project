@@ -298,20 +298,20 @@ h1, h2, h3, h4 {
 }
 
 .gray-circle2{
-background-color: rgba(224, 224, 224, .8); /* 灰色 */
-top: -10px;
-left: 320px;
-/* padding-top: 30px; */
-/* margin-top: 30px; */
-z-index: -1;
-}
-
-.yellow-circle2 {
-    background-color: rgba(244, 180, 0, .8); /* 黃色 */
-    top: -20px;
-    left: 100px;
+    background-color: rgba(224, 224, 224, .8); /* 灰色 */
+    top: 20px;
+    left: 300px;
+    /* padding-top: 30px; */
+    /* margin-top: 30px; */
     z-index: -1;
-}
+    }
+
+    .yellow-circle2 {
+        background-color: rgba(244, 180, 0, .8); /* 黃色 */
+        top: -20px;
+        left: 130px;
+        z-index: -1;
+    }
 
 h1 {
     font-size: 20px; /* 文字也等比例縮小 */
@@ -480,8 +480,8 @@ h2{ font-size: 20px; /* 文字也等比例縮小 */
 
     .gray-circle2{
     background-color: rgba(224, 224, 224, .8); /* 灰色 */
-    top: -10px;
-    left: 320px;
+    top: 20px;
+    left: 280px;
     /* padding-top: 30px; */
     /* margin-top: 30px; */
     z-index: -1;
@@ -490,19 +490,19 @@ h2{ font-size: 20px; /* 文字也等比例縮小 */
     .yellow-circle2 {
         background-color: rgba(244, 180, 0, .8); /* 黃色 */
         top: -20px;
-        left: 100px;
+        left: 130px;
         z-index: -1;
     }
 
     h1 {
-        font-size: 20px; /* 文字也等比例縮小 */
+        font-size: 16px; /* 文字也等比例縮小 */
         text-align: center; /* 與 circle-container2 保持一致 */
         margin-left: 100px; /* 增加左側間距 */
 
        
     }
 
-    h2{ font-size: 20px; /* 文字也等比例縮小 */
+    h2{ font-size: 16px; /* 文字也等比例縮小 */
         text-align: center; /* 與 circle-container2 保持一致 */
         margin-left: 100px; /* 增加左側間距 */}
     
@@ -664,30 +664,29 @@ h2{ font-size: 20px; /* 文字也等比例縮小 */
           }
       
           .gray-circle2{
-          background-color: rgba(224, 224, 224, .8); /* 灰色 */
-          top: -10px;
-          left: 300px;
-          /* padding-top: 30px; */
-          /* margin-top: 30px; */
-          z-index: -1;
-          }
-      
-          .yellow-circle2 {
-              background-color: rgba(244, 180, 0, .8); /* 黃色 */
-              top: -20px;
-              left: 90px;
-              z-index: -1;
-          }
-      
+            background-color: rgba(224, 224, 224, .8); /* 灰色 */
+            top: 20px;
+            left: 280px;
+            /* padding-top: 30px; */
+            /* margin-top: 30px; */
+            z-index: -1;
+            }
+        
+            .yellow-circle2 {
+                background-color: rgba(244, 180, 0, .8); /* 黃色 */
+                top: -20px;
+                left: 130px;
+                z-index: -1;
+            }
           h1 {
-              font-size: 20px; /* 文字也等比例縮小 */
+              font-size: 16px; /* 文字也等比例縮小 */
               text-align: center; /* 與 circle-container2 保持一致 */
               margin-left: 90px; /* 增加左側間距 */
       
              
           }
       
-          h2{ font-size: 20px; /* 文字也等比例縮小 */
+          h2{ font-size: 16px; /* 文字也等比例縮小 */
               text-align: center; /* 與 circle-container2 保持一致 */
               margin-left: 90px; /* 增加左側間距 */}
           

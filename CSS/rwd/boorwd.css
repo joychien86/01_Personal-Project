@@ -490,7 +490,7 @@ h2{ font-size: 20px; /* 文字也等比例縮小 */
     .yellow-circle2 {
         background-color: rgba(244, 180, 0, .8); /* 黃色 */
         top: -20px;
-        left: 100px;
+        left: 80px;
         z-index: -1;
     }
 
@@ -675,7 +675,7 @@ h2{ font-size: 20px; /* 文字也等比例縮小 */
           .yellow-circle2 {
               background-color: rgba(244, 180, 0, .8); /* 黃色 */
               top: -20px;
-              left: 90px;
+              left: 70px;
               z-index: -1;
           }
       

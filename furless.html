@@ -8,6 +8,22 @@
     <link href="./CSS/furless.css" rel="stylesheet" type="text/css">
     <link href="./CSS/header.css" rel="stylesheet" type="text/css">
     <link href="./CSS/nav_footer.css" rel="stylesheet" type="text/css">
+    <link href="./CSS/rwd/furlessrwd.css" rel="stylesheet" type="text/css">
+    <link href="./CSS/rwd/headerrwd.css" rel="stylesheet" type="text/css">
+    <link href="./CSS/rwd/footerrwd.css" rel="stylesheet" type="text/css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<!-- END -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,6 +35,9 @@
      <!-- 頁首的bar -->
      <header>
         <div class="container">
+            <div class="top">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                 </div>
             <div class="logo">
                 <a href="./index.html" target="_self"> 
                     <img src="./LOGO/Group 10 png.png" alt="毛絨星球 Logo" class="logo-image">
@@ -71,6 +90,11 @@
 <!-- --------------------------------------------------------------------------------------------- -->
 
 <main>
+    <div class="owl-carousel">
+        <div class="item" ><img src="./website/furless/free/new01.png" alt="圖片1"></div>
+        <div class="item"><img src="./website/furless/free/new02.png" alt="圖片2"></div>
+        <div class="item"><img src="./website/furless/free/new03.png" alt="圖片3"></div>
+      </div>
     <div class="wrapper">
     <div class="animal">
         <ul>
@@ -78,6 +102,7 @@
             <li class="pic2"></li>
             <li class="pic3"></li>
         </ul>
+    </div>
         <div id="section2">
             <div class="circle-container2">
                 <div class="circle gray-circle2"></div>
@@ -168,5 +193,7 @@
     <p>© 本網站為緯育TibaMe【第94期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</p>
 </div>
 </div>
+<script src="./JS/rwd/header.js"></script>
+<script src="./JS/rwd/furlessrwd.js"></script>
 </body>
 </html>
