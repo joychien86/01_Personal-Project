@@ -1,0 +1,1017 @@
+/* ====================1440px RWD========================= */
+@media screen and (max-width:1440px){
+    .wrapper  {
+        margin: 0 auto;
+        width: 100%;
+    }
+     
+
+    .top > .fa{
+        display: none;
+    }
+
+
+}
+
+
+/* ====================1200px RWD========================= */
+@media screen and (max-width:1200px){
+    .wrapper{
+        margin: 0 auto;
+        width: 100%;
+    }
+    .top > .fa{
+        display: none;
+    }
+
+}
+/* ====================820px RWD========================= */
+@media screen and (max-width: 820px) {
+
+    .wrapper{
+        margin: 0 auto;
+        width: 100%;
+        max-width: 820px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        padding: 10px;
+        width: 100%;
+    }
+    .top > .fa {
+        display: block;
+    }
+
+    .circle-container {
+        transform: scale(0.8); /* 等比例縮小 */
+        transform-origin: center; /* 從中心縮放 */
+        margin: 0 auto; /* 置中 */
+        display: flex;
+        flex-direction: column; /* 垂直排列 */
+        align-items: center; /* 水平置中 */
+        justify-content: center;
+        width: 100%; /* 確保不超出螢幕 */
+        text-align: center;
+        position: relative;
+        margin-top: -40px;
+        margin-bottom: 40px;
+    }
+
+    /* 調整內部圓形的位置 */
+    .gray-circle {
+        height: 90px;
+        width: 90px;
+        position: absolute;
+        top: 120px; /* 根據縮放微調位置 */
+        left: 60%; /* 置中 */
+        transform: translateX(-50%); /* 水平置中 */
+    }
+
+    .yellow-circle {
+        height: 80px;
+        width: 80px;
+        position: absolute;
+        top: 70px; /* 根據縮放微調位置 */
+        left: 32%; /* 置中 */
+        transform: translateX(-50%); /* 水平置中 */
+    }
+
+    /* 調整 .text 大小並置中 */
+    .text {
+        font-size: 36px; /* 縮小文字大小 */
+        text-align: center; /* 保持文字居中 */
+        margin-top: 100px; /* 與圓形距離 */
+        width: 100%; /* 確保與畫面對齊 */
+        margin-bottom: 30px;
+        font-weight: 900;
+        font-family: "DM Sans";
+        line-height: 52px;
+        font-style: italic;
+        color: var(--Text_Black, #333);
+    }
+
+    .container12 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* 行間距 */
+        max-width: 100%; /* 滿屏寬 */
+        margin: 0 auto; /* 居中 */
+    }
+
+    .row, .row.reverse {
+        display: flex;
+        flex-direction: column; /* 垂直排列 */
+        align-items: center; /* 水平置中 */
+        gap: 20px;
+        text-align: center; /* 文字居中 */
+        margin-bottom: 30px;
+    }
+
+    /* 圖片區域 */
+    .image-section12, .image-section13, .image-section14, .image-section15 {
+        order: 1; /* 圖片在最上 */
+        width: 100%; /* 滿屏寬 */
+        text-align: center;
+    }
+
+    .image-section12 img, .image-section13 img, .image-section14 img, .image-section15 img {
+        width: 80%; /* 圖片縮小 */
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .image-section12 img, .image-section13 img, .image-section14 img, .image-section15 img.hover-image:hover {
+        box-shadow:none;
+        transform: none;
+    }
+
+        /* 取消图片的 hover 效果 */
+.image-section12 img,
+.image-section13 img,
+.image-section14 img,
+.image-section15 img {
+    transition: none; /* 禁用动画效果 */
+    transform: none; /* 禁用缩放或旋转 */
+    box-shadow: none; /* 移除阴影 */
+}
+
+.image-section12 img:hover,
+.image-section13 img:hover,
+.image-section14 img:hover,
+.image-section15 img:hover {
+    transform: none; /* 禁用缩放 */
+    box-shadow: none; /* 禁用阴影 */
+}
+
+
+    /* 文字區域 */
+    .text-section12, .text-section13, .text-section14, .text-section15 {
+        order: 2; /* 排在圖片下 */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px; /* 元素間距 */
+        text-align: center;
+        width: 100%; /* 滿屏寬 */
+    }
+
+    .text-section12 h5, .text-section13 h5, .text-section14 h5, .text-section15 h5 {
+        font-size: 20px; /* 調整字體大小 */
+        font-weight: bold;
+    }
+
+    .text-section12 .logo, .text-section13 .logo, .text-section14 .logo, .text-section15 .logo {
+        width: 55px; /* 縮小 logo */
+        height: auto;
+        margin-left: 10px; /* 與文字間距 */
+    }
+
+    /* h5 和 logo 水平排列 */
+    .text-section12 h5, .text-section13 h5, .text-section14 h5, .text-section15 h5 {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .text-section12 .logo, .text-section13 .logo, .text-section14 .logo, .text-section15 .logo {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    /* 子文字 (sub-text) */
+    .text-section12 .sub-text1, .text-section13 .sub-text2, .text-section14 .sub-text3, .text-section15 .sub-text4 {
+        order: 3; /* 在 h5 和 logo 下面 */
+        font-size: 20px; /* 調整字體大小 */
+        font-style: italic;
+        color: #666;
+        margin-top: -10px;
+        margin-bottom: -10px;
+    }
+
+    /* 段落文字 */
+    .text-section12 p, .text-section13 p, .text-section14 p, .text-section15 p {
+        order: 4; /* 在子文字下面 */
+        font-size: 16px; /* 調整字體大小 */
+        line-height: 1.6; /* 行高 */
+        margin: 10px 0;
+    }
+
+    /* 按鈕組 */
+    .button-group {
+        order: 5; /* 在段落下面 */
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .shape-ex11 {
+        width: 100px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FF881A;
+        border: 1px solid #FF881A; /* 只保留边框 */
+        border-radius: 5px; /* 保留圆角 */
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        background-color: transparent; /* 确保背景透明 */
+        transition: none; /* 移除过渡效果 */
+    }
+
+    .shape-ex11:hover,
+    .shape-ex11:focus {
+        background-color: transparent; /* 移除 hover 背景变化 */
+        color: #FF881A; /* 保持文字颜色 */
+        border: 1px solid #FF881A; /* 保持边框 */
+    }
+
+    .shape-ex11::before,
+    .shape-ex11::after {
+        content: none; /* 移除装饰效果 */
+    }
+    /* 單一按鈕居中 */
+    .button-group a:only-child {
+        margin: 0 auto;
+    }
+
+    .back-home-button {
+        width: 120px;
+        display: block;
+        background: #FF881A; /* 橘色背景 */
+        color: #FFFFFF;
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 30px; /* 圓角效果 */
+        overflow: hidden;
+        padding: 12px 20px; /* 增加左右內距 */
+        transition: none; /* 移除动画过渡 */
+        position: absolute; /* 去掉絕對定位 */
+        align-self: center; /* 水平置中，需在 flex 容器內 */
+        left: 410px;
+        margin: 0 auto;
+        /* margin-top: -800px; */
+        
+      }
+
+
+    .back-home-button:hover,
+    .back-home-button:focus {
+        background: #FF881A; /* 保持原背景色 */
+        color: #FFFFFF; /* 保持原文字颜色 */
+    }
+
+    .back-home-button span {
+        display: none; /* 移除内部动画效果 */
+    }
+}
+
+/* ====================430px RWD========================= */
+@media screen and (max-width: 430px) {
+
+    /* *{
+        transition: none;
+        transform: none;
+    } */
+
+    .top > .fa {
+        display: block;
+    }
+    .wrapper{
+        max-width: 430px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        padding: 10px;
+        width: 100%;
+        }
+
+        .circle-container {
+            transform: scale(0.8); /* 等比例縮小 */
+            transform-origin: center; /* 從中心縮放 */
+            margin: 0 auto; /* 置中 */
+            display: flex;
+            flex-direction: column; /* 垂直排列 */
+            align-items: center; /* 水平置中 */
+            justify-content: center;
+            width: 100%; /* 確保不超出螢幕 */
+            text-align: center;
+            position: relative;
+            margin-top: -40px;
+        }
+    
+        /* 調整內部圓形的位置 */
+        .gray-circle {
+            height: 70px;
+            width: 70px;
+            position: absolute;
+            top: 120px; /* 根據縮放微調位置 */
+            left: 75%; /* 置中 */
+            transform: translateX(-50%); /* 水平置中 */
+        }
+    
+        .yellow-circle {
+            height: 60px;
+            width: 60px;
+            position: absolute;
+            top: 70px; /* 根據縮放微調位置 */
+            left: 12%; /* 置中 */
+            transform: translateX(-50%); /* 水平置中 */
+        }
+    
+        /* 調整 .text 大小並置中 */
+        .text {
+            font-size: 36px; /* 縮小文字大小 */
+            text-align: center; /* 保持文字居中 */
+            margin-top: 100px; /* 與圓形距離 */
+            width: 100%; /* 確保與畫面對齊 */
+            margin-bottom: 30px;
+            font-weight: 900;
+            font-family: "DM Sans";
+            line-height: 52px;
+            font-style: italic;
+            color: var(--Text_Black, #333);
+        }
+
+        .container12 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* 行間距 */
+            max-width: 100%; /* 滿屏寬 */
+            margin: 0 auto; /* 居中 */
+        }
+    
+        .row, .row.reverse {
+            display: flex;
+            flex-direction: column; /* 垂直排列 */
+            align-items: center; /* 水平置中 */
+            gap: 20px;
+            text-align: center; /* 文字居中 */
+            margin-bottom: 30px;
+        }
+    
+        /* 圖片區域 */
+        .image-section12, .image-section13, .image-section14, .image-section15 {
+            order: 1; /* 圖片在最上 */
+            width: 100%; /* 滿屏寬 */
+            text-align: center;
+        }
+    
+        .image-section12 img, .image-section13 img, .image-section14 img, .image-section15 img {
+            width: 80%; /* 圖片縮小 */
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .image-section12 img, .image-section13 img, .image-section14 img, .image-section15 img.hover-image:hover {
+            box-shadow:none;
+            transform: none;
+        }
+
+            /* 取消图片的 hover 效果 */
+    .image-section12 img,
+    .image-section13 img,
+    .image-section14 img,
+    .image-section15 img {
+        transition: none; /* 禁用动画效果 */
+        transform: none; /* 禁用缩放或旋转 */
+        box-shadow: none; /* 移除阴影 */
+    }
+
+    .image-section12 img:hover,
+    .image-section13 img:hover,
+    .image-section14 img:hover,
+    .image-section15 img:hover {
+        transform: none; /* 禁用缩放 */
+        box-shadow: none; /* 禁用阴影 */
+    }
+
+    
+        /* 文字區域 */
+        .text-section12, .text-section13, .text-section14, .text-section15 {
+            order: 2; /* 排在圖片下 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px; /* 元素間距 */
+            text-align: center;
+            width: 100%; /* 滿屏寬 */
+        }
+    
+        .text-section12 h5, .text-section13 h5, .text-section14 h5, .text-section15 h5 {
+            font-size: 20px; /* 調整字體大小 */
+            font-weight: bold;
+        }
+    
+        .text-section12 .logo, .text-section13 .logo, .text-section14 .logo, .text-section15 .logo {
+            width: 55px; /* 縮小 logo */
+            height: auto;
+            margin-left: 10px; /* 與文字間距 */
+        }
+    
+        /* h5 和 logo 水平排列 */
+        .text-section12 h5, .text-section13 h5, .text-section14 h5, .text-section15 h5 {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    
+        .text-section12 .logo, .text-section13 .logo, .text-section14 .logo, .text-section15 .logo {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    
+        /* 子文字 (sub-text) */
+        .text-section12 .sub-text1, .text-section13 .sub-text2, .text-section14 .sub-text3, .text-section15 .sub-text4 {
+            order: 3; /* 在 h5 和 logo 下面 */
+            font-size: 20px; /* 調整字體大小 */
+            font-style: italic;
+            color: #666;
+            margin-top: -10px;
+            margin-bottom: -10px;
+        }
+    
+        /* 段落文字 */
+        .text-section12 p, .text-section13 p, .text-section14 p, .text-section15 p {
+            order: 4; /* 在子文字下面 */
+            font-size: 16px; /* 調整字體大小 */
+            line-height: 1.6; /* 行高 */
+            margin: 10px 0;
+        }
+    
+        /* 按鈕組 */
+        .button-group {
+            order: 5; /* 在段落下面 */
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    
+        .shape-ex11 {
+            width: 100px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #FF881A;
+            border: 1px solid #FF881A; /* 只保留边框 */
+            border-radius: 5px; /* 保留圆角 */
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            background-color: transparent; /* 确保背景透明 */
+            transition: none; /* 移除过渡效果 */
+        }
+    
+        .shape-ex11:hover,
+        .shape-ex11:focus {
+            background-color: transparent; /* 移除 hover 背景变化 */
+            color: #FF881A; /* 保持文字颜色 */
+            border: 1px solid #FF881A; /* 保持边框 */
+        }
+    
+        .shape-ex11::before,
+        .shape-ex11::after {
+            content: none; /* 移除装饰效果 */
+        }
+        /* 單一按鈕居中 */
+        .button-group a:only-child {
+            margin: 0 auto;
+        }
+
+        .back-home-button {
+            width: 120px;
+            display: block;
+            background: #FF881A; /* 橘色背景 */
+            color: #FFFFFF;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 30px; /* 圓角效果 */
+            overflow: hidden;
+            padding: 12px 20px; /* 增加左右內距 */
+            transition: none;
+            margin: 20px auto; /* 置中對齊 */
+            position: absolute; /* 去掉絕對定位 */
+            align-self: center; /* 水平置中，需在 flex 容器內 */
+            left: 205px;
+            margin: 0 auto;
+            /* margin-top: -800px; */
+            
+          }
+    
+          .back-home-button:hover,
+          .back-home-button:focus {
+              background: #FF881A; /* 保持原背景色 */
+              color: #FFFFFF; /* 保持原文字颜色 */
+          }
+      
+          .back-home-button span {
+              display: none; /* 移除内部动画效果 */
+          }
+    }
+
+    /* ====================412px RWD========================= */
+@media screen and (max-width: 412px) {
+
+    .top > .fa {
+        display: block;
+    }
+
+    .wrapper{
+        max-width: 412px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        padding: 10px;
+        width: 100%;
+        }
+
+        .circle-container {
+            transform: scale(0.8); /* 等比例縮小 */
+            transform-origin: center; /* 從中心縮放 */
+            margin: 0 auto; /* 置中 */
+            display: flex;
+            flex-direction: column; /* 垂直排列 */
+            align-items: center; /* 水平置中 */
+            justify-content: center;
+            width: 100%; /* 確保不超出螢幕 */
+            text-align: center;
+            position: relative;
+            margin-top: -40px;
+        }
+    
+        /* 調整內部圓形的位置 */
+        .gray-circle {
+            height: 70px;
+            width: 70px;
+            position: absolute;
+            top: 120px; /* 根據縮放微調位置 */
+            left: 75%; /* 置中 */
+            transform: translateX(-50%); /* 水平置中 */
+        }
+    
+        .yellow-circle {
+            height: 60px;
+            width: 60px;
+            position: absolute;
+            top: 70px; /* 根據縮放微調位置 */
+            left: 12%; /* 置中 */
+            transform: translateX(-50%); /* 水平置中 */
+        }
+    
+        /* 調整 .text 大小並置中 */
+        .text {
+            font-size: 36px; /* 縮小文字大小 */
+            text-align: center; /* 保持文字居中 */
+            margin-top: 100px; /* 與圓形距離 */
+            width: 100%; /* 確保與畫面對齊 */
+            margin-bottom: 30px;
+            font-weight: 900;
+            font-family: "DM Sans";
+            line-height: 52px;
+            font-style: italic;
+            color: var(--Text_Black, #333);
+        }
+
+        .container12 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* 行間距 */
+            max-width: 100%; /* 滿屏寬 */
+            margin: 0 auto; /* 居中 */
+        }
+    
+        .row, .row.reverse {
+            display: flex;
+            flex-direction: column; /* 垂直排列 */
+            align-items: center; /* 水平置中 */
+            gap: 20px;
+            text-align: center; /* 文字居中 */
+            margin-bottom: 30px;
+        }
+    
+        /* 圖片區域 */
+        .image-section12, .image-section13, .image-section14, .image-section15 {
+            order: 1; /* 圖片在最上 */
+            width: 100%; /* 滿屏寬 */
+            text-align: center;
+        }
+    
+        .image-section12 img, .image-section13 img, .image-section14 img, .image-section15 img {
+            width: 80%; /* 圖片縮小 */
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .image-section12 img, .image-section13 img, .image-section14 img, .image-section15 img.hover-image:hover {
+            box-shadow:none;
+            transform: none;
+        }
+
+            /* 取消图片的 hover 效果 */
+    .image-section12 img,
+    .image-section13 img,
+    .image-section14 img,
+    .image-section15 img {
+        transition: none; /* 禁用动画效果 */
+        transform: none; /* 禁用缩放或旋转 */
+        box-shadow: none; /* 移除阴影 */
+    }
+
+    .image-section12 img:hover,
+    .image-section13 img:hover,
+    .image-section14 img:hover,
+    .image-section15 img:hover {
+        transform: none; /* 禁用缩放 */
+        box-shadow: none; /* 禁用阴影 */
+    }
+
+    
+        /* 文字區域 */
+        .text-section12, .text-section13, .text-section14, .text-section15 {
+            order: 2; /* 排在圖片下 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px; /* 元素間距 */
+            text-align: center;
+            width: 100%; /* 滿屏寬 */
+        }
+    
+        .text-section12 h5, .text-section13 h5, .text-section14 h5, .text-section15 h5 {
+            font-size: 20px; /* 調整字體大小 */
+            font-weight: bold;
+        }
+    
+        .text-section12 .logo, .text-section13 .logo, .text-section14 .logo, .text-section15 .logo {
+            width: 55px; /* 縮小 logo */
+            height: auto;
+            margin-left: 10px; /* 與文字間距 */
+        }
+    
+        /* h5 和 logo 水平排列 */
+        .text-section12 h5, .text-section13 h5, .text-section14 h5, .text-section15 h5 {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    
+        .text-section12 .logo, .text-section13 .logo, .text-section14 .logo, .text-section15 .logo {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    
+        /* 子文字 (sub-text) */
+        .text-section12 .sub-text1, .text-section13 .sub-text2, .text-section14 .sub-text3, .text-section15 .sub-text4 {
+            order: 3; /* 在 h5 和 logo 下面 */
+            font-size: 20px; /* 調整字體大小 */
+            font-style: italic;
+            color: #666;
+            margin-top: -10px;
+            margin-bottom: -10px;
+        }
+    
+        /* 段落文字 */
+        .text-section12 p, .text-section13 p, .text-section14 p, .text-section15 p {
+            order: 4; /* 在子文字下面 */
+            font-size: 16px; /* 調整字體大小 */
+            line-height: 1.6; /* 行高 */
+            margin: 10px 0;
+        }
+    
+        /* 按鈕組 */
+        .button-group {
+            order: 5; /* 在段落下面 */
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    
+        .shape-ex11 {
+            width: 100px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #FF881A;
+            border: 1px solid #FF881A; /* 只保留边框 */
+            border-radius: 5px; /* 保留圆角 */
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            background-color: transparent; /* 确保背景透明 */
+            transition: none; /* 移除过渡效果 */
+        }
+    
+        .shape-ex11:hover,
+        .shape-ex11:focus {
+            background-color: transparent; /* 移除 hover 背景变化 */
+            color: #FF881A; /* 保持文字颜色 */
+            border: 1px solid #FF881A; /* 保持边框 */
+        }
+    
+        .shape-ex11::before,
+        .shape-ex11::after {
+            content: none; /* 移除装饰效果 */
+        }
+        /* 單一按鈕居中 */
+        .button-group a:only-child {
+            margin: 0 auto;
+        }
+
+        .back-home-button {
+            width: 120px;
+            display: block;
+            background: #FF881A; /* 橘色背景 */
+            color: #FFFFFF;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 30px; /* 圓角效果 */
+            overflow: hidden;
+            padding: 12px 20px; /* 增加左右內距 */
+            transition: none;
+            margin: 20px auto; /* 置中對齊 */
+            position: absolute; /* 去掉絕對定位 */
+            align-self: center; /* 水平置中，需在 flex 容器內 */
+            left: 200px;
+            margin: 0 auto;
+            /* margin-top: -800px; */
+            
+          }
+    
+        .back-home-button:hover,
+        .back-home-button:focus {
+            background: #FF881A; /* 保持原背景色 */
+            color: #FFFFFF; /* 保持原文字颜色 */
+        }
+    
+        .back-home-button span {
+            display: none; /* 移除内部动画效果 */
+        }
+    
+    }
+
+    /* ====================390px RWD========================= */
+
+@media screen and (max-width: 390px) {
+
+    .top > .fa {
+        display: block;
+    }
+
+    .wrapper{
+        max-width: 390px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        padding: 10px;
+        width: 100%;
+        }
+        .circle-container {
+            transform: scale(0.8); /* 等比例縮小 */
+            transform-origin: center; /* 從中心縮放 */
+            margin: 0 auto; /* 置中 */
+            display: flex;
+            flex-direction: column; /* 垂直排列 */
+            align-items: center; /* 水平置中 */
+            justify-content: center;
+            width: 100%; /* 確保不超出螢幕 */
+            text-align: center;
+            position: relative;
+            margin-top: -40px;
+        }
+    
+        /* 調整內部圓形的位置 */
+        .gray-circle {
+            height: 70px;
+            width: 70px;
+            position: absolute;
+            top: 120px; /* 根據縮放微調位置 */
+            left: 75%; /* 置中 */
+            transform: translateX(-50%); /* 水平置中 */
+        }
+    
+        .yellow-circle {
+            height: 60px;
+            width: 60px;
+            position: absolute;
+            top: 70px; /* 根據縮放微調位置 */
+            left: 12%; /* 置中 */
+            transform: translateX(-50%); /* 水平置中 */
+        }
+    
+        /* 調整 .text 大小並置中 */
+        .text {
+            font-size: 36px; /* 縮小文字大小 */
+            text-align: center; /* 保持文字居中 */
+            margin-top: 100px; /* 與圓形距離 */
+            width: 100%; /* 確保與畫面對齊 */
+            margin-bottom: 30px;
+            font-weight: 900;
+            font-family: "DM Sans";
+            line-height: 52px;
+            font-style: italic;
+            color: var(--Text_Black, #333);
+        }
+
+        .container12 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* 行間距 */
+            max-width: 100%; /* 滿屏寬 */
+            margin: 0 auto; /* 居中 */
+        }
+    
+        .row, .row.reverse {
+            display: flex;
+            flex-direction: column; /* 垂直排列 */
+            align-items: center; /* 水平置中 */
+            gap: 20px;
+            text-align: center; /* 文字居中 */
+            margin-bottom: 30px;
+        }
+    
+        /* 圖片區域 */
+        .image-section12, .image-section13, .image-section14, .image-section15 {
+            order: 1; /* 圖片在最上 */
+            width: 100%; /* 滿屏寬 */
+            text-align: center;
+        }
+    
+        .image-section12 img, .image-section13 img, .image-section14 img, .image-section15 img {
+            width: 80%; /* 圖片縮小 */
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .image-section12 img, .image-section13 img, .image-section14 img, .image-section15 img.hover-image:hover {
+            box-shadow:none;
+            transform: none;
+        }
+
+            /* 取消图片的 hover 效果 */
+    .image-section12 img,
+    .image-section13 img,
+    .image-section14 img,
+    .image-section15 img {
+        transition: none; /* 禁用动画效果 */
+        transform: none; /* 禁用缩放或旋转 */
+        box-shadow: none; /* 移除阴影 */
+    }
+
+    .image-section12 img:hover,
+    .image-section13 img:hover,
+    .image-section14 img:hover,
+    .image-section15 img:hover {
+        transform: none; /* 禁用缩放 */
+        box-shadow: none; /* 禁用阴影 */
+    }
+
+    
+        /* 文字區域 */
+        .text-section12, .text-section13, .text-section14, .text-section15 {
+            order: 2; /* 排在圖片下 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px; /* 元素間距 */
+            text-align: center;
+            width: 100%; /* 滿屏寬 */
+        }
+    
+        .text-section12 h5, .text-section13 h5, .text-section14 h5, .text-section15 h5 {
+            font-size: 20px; /* 調整字體大小 */
+            font-weight: bold;
+        }
+    
+        .text-section12 .logo, .text-section13 .logo, .text-section14 .logo, .text-section15 .logo {
+            width: 55px; /* 縮小 logo */
+            height: auto;
+            margin-left: 10px; /* 與文字間距 */
+        }
+    
+        /* h5 和 logo 水平排列 */
+        .text-section12 h5, .text-section13 h5, .text-section14 h5, .text-section15 h5 {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    
+        .text-section12 .logo, .text-section13 .logo, .text-section14 .logo, .text-section15 .logo {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    
+        /* 子文字 (sub-text) */
+        .text-section12 .sub-text1, .text-section13 .sub-text2, .text-section14 .sub-text3, .text-section15 .sub-text4 {
+            order: 3; /* 在 h5 和 logo 下面 */
+            font-size: 20px; /* 調整字體大小 */
+            font-style: italic;
+            color: #666;
+            margin-top: -10px;
+            margin-bottom: -10px;
+        }
+    
+        /* 段落文字 */
+        .text-section12 p, .text-section13 p, .text-section14 p, .text-section15 p {
+            order: 4; /* 在子文字下面 */
+            font-size: 16px; /* 調整字體大小 */
+            line-height: 1.6; /* 行高 */
+            margin: 10px 0;
+        }
+    
+        /* 按鈕組 */
+        .button-group {
+            order: 5; /* 在段落下面 */
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    
+        .shape-ex11 {
+            width: 100px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #FF881A;
+            border: 1px solid #FF881A; /* 只保留边框 */
+            border-radius: 5px; /* 保留圆角 */
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            background-color: transparent; /* 确保背景透明 */
+            transition: none; /* 移除过渡效果 */
+        }
+    
+        .shape-ex11:hover,
+        .shape-ex11:focus {
+            background-color: transparent; /* 移除 hover 背景变化 */
+            color: #FF881A; /* 保持文字颜色 */
+            border: 1px solid #FF881A; /* 保持边框 */
+        }
+    
+        .shape-ex11::before,
+        .shape-ex11::after {
+            content: none; /* 移除装饰效果 */
+        }
+        /* 單一按鈕居中 */
+        .button-group a:only-child {
+            margin: 0 auto;
+        }
+
+        .back-home-button {
+            width: 120px;
+            display: block;
+            background: #FF881A; /* 橘色背景 */
+            color: #FFFFFF;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 30px; /* 圓角效果 */
+            overflow: hidden;
+            padding: 12px 20px; /* 增加左右內距 */
+            transition: none;
+            margin: 20px auto; /* 置中對齊 */
+            position: absolute; /* 去掉絕對定位 */
+            align-self: center; /* 水平置中，需在 flex 容器內 */
+            left: 180px;
+            margin: 0 auto;
+            /* margin-top: -800px; */
+            
+          }
+    
+          .back-home-button:hover,
+          .back-home-button:focus {
+              background: #FF881A; /* 保持原背景色 */
+              color: #FFFFFF; /* 保持原文字颜色 */
+          }
+      
+          .back-home-button span {
+              display: none; /* 移除内部动画效果 */
+          }
+    }

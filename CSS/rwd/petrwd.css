@@ -215,6 +215,16 @@
         left: 410px;
         
       }
+
+      .back-home-button:hover,
+      .back-home-button:focus {
+          background: #FF881A; /* 保持原背景色 */
+          color: #FFFFFF; /* 保持原文字颜色 */
+      }
+  
+      .back-home-button span {
+          display: none; /* 移除内部动画效果 */
+      }
            
 }
 
@@ -363,30 +373,34 @@
         margin-right: auto;
     }
     .back-home-button {
-        width: 120px;
+      width: 120px;
         display: block;
-        /* position: fixed; */
-        bottom: 50px;
-        z-index: 10;
-        /* min-width: 60px; */
         background: #FF881A; /* 橘色背景 */
         color: #FFFFFF;
         font-size: 1rem;
         font-weight: bold;
         text-align: center;
-        align-items: center;
-        justify-content: center;
         text-decoration: none;
         border-radius: 30px; /* 圓角效果 */
         overflow: hidden;
-        padding: 12px 0;
+        padding: 12px 20px; /* 增加左右內距 */
         transition: 0.5s;
+        margin: 20px auto; /* 置中對齊 */
+        position: absolute; /* 去掉絕對定位 */
+        align-self: center; /* 水平置中，需在 flex 容器內 */
+        left: 200px;
         margin: 0 auto;
-        /* margin-bottom: 150px;
-        margin-top: 150px; */
-        position: absolute;
-        left: 220px;
+        /* margin-top: -100px; */
         
+      }
+      .back-home-button:hover,
+      .back-home-button:focus {
+          background: #FF881A; /* 保持原背景色 */
+          color: #FFFFFF; /* 保持原文字颜色 */
+      }
+  
+      .back-home-button span {
+          display: none; /* 移除内部动画效果 */
       }
            
 
@@ -540,30 +554,35 @@
         margin-right: auto;
     }
     .back-home-button {
-        width: 120px;
-        display: block;
-        /* position: fixed; */
-        bottom: 50px;
-        z-index: 10;
-        /* min-width: 60px; */
-        background: #FF881A; /* 橘色背景 */
-        color: #FFFFFF;
-        font-size: 1rem;
-        font-weight: bold;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        border-radius: 30px; /* 圓角效果 */
-        overflow: hidden;
-        padding: 12px 0;
-        transition: 0.5s;
-        margin: 0 auto;
-        /* margin-bottom: 150px;
-        margin-top: 150px; */
-        position: absolute;
-        left: 200px;
+      width: 120px;
+      display: block;
+      background: #FF881A; /* 橘色背景 */
+      color: #FFFFFF;
+      font-size: 1rem;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 30px; /* 圓角效果 */
+      overflow: hidden;
+      padding: 12px 20px; /* 增加左右內距 */
+      transition: 0.5s;
+      margin: 20px auto; /* 置中對齊 */
+      position: absolute; /* 去掉絕對定位 */
+      align-self: center; /* 水平置中，需在 flex 容器內 */
+      /* left: 200px; */
+      margin: 0 auto;
+      /* margin-top: -100px; */
         
+      }
+
+      .back-home-button:hover,
+      .back-home-button:focus {
+          background: #FF881A; /* 保持原背景色 */
+          color: #FFFFFF; /* 保持原文字颜色 */
+      }
+  
+      .back-home-button span {
+          display: none; /* 移除内部动画效果 */
       }
               
 
@@ -586,7 +605,33 @@
         }
 
         .back-home-button{
-            left:190px;
+          width: 120px;
+          display: block;
+          background: #FF881A; /* 橘色背景 */
+          color: #FFFFFF;
+          font-size: 1rem;
+          font-weight: bold;
+          text-align: center;
+          text-decoration: none;
+          border-radius: 30px; /* 圓角效果 */
+          overflow: hidden;
+          padding: 12px 20px; /* 增加左右內距 */
+          transition: 0.5s;
+          position: absolute; /* 去掉絕對定位 */
+          align-self: center; /* 水平置中，需在 flex 容器內 */
+          /* left: 200px; */
+          margin: 0 auto;
+          /* margin-top: -100px; */
+        }
+
+        .back-home-button:hover,
+        .back-home-button:focus {
+            background: #FF881A; /* 保持原背景色 */
+            color: #FFFFFF; /* 保持原文字颜色 */
+        }
+    
+        .back-home-button span {
+            display: none; /* 移除内部动画效果 */
         }
 
 
