@@ -9,6 +9,7 @@
 .wrapper{
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
 }
 .container01 {
     width: 100%;
@@ -222,7 +223,7 @@
     border-radius: 30px; /* 圓角邊框 */
     padding: 20px;
     width: 300px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 添加陰影 */
+    box-shadow: 0 2px 4px rgba(246, 183, 86, 0.2); /* 添加陰影 */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -234,7 +235,7 @@
 
 .card:hover {
     transform: scale(1.05); /* 放大 */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8); /* 加深陰影 */
+    box-shadow: 0 8px 10px rgba(246, 183, 86, 0.8); /* 加深陰影 */
 }
 
 /* 卡片標題 */

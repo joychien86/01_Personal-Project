@@ -3,6 +3,7 @@
 .wrapper{
 max-width: 1200px;
 margin: 0 auto;
+width: 100%;
 }
 .logo .logo-image {
   width: 200px; 

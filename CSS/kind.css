@@ -17,6 +17,7 @@
   align-items: center; /* 水平居中 */
   justify-content: center; /* 垂直居中 */
   min-height: 100vh; /* 占满屏幕高度 */
+  width: 100%;
 }
 
 /* 頁面背景與文本樣式 */
