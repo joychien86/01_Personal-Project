@@ -200,6 +200,29 @@
         color: #fff;
         /* transition: color 0.3s ease; */
     }
+    .back-to-top{
+        right:30px;
+        bottom:220px;
+        width: 40px;
+        height: 40px;
+        display: flex; /* 使用 Flexbox */
+        justify-content: center; /* 水平置中 */
+        align-items: center; /* 垂直置中 */
+        background-color: #fff; /* 保持原本背景色 */
+       color:#FF881A ; /* 保持文字顏色 */
+       }  
+       
+       .back-to-top .fa {
+        font-size: 16px;
+      }
+
+      /* 清除 hover 效果 */
+   .back-to-top:hover {
+    background-color: #fff; /* 保持原本背景色 */
+    color:#FF881A ; /* 保持文字顏色 */
+    box-shadow: none; /* 移除陰影變化 */
+    opacity: 1; /* 確保按鈕仍可見 */
+      }
     }
 /* ====================430px RWD========================= */
 @media screen and (max-width: 430px) {
@@ -398,6 +421,30 @@ h2{ font-size: 20px; /* 文字也等比例縮小 */
     color: #fff;
     /* transition: color 0.3s ease; */
 }
+  /* 回到最上方按鈕樣式 */
+  .back-to-top{
+    right:30px;
+    bottom:270px;
+    width: 30px;
+    height: 30px;
+    display: flex; /* 使用 Flexbox */
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+    background-color: #fff; /* 保持原本背景色 */
+   color:#FF881A ; /* 保持文字顏色 */
+   }  
+   
+   .back-to-top .fa {
+    font-size: 16px;
+  }
+
+  /* 清除 hover 效果 */
+.back-to-top:hover {
+background-color: #fff; /* 保持原本背景色 */
+color:#FF881A ; /* 保持文字顏色 */
+box-shadow: none; /* 移除陰影變化 */
+opacity: 1; /* 確保按鈕仍可見 */
+  }
 }
 
 
@@ -579,6 +626,29 @@ h2{ font-size: 20px; /* 文字也等比例縮小 */
         color: #fff;
         /* transition: color 0.3s ease; */
     }
+    .back-to-top{
+        right:30px;
+        bottom:270px;
+        width: 30px;
+        height: 30px;
+        display: flex; /* 使用 Flexbox */
+        justify-content: center; /* 水平置中 */
+        align-items: center; /* 垂直置中 */
+        background-color: #fff; /* 保持原本背景色 */
+       color:#FF881A ; /* 保持文字顏色 */
+       }  
+       
+       .back-to-top .fa {
+        font-size: 16px;
+      }
+
+      /* 清除 hover 效果 */
+   .back-to-top:hover {
+    background-color: #fff; /* 保持原本背景色 */
+    color:#FF881A ; /* 保持文字顏色 */
+    box-shadow: none; /* 移除陰影變化 */
+    opacity: 1; /* 確保按鈕仍可見 */
+      }
 }
 
 
@@ -763,6 +833,30 @@ h2{ font-size: 20px; /* 文字也等比例縮小 */
               overflow: hidden;
               color: #fff;
               /* transition: color 0.3s ease; */
+          }
+          /* 回到最上方按鈕樣式 */
+          .back-to-top{
+            right:30px;
+            bottom:270px;
+            width: 30px;
+            height: 30px;
+            display: flex; /* 使用 Flexbox */
+            justify-content: center; /* 水平置中 */
+            align-items: center; /* 垂直置中 */
+            background-color: #fff; /* 保持原本背景色 */
+           color:#FF881A ; /* 保持文字顏色 */
+           }  
+           
+           .back-to-top .fa {
+            font-size: 16px;
+          }
+    
+          /* 清除 hover 效果 */
+       .back-to-top:hover {
+        background-color: #fff; /* 保持原本背景色 */
+        color:#FF881A ; /* 保持文字顏色 */
+        box-shadow: none; /* 移除陰影變化 */
+        opacity: 1; /* 確保按鈕仍可見 */
           }
 
 }

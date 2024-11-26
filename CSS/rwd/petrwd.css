@@ -225,6 +225,32 @@
       .back-home-button span {
           display: none; /* 移除内部动画效果 */
       }
+
+      
+      .back-to-top{
+        right:30px;
+        bottom:230px;
+        width: 40px;
+        height: 40px;
+        display: flex; /* 使用 Flexbox */
+        justify-content: center; /* 水平置中 */
+        align-items: center; /* 垂直置中 */
+        background-color: #fff; /* 保持原本背景色 */
+       color:#FF881A ; /* 保持文字顏色 */
+       }  
+       
+       .back-to-top .fa {
+        font-size: 16px;
+      }
+
+      /* 清除 hover 效果 */
+   .back-to-top:hover {
+    background-color: #fff; /* 保持原本背景色 */
+    color:#FF881A ; /* 保持文字顏色 */
+    box-shadow: none; /* 移除陰影變化 */
+    opacity: 1; /* 確保按鈕仍可見 */
+      }
+
            
 }
 
@@ -402,6 +428,31 @@
       .back-home-button span {
           display: none; /* 移除内部动画效果 */
       }
+
+      .back-to-top{
+        right:30px;
+        bottom:250px;
+        width: 30px;
+        height: 30px;
+        display: flex; /* 使用 Flexbox */
+        justify-content: center; /* 水平置中 */
+        align-items: center; /* 垂直置中 */
+        background-color: #fff; /* 保持原本背景色 */
+    color:#FF881A ; /* 保持文字顏色 */
+       }  
+       
+       .back-to-top .fa {
+        font-size: 16px;
+      }
+
+      /* 清除 hover 效果 */
+   .back-to-top:hover {
+    background-color: #fff; /* 保持原本背景色 */
+    color:#FF881A ; /* 保持文字顏色 */
+    box-shadow: none; /* 移除陰影變化 */
+    opacity: 1; /* 確保按鈕仍可見 */
+      }
+
            
 
 
@@ -584,7 +635,29 @@
       .back-home-button span {
           display: none; /* 移除内部动画效果 */
       }
-              
+           .back-to-top{
+            right:30px;
+            bottom:250px;
+            width: 30px;
+            height: 30px;
+            display: flex; /* 使用 Flexbox */
+            justify-content: center; /* 水平置中 */
+            align-items: center; /* 垂直置中 */
+            background-color: #fff; /* 保持原本背景色 */
+    color:#FF881A ; /* 保持文字顏色 */
+           }  
+           
+           .back-to-top .fa {
+            font-size: 16px;
+          }
+
+          /* 清除 hover 效果 */
+       .back-to-top:hover {
+        background-color: #fff; /* 保持原本背景色 */
+        color:#FF881A ; /* 保持文字顏色 */
+        box-shadow: none; /* 移除陰影變化 */
+        opacity: 1; /* 確保按鈕仍可見 */
+          }
 
 }
 
@@ -633,6 +706,31 @@
         .back-home-button span {
             display: none; /* 移除内部动画效果 */
         }
+
+        .back-to-top{
+          right:30px;
+          bottom:250px;
+          width: 30px;
+          height: 30px;
+          display: flex; /* 使用 Flexbox */
+          justify-content: center; /* 水平置中 */
+          align-items: center; /* 垂直置中 */
+          background-color: #fff; /* 保持原本背景色 */
+         color:#FF881A ; /* 保持文字顏色 */
+         }  
+         
+         .back-to-top .fa {
+          font-size: 16px;
+        }
+
+        /* 清除 hover 效果 */
+     .back-to-top:hover {
+      background-color: #fff; /* 保持原本背景色 */
+      color:#FF881A ; /* 保持文字顏色 */
+      box-shadow: none; /* 移除陰影變化 */
+      opacity: 1; /* 確保按鈕仍可見 */
+        }
+
 
 
 }
