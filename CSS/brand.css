@@ -12,11 +12,6 @@ margin:0 auto;
 width: 100%;
 }
 
-
-.logo .logo-image{
-    margin-top: 20px;
-}
-
 /* 圓形裝飾 */
 .circle-container {
     position: relative;
@@ -155,7 +150,7 @@ width: 100%;
     max-width: 300px;
 }
 
-.logo {
+.logo2 {
     width: 100px;
     margin-bottom: 20px;
     margin-left: 100px;

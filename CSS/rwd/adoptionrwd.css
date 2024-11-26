@@ -166,6 +166,7 @@
         width: 55px; /* 縮小 logo */
         height: auto;
         margin-left: 10px; /* 與文字間距 */
+        margin-bottom: 20px;
     }
 
     /* h5 和 logo 水平排列 */
@@ -416,6 +417,7 @@
             width: 55px; /* 縮小 logo */
             height: auto;
             margin-left: 10px; /* 與文字間距 */
+            margin-bottom: 20px;
         }
     
         /* h5 和 logo 水平排列 */
@@ -662,6 +664,7 @@
             width: 55px; /* 縮小 logo */
             height: auto;
             margin-left: 10px; /* 與文字間距 */
+            margin-bottom: 20px;
         }
     
         /* h5 和 logo 水平排列 */
@@ -909,6 +912,7 @@
             width: 55px; /* 縮小 logo */
             height: auto;
             margin-left: 10px; /* 與文字間距 */
+            margin-bottom: 20px;
         }
     
         /* h5 和 logo 水平排列 */
