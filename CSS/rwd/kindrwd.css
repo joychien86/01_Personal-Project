@@ -132,7 +132,7 @@
           
           /* 懸停時的文字變換效果 */
           .btn11:before {
-            content:none;
+            content:"";
             transform: none;
             transition: none;
           }
