@@ -8,17 +8,39 @@
     <link href="./CSS/south.css" rel="stylesheet" type="text/css">
     <link href="./CSS/header.css" rel="stylesheet" type="text/css">
     <link href="./CSS/nav_footer.css" rel="stylesheet" type="text/css">
+    <link href="./CSS/rwd/southrwd.css" rel="stylesheet" type="text/css">
+    <link href="./CSS/rwd/headerrwd.css" rel="stylesheet" type="text/css">
+    <link href="./CSS/rwd/footerrwd.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Doto:wght@100..900&display=swap" rel="stylesheet">
+      <!-- Owl Carousel CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+      
+      
+      <!-- jQuery -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      
+      <!-- Owl Carousel JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+      <!-- END -->
+    
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 </head>
     <body>
       
      <!-- 頁首的bar -->
      <header>
         <div class="container">
+            <div class="top">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                 </div>
             <div class="logo">
                 <a href="./index.html" target="_self"> 
                     <img src="./LOGO/Group 10 png.png" alt="毛絨星球 Logo" class="logo-image">
@@ -106,11 +128,11 @@
 <!------------------------------------------------------------------------------------>
 <div class="stats-section">
     <div class="stat-item">
-        <div class="stat-number">53</div>
+        <div class="stat-number" data-count="53">53</div>
         <div class="stat-label">特寵醫院總數</div>
     </div>
     <div class="stat-item">
-        <div class="stat-number">6</div>
+        <div class="stat-number" data-count="6">6</div>
         <div class="stat-label">夜間急診總數</div>
     </div>
     <div class="stat-date">
@@ -122,14 +144,17 @@
 <div class="card-container">
     <!-- 第一張卡片 -->
     <div class="card">
+        <a href="https://www.facebook.com/gaiavet/?locale=zh_TW" target="_blank" class="card-button00">
         <h3 class="card-title">蓋亞野生動物專科醫院</h3>
         <p class="card-info">地址:高雄市三民區建工路611號</p>
         <p class="card-info">(07)392-9353</p>
         <p class="card-info">營業時間：一~六 10:00~20:00</p>
         <a href="https://www.facebook.com/gaiavet/?locale=zh_TW" target="_blank" class="card-button">Learn more</a>
+    </a>
     </div>
     <!-- 第二張卡片 -->
     <div class="card">
+        <a href="https://www.facebook.com/monsterah62/" target="_blank" class="card-button00">
         <h3 class="card-title">
             <span class="card-icon">+</span> 大毛小毛動物醫院
         </h3>
@@ -137,15 +162,56 @@
         <p class="card-info">電話:(07)780-9102</p>
         <p class="card-info">營業時間:9:00-20:30</p>
         <a href="https://www.facebook.com/monsterah62/" target="_blank" class="card-button">Learn more</a>
+    </a>
     </div>
     <!-- 第三張卡片 -->
     <div class="card">
+        <a href="https://www.facebook.com/p/%E7%AA%A9%E7%AA%A9%E5%85%94%E5%8B%95%E7%89%A9%E9%86%AB%E9%99%A2-%E5%85%94%E5%B0%88%E7%A7%91%E9%BC%A0%E7%A7%91%E7%8A%AC%E7%A7%91%E8%B2%93%E7%A7%91%E5%B0%8F%E5%9E%8B%E5%93%BA%E4%B9%B3%E9%A1%9E%E9%86%AB%E9%99%A2-100066416025430/?locale=zh_TW" target="_blank" class="card-button00">
         <h3 class="card-title">窩窩兔動物醫院</h3>
         <p class="card-info">地址:高雄市苓雅區建民路67號</p>
         <p class="card-info">電話:(07) 713-0300</p>
         <p class="card-info">營業時間：二~日 9:30-20:30</p>
         <a href="https://www.facebook.com/p/%E7%AA%A9%E7%AA%A9%E5%85%94%E5%8B%95%E7%89%A9%E9%86%AB%E9%99%A2-%E5%85%94%E5%B0%88%E7%A7%91%E9%BC%A0%E7%A7%91%E7%8A%AC%E7%A7%91%E8%B2%93%E7%A7%91%E5%B0%8F%E5%9E%8B%E5%93%BA%E4%B9%B3%E9%A1%9E%E9%86%AB%E9%99%A2-100066416025430/?locale=zh_TW" target="_blank" class="card-button">Learn more</a>
+    </a>
     </div>
+
+        <!-- 第一張卡片 -->
+        <div class="card">
+            <a href="https://www.facebook.com/gaiavet/?locale=zh_TW" target="_blank" class="card-button00">
+            <h3 class="card-title">蓋亞野生動物專科醫院</h3>
+            <p class="card-info">地址:高雄市三民區建工路611號</p>
+            <p class="card-info">(07)392-9353</p>
+            <p class="card-info">營業時間：一~六 10:00~20:00</p>
+            <a href="https://www.facebook.com/gaiavet/?locale=zh_TW" target="_blank" class="card-button">Learn more</a>
+        </a>
+        </div>
+        <!-- 第二張卡片 -->
+        <div class="card">
+            <a href="https://www.facebook.com/monsterah62/" target="_blank" class="card-button00">
+            <h3 class="card-title">
+                <span class="card-icon">+</span> 大毛小毛動物醫院
+            </h3>
+            <p class="card-info">地址:高雄市三民區文濱路62號</p>
+            <p class="card-info">電話:(07)780-9102</p>
+            <p class="card-info">營業時間:9:00-20:30</p>
+            <a href="https://www.facebook.com/monsterah62/" target="_blank" class="card-button">Learn more</a>
+        </a>
+        </div>
+        <!-- 第三張卡片 -->
+        <div class="card">
+            <a href="https://www.facebook.com/p/%E7%AA%A9%E7%AA%A9%E5%85%94%E5%8B%95%E7%89%A9%E9%86%AB%E9%99%A2-%E5%85%94%E5%B0%88%E7%A7%91%E9%BC%A0%E7%A7%91%E7%8A%AC%E7%A7%91%E8%B2%93%E7%A7%91%E5%B0%8F%E5%9E%8B%E5%93%BA%E4%B9%B3%E9%A1%9E%E9%86%AB%E9%99%A2-100066416025430/?locale=zh_TW" target="_blank" class="card-button00">
+            <h3 class="card-title">窩窩兔動物醫院</h3>
+            <p class="card-info">地址:高雄市苓雅區建民路67號</p>
+            <p class="card-info">電話:(07) 713-0300</p>
+            <p class="card-info">營業時間：二~日 9:30-20:30</p>
+            <a href="https://www.facebook.com/p/%E7%AA%A9%E7%AA%A9%E5%85%94%E5%8B%95%E7%89%A9%E9%86%AB%E9%99%A2-%E5%85%94%E5%B0%88%E7%A7%91%E9%BC%A0%E7%A7%91%E7%8A%AC%E7%A7%91%E8%B2%93%E7%A7%91%E5%B0%8F%E5%9E%8B%E5%93%BA%E4%B9%B3%E9%A1%9E%E9%86%AB%E9%99%A2-100066416025430/?locale=zh_TW" target="_blank" class="card-button">Learn more</a>
+        </a>
+        </div>
+        <!-- back to top -->
+<div class="back-to-top" id="back-to-top" title="Back to top">
+    <i class="fa fa-chevron-up"></i>
+</div>
+<!-- back to top end-->
 <!---------------------------------------------------------------->
 <script src="./JS/scripts.js"></script> <!-- 連結到JavaScript文件 -->
 </div>
@@ -179,5 +245,8 @@
     <p>© 本網站為緯育TibaMe【第94期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</p>
 </div>
 </div>
+<script src="./JS/rwd/header.js"></script>
+<script src="./JS/count-animation.js"></script>
+<script src="./JS/back-to-top.js"></script>
 </body>
-</html>>
+</html>

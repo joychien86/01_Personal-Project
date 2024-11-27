@@ -8,17 +8,40 @@
     <link href="./CSS/hospital.css" rel="stylesheet" type="text/css">
     <link href="./CSS/header.css" rel="stylesheet" type="text/css">
     <link href="./CSS/nav_footer.css" rel="stylesheet" type="text/css">
+    <link href="./CSS/rwd/hospitalrwd.css" rel="stylesheet" type="text/css">
+    <link href="./CSS/rwd/headerrwd.css" rel="stylesheet" type="text/css">
+    <link href="./CSS/rwd/footerrwd.css" rel="stylesheet" type="text/css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Doto:wght@100..900&display=swap" rel="stylesheet">
+      <!-- Owl Carousel CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+      
+      
+      <!-- jQuery -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      
+      <!-- Owl Carousel JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+      <!-- END -->
+    
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 </head>
     <body>
         
      <!-- 頁首的bar -->
      <header>
         <div class="container">
+            <div class="top">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                 </div>
             <div class="logo">
                 <a href="./index.html" target="_self"> 
                     <img src="./LOGO/Group 10 png.png" alt="毛絨星球 Logo" class="logo-image">
@@ -105,11 +128,11 @@
 <!------------------------------------------------------------------------------------>
 <div class="stats-section">
     <div class="stat-item">
-        <div class="stat-number">52</div>
-        <div class="stat-label">特寵醫院總數</div>
+        <div class="stat-number" data-count="52">52</div>
+        <div class="stat-label" >特寵醫院總數</div>
     </div>
     <div class="stat-item">
-        <div class="stat-number">7</div>
+        <div class="stat-number"  data-count="7">7</div>
         <div class="stat-label">夜間急診總數</div>
     </div>
     <div class="stat-date">
@@ -120,15 +143,20 @@
 <!------------------------------------------------------------------------------------>
 <div class="card-container">
     <!-- 第一張卡片 -->
+    
     <div class="card">
+        <a href="https://www.ark.vet/?utm_source=google&utm_medium=cpc&utm_campaign=sem_brand&gad_source=1&gclid=Cj0KCQjwvpy5BhDTARIsAHSilykZMsncJxkY4q9s5NM0qQDTD-fZsVJvmrkr9nfO3Yu-i1dZwH6ENxAaAplsEALw_wcB" target="_blank" class="card-button00">
         <h3 class="card-title">亞各特殊寵物專科醫院</h3>
         <p class="card-info">地址:台北市南港區研究路一段101巷12號</p>
         <p class="card-info">電話：(02)2653-3636</p>
         <p class="card-info">營業時間：一~六 10:30~21:30</p>
         <a href="https://www.ark.vet/?utm_source=google&utm_medium=cpc&utm_campaign=sem_brand&gad_source=1&gclid=Cj0KCQjwvpy5BhDTARIsAHSilykZMsncJxkY4q9s5NM0qQDTD-fZsVJvmrkr9nfO3Yu-i1dZwH6ENxAaAplsEALw_wcB" target="_blank" class="card-button">Learn more</a>
+    </a>
     </div>
+
     <!-- 第二張卡片 -->
     <div class="card">
+        <a href="http://www.boulderyard24.com/?gad_source=1&gclid=Cj0KCQjwvpy5BhDTARIsAHSilynJb_CVSRRdTrf7KJzfatYivBbKhOtR_O5Z2Vs2QtvTeK7M-J-PFlEaAnqJEALw_wcB" target="_blank" class="card-button00">
         <h3 class="card-title">
             <span class="card-icon">+</span> 布達羊動物醫院
         </h3>
@@ -136,20 +164,63 @@
         <p class="card-info">電話:(02)2834-1119</p>
         <p class="card-info">營業時間:24hr</p>
         <a href="http://www.boulderyard24.com/?gad_source=1&gclid=Cj0KCQjwvpy5BhDTARIsAHSilynJb_CVSRRdTrf7KJzfatYivBbKhOtR_O5Z2Vs2QtvTeK7M-J-PFlEaAnqJEALw_wcB" target="_blank" class="card-button">Learn more</a>
+    </a>
     </div>
     <!-- 第三張卡片 -->
     <div class="card">
+        <a href="https://www.facebook.com/z3vet/?locale=zh_TW" target="_blank" class="card-button00">
         <h3 class="card-title">芝山動物醫院</h3>
         <p class="card-info">地址:台北市士林區文林路262-2號</p>
         <p class="card-info">電話：(02)2832-8385</p>
         <p class="card-info">營業時間：一~日 10:00~21:00</p>
         <a href="https://www.facebook.com/z3vet/?locale=zh_TW" target="_blank" class="card-button">Learn more</a>
+    </a>
     </div>
+ <!-- 第一張卡片 -->
+    
+ <div class="card">
+    <a href="https://www.ark.vet/?utm_source=google&utm_medium=cpc&utm_campaign=sem_brand&gad_source=1&gclid=Cj0KCQjwvpy5BhDTARIsAHSilykZMsncJxkY4q9s5NM0qQDTD-fZsVJvmrkr9nfO3Yu-i1dZwH6ENxAaAplsEALw_wcB" target="_blank" class="card-button00">
+    <h3 class="card-title">亞各特殊寵物專科醫院</h3>
+    <p class="card-info">地址:台北市南港區研究路一段101巷12號</p>
+    <p class="card-info">電話：(02)2653-3636</p>
+    <p class="card-info">營業時間：一~六 10:30~21:30</p>
+    <a href="https://www.ark.vet/?utm_source=google&utm_medium=cpc&utm_campaign=sem_brand&gad_source=1&gclid=Cj0KCQjwvpy5BhDTARIsAHSilykZMsncJxkY4q9s5NM0qQDTD-fZsVJvmrkr9nfO3Yu-i1dZwH6ENxAaAplsEALw_wcB" target="_blank" class="card-button">Learn more</a>
+</a>
+</div>
+
+<!-- 第二張卡片 -->
+<div class="card">
+    <a href="http://www.boulderyard24.com/?gad_source=1&gclid=Cj0KCQjwvpy5BhDTARIsAHSilynJb_CVSRRdTrf7KJzfatYivBbKhOtR_O5Z2Vs2QtvTeK7M-J-PFlEaAnqJEALw_wcB" target="_blank" class="card-button00">
+    <h3 class="card-title">
+        <span class="card-icon">+</span> 布達羊動物醫院
+    </h3>
+    <p class="card-info">地址:台北市士林區志成路一段102號</p>
+    <p class="card-info">電話:(02)2834-1119</p>
+    <p class="card-info">營業時間:24hr</p>
+    <a href="http://www.boulderyard24.com/?gad_source=1&gclid=Cj0KCQjwvpy5BhDTARIsAHSilynJb_CVSRRdTrf7KJzfatYivBbKhOtR_O5Z2Vs2QtvTeK7M-J-PFlEaAnqJEALw_wcB" target="_blank" class="card-button">Learn more</a>
+</a>
+</div>
+<!-- 第三張卡片 -->
+<div class="card">
+    <a href="https://www.facebook.com/z3vet/?locale=zh_TW" target="_blank" class="card-button00">
+    <h3 class="card-title">芝山動物醫院</h3>
+    <p class="card-info">地址:台北市士林區文林路262-2號</p>
+    <p class="card-info">電話：(02)2832-8385</p>
+    <p class="card-info">營業時間：一~日 10:00~21:00</p>
+    <a href="https://www.facebook.com/z3vet/?locale=zh_TW" target="_blank" class="card-button">Learn more</a>
+</a>
+</div>
+    <!-- back to top -->
+<div class="back-to-top" id="back-to-top" title="Back to top">
+    <i class="fa fa-chevron-up"></i>
+</div>
+<!-- back to top end-->
 </div>
 <!---------------------------------------------------------------->
 <script src="./JS/scripts.js"></script> <!-- 連結到JavaScript文件 -->
+
 </div>
-<!--footer-->>
+<!--footer-->
 <div class="footer">
     <div class="footer-top">
         <!-- Logo 和網站名稱 -->
@@ -177,5 +248,9 @@
     <p>© 本網站為緯育TibaMe【第94期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</p>
 </div>
 </div>
+<script src="./JS/rwd/header.js"></script>
+<script src="./JS/count-animation.js"></script>
+<script src="./JS/back-to-top.js"></script>
+
 </body>
 </html>

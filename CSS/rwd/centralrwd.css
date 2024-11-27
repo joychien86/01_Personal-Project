@@ -1,0 +1,921 @@
+/* ====================1440px RWD========================= */
+@media screen and (max-width:1440px){
+    .wrapper{
+        margin: 0 auto;
+        width: 100%;
+    }
+    .top > .fa{
+        display: none;
+    }
+    .back-to-top{
+        display: block;
+      }
+  
+    
+
+}
+/* ====================1200px RWD========================= */
+
+@media screen and (max-width:1200px){
+    .wrapper{
+        margin: 0 auto;
+        width: 100%;
+    }
+    .top > .fa{
+        display: none;
+    }
+    .back-to-top{
+        display: block;
+      }
+  
+}
+
+/* ====================820px RWD========================= */
+
+ /* 讓圖片置於畫面正中間 */
+ @media screen and (max-width: 820px) {
+    .top > .fa {
+        display: block;
+    }
+
+    .back-to-top{
+        display: block;
+      }
+
+      .container01 {
+        display: flex;
+        justify-content: space-around; /* 四個按鈕水平對齊 */
+        flex-wrap: nowrap; /* 禁止按鈕換行 */
+        gap: 5px;
+        margin-bottom: -60px;
+    }
+
+    .container01 .button {
+        display: flex;
+        flex-direction: column; /* 縱向排列 */
+        align-items: center; /* 水平置中 */
+        justify-content: center; /* 垂直置中 */
+        width: 120px; /* 縮小按鈕尺寸 */
+        height: 120px;
+        font-size: 40px; /* 調整字體大小 */
+        border-radius: 50%; /* 圓形按鈕 */
+        text-align: center;
+    }
+
+    .container01 .button img {
+        width: 40px; /* 縮小圖標 */
+        height: 40px;
+        margin-bottom: 5px; /* 圖片和文字間距 */
+    }
+
+    .container01 .button span {
+        font-size: 20px; /* 調整文字大小 */
+        margin-top: 5px;
+    }
+
+    .container01 .button.active {
+        background-color: #FF7A45; /* 活躍按鈕橙色背景 */
+        color: white; /* 白色文字 */
+    }
+
+    .container01 .button.inactive {
+        background-color: #FFECD9; /* 非活躍按鈕淺橙背景 */
+        color: #333; /* 深灰色文字 */
+    }
+
+    .recommendation-section {
+
+        max-width: 820px;
+        display: flex;
+        flex-direction: column; /* 內容垂直排列 */
+        align-items: center;
+        text-align: center;
+        margin: 20px auto;
+        padding: 60px 10px;
+    }
+
+    .recommendation-section .title {
+        font-size: 28px; /* 調整字體大小 */
+        line-height: 65px;
+        color:#fff;
+        font-weight: 650;
+        /* padding-top: 6px; */
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* 添加陰影效果 */
+    }
+
+    .icon-text {
+        margin-top: 10px;
+        font-size: 14px; /* 調整文字大小 */
+    }
+
+    .stats-section {
+        display: flex;
+        flex-direction: column; /* 改為垂直對齊 */
+        align-items: center;
+        gap: 20px; /* 元素之間的間距 */
+        padding: 5px 0;
+        margin-top: -80px;
+    }
+
+    .stat-item {
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+
+    .stat-number {
+        font-size: 52px; /* 縮小字體 */
+        font-weight: bold;
+        margin-bottom: 5px;
+        
+    }
+
+    .stat-label {
+        font-size: 24px; /* 縮小字體 */
+    }
+
+    /* Date Section */
+.stat-date {
+    padding-right: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 14px; /* 日期字體大小 */
+    color: #999; /* 灰色 */
+    display: flex;
+    align-items: center;
+    gap: 8px; /* 小圓點和文字之間的間距 */
+    margin-bottom: 20px;
+    font-family: "DM Sans";
+}
+
+.date-dot {
+    width: 20px;
+    height: 20px;
+    background-color: #FFA94D; /* 橙色圓點 */
+    border-radius: 50%; /* 圓形 */
+    /* margin-bottom: 20px; */
+    /* margin-bottom: 20px; */
+}
+
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 每列顯示兩張卡片 */
+       gap: 20px; /* 卡片之間的垂直間距仍維持 20px */
+        justify-content: center; /* 水平置中 */
+        padding: 60px auto;
+    }
+
+    .card {
+        margin: 0 auto; /* 確保卡片居中*/ 
+        /* padding-left: 10px; */
+    }
+
+    .card:hover {
+        transform: none; /* 移除放大效果 */
+        box-shadow: none; /* 移除陰影效果 */
+    }
+    
+    .card-button:hover {
+        background-color: #FF7A45; /* 保持背景色不變 */
+        color: #fff; /* 保持文字顏色不變 */
+    }
+
+    /* Background Circles - 背景圓形樣式 */
+.background-circle {
+position: absolute; /* 絕對定位，依據 .text-container 定位 */
+border-radius: 50%; /* 設置為 50% 以形成圓形 */
+background-color: #FFC966; /* 設置背景顏色為淺橙色 */
+}
+
+.background-circle.large {
+width: 60px; /* 大圓的寬度 */
+height: 60px; /* 大圓的高度 */
+top: -20px; /* 調整上方位置 */
+left: -45px; /* 調整左邊位置，使其更靠近標題 */
+z-index: -1;
+background-color: #FFC966;
+}
+
+.background-circle.small {
+width: 60px; /* 小圓的寬度 */
+height: 60px; /* 小圓的高度 */
+background-color: #FFC966;; /* 橙色背景，覆蓋掉大圓的淺橙色 */
+top: 30px; /* 向下移動 */
+right: -50px; /* 調整右邊位置 */
+z-index: -1;
+}
+
+
+/* Title Background - 標題背景矩形 */
+.title-background {
+position: absolute; /* 絕對定位，確保背景矩形置於標題文字後 */
+background-color:rgb(255, 136, 26, .8);/* 標題背景矩形的顏色為淺橙色 */
+width: 1440px; /* 背景矩形的寬度 */
+height: 65px; /* 背景矩形的高度 */
+top: 25%; /* 垂直位置為容器的 50% */
+left: 50%; /* 水平位置為容器的 50% */
+transform: translate(-50%, -50%); /* 使用 translate 將背景矩形置中 */
+z-index: -3; /* 將背景矩形置於文字後面 */
+}
+
+/* Icon and Description Text - 圖示與描述文字 */
+.icon-text {
+display: flex; /* 使用 flex 排版，讓圖示與文字在同一行 */
+align-items: center; /* 圖示和文字垂直置中對齊 */
+justify-content: center; /* 水平置中對齊 */
+margin-top: 20px; /* 上方的間距 30px */
+font-weight: 500px;
+}
+
+.icon {
+font-size: 30px;
+color: #FF7A45;
+font-weight: 900;
+text-shadow: 
+    1px 0 #FF7A45,  /* 右邊陰影 */
+   -1px 0 #FF7A45,  /* 左邊陰影 */
+    0 1px #FF7A45,  /* 下方陰影 */
+    0 -1px #FF7A45; /* 上方陰影 */
+    /* margin-top: 30px; */
+}
+
+.description {
+font-size: 20px; /* 描述文字的字體大小 */
+color: #FF7A45; /* 橙色文字 */
+/* margin-top: 30px; */
+
+}
+
+.back-to-top{
+    right:30px;
+    bottom:220px;
+    width: 40px;
+    height: 40px;
+    display: flex; /* 使用 Flexbox */
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+    background-color: #fff; /* 保持原本背景色 */
+   color:#FF881A ; /* 保持文字顏色 */
+   }  
+   
+   .back-to-top .fa {
+    font-size: 16px;
+  }
+
+  /* 清除 hover 效果 */
+.back-to-top:hover {
+background-color: #fff; /* 保持原本背景色 */
+color:#FF881A ; /* 保持文字顏色 */
+box-shadow: none; /* 移除陰影變化 */
+opacity: 1; /* 確保按鈕仍可見 */
+  }
+   
+  
+}
+/* ====================430px RWD========================= */
+
+    /* 讓圖片置於畫面正中間 */
+    @media screen and (max-width: 430px) {
+        .container01 {
+            display: flex;
+            justify-content: space-around; /* 四個按鈕水平對齊 */
+            flex-wrap: nowrap; /* 禁止按鈕換行 */
+            gap: 5px;
+            margin-bottom: -60px;
+        }
+    
+        .container01 .button {
+            display: flex;
+            flex-direction: column; /* 縱向排列 */
+            align-items: center; /* 水平置中 */
+            justify-content: center; /* 垂直置中 */
+            width: 80px; /* 縮小按鈕尺寸 */
+            height: 80px;
+            font-size: 20px; /* 調整字體大小 */
+            border-radius: 50%; /* 圓形按鈕 */
+            text-align: center;
+        }
+    
+        .container01 .button img {
+            width: 30px; /* 縮小圖標 */
+            height: 30px;
+            margin-bottom: 5px; /* 圖片和文字間距 */
+        }
+    
+        .container01 .button span {
+            font-size: 10px; /* 調整文字大小 */
+        }
+    
+        .container01 .button.active {
+            background-color: #FF7A45; /* 活躍按鈕橙色背景 */
+            color: white; /* 白色文字 */
+        }
+    
+        .container01 .button.inactive {
+            background-color: #FFECD9; /* 非活躍按鈕淺橙背景 */
+            color: #333; /* 深灰色文字 */
+        }
+    
+        .recommendation-section {
+
+            max-width: 430px;
+            display: flex;
+            flex-direction: column; /* 內容垂直排列 */
+            align-items: center;
+            text-align: center;
+            margin: 20px auto;
+            padding: 60px 10px;
+        }
+    
+        .recommendation-section .title {
+            font-size: 28px; /* 調整字體大小 */
+            line-height: 65px;
+            color:#fff;
+            font-weight: 650;
+            /* padding-top: 6px; */
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* 添加陰影效果 */
+        }
+    
+        .icon-text {
+            margin-top: 10px;
+            font-size: 14px; /* 調整文字大小 */
+        }
+    
+        .stats-section {
+            display: flex;
+            flex-direction: column; /* 改為垂直對齊 */
+            align-items: center;
+            gap: 20px; /* 元素之間的間距 */
+            padding: 5px 0;
+            margin-top: -80px;
+        }
+    
+        .stat-item {
+            text-align: center;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+    
+        .stat-number {
+            font-size: 52px; /* 縮小字體 */
+            font-weight: bold;
+            margin-bottom: 5px;
+            
+        }
+    
+        .stat-label {
+            font-size: 24px; /* 縮小字體 */
+        }
+    
+        .stat-date {
+            display: none
+        }
+    
+        .card-container {
+            display: flex;
+            flex-direction: column; /* 卡片垂直堆疊 */
+            align-items: center;
+            gap: 20px;
+            padding: 0 10px;
+        }
+    
+        .card {
+            width: 90%; /* 調整卡片寬度 */
+        }
+
+        .card:hover {
+            transform: none; /* 移除放大效果 */
+            box-shadow: none; /* 移除陰影效果 */
+        }
+        
+        .card-button:hover {
+            background-color: #FF7A45; /* 保持背景色不變 */
+            color: #fff; /* 保持文字顏色不變 */
+        }
+
+        /* Background Circles - 背景圓形樣式 */
+.background-circle {
+    position: absolute; /* 絕對定位，依據 .text-container 定位 */
+    border-radius: 50%; /* 設置為 50% 以形成圓形 */
+    background-color: #FFC966; /* 設置背景顏色為淺橙色 */
+}
+
+.background-circle.large {
+    width: 60px; /* 大圓的寬度 */
+    height: 60px; /* 大圓的高度 */
+    top: -20px; /* 調整上方位置 */
+    left: -45px; /* 調整左邊位置，使其更靠近標題 */
+    z-index: -1;
+    background-color: #FFC966;
+}
+
+.background-circle.small {
+    width: 60px; /* 小圓的寬度 */
+    height: 60px; /* 小圓的高度 */
+    background-color: #FFC966;; /* 橙色背景，覆蓋掉大圓的淺橙色 */
+    top: 30px; /* 向下移動 */
+    right: -50px; /* 調整右邊位置 */
+    z-index: -1;
+}
+
+
+/* Title Background - 標題背景矩形 */
+.title-background {
+    position: absolute; /* 絕對定位，確保背景矩形置於標題文字後 */
+    background-color:rgb(255, 136, 26, .8);/* 標題背景矩形的顏色為淺橙色 */
+    width: 1440px; /* 背景矩形的寬度 */
+    height: 65px; /* 背景矩形的高度 */
+    top: 25%; /* 垂直位置為容器的 50% */
+    left: 50%; /* 水平位置為容器的 50% */
+    transform: translate(-50%, -50%); /* 使用 translate 將背景矩形置中 */
+    z-index: -3; /* 將背景矩形置於文字後面 */
+}
+
+/* Icon and Description Text - 圖示與描述文字 */
+.icon-text {
+    display: flex; /* 使用 flex 排版，讓圖示與文字在同一行 */
+    align-items: center; /* 圖示和文字垂直置中對齊 */
+    justify-content: center; /* 水平置中對齊 */
+    margin-top: 20px; /* 上方的間距 30px */
+    font-weight: 500px;
+}
+
+.icon {
+    font-size: 30px;
+    color: #FF7A45;
+    font-weight: 900;
+    text-shadow: 
+        1px 0 #FF7A45,  /* 右邊陰影 */
+       -1px 0 #FF7A45,  /* 左邊陰影 */
+        0 1px #FF7A45,  /* 下方陰影 */
+        0 -1px #FF7A45; /* 上方陰影 */
+        /* margin-top: 30px; */
+}
+
+.description {
+    font-size: 20px; /* 描述文字的字體大小 */
+    color: #FF7A45; /* 橙色文字 */
+    /* margin-top: 30px; */
+    
+}
+
+.back-to-top{
+    right:30px;
+    bottom:250px;
+    width: 30px;
+    height: 30px;
+    display: flex; /* 使用 Flexbox */
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+    background-color: #fff; /* 保持原本背景色 */
+   color:#FF881A ; /* 保持文字顏色 */
+   }  
+   
+   .back-to-top .fa {
+    font-size: 16px;
+  }
+
+  /* 清除 hover 效果 */
+.back-to-top:hover {
+background-color: #fff; /* 保持原本背景色 */
+color:#FF881A ; /* 保持文字顏色 */
+box-shadow: none; /* 移除陰影變化 */
+opacity: 1; /* 確保按鈕仍可見 */
+  }
+       
+
+
+}
+
+
+/* ===================412px RWD========================= */
+
+    /* 讓圖片置於畫面正中間 */
+    @media screen and (max-width: 412px) {
+
+        .container01 {
+            display: flex;
+            justify-content: space-around; /* 四個按鈕水平對齊 */
+            flex-wrap: nowrap; /* 禁止按鈕換行 */
+            gap: 5px;
+            margin-bottom: -60px;
+        }
+    
+        .container01 .button {
+            display: flex;
+            flex-direction: column; /* 縱向排列 */
+            align-items: center; /* 水平置中 */
+            justify-content: center; /* 垂直置中 */
+            width: 80px; /* 縮小按鈕尺寸 */
+            height: 80px;
+            font-size: 20px; /* 調整字體大小 */
+            border-radius: 50%; /* 圓形按鈕 */
+            text-align: center;
+        }
+    
+        .container01 .button img {
+            width: 30px; /* 縮小圖標 */
+            height: 30px;
+            margin-bottom: 5px; /* 圖片和文字間距 */
+        }
+    
+        .container01 .button span {
+            font-size: 10px; /* 調整文字大小 */
+        }
+    
+        .container01 .button.active {
+            background-color: #FF7A45; /* 活躍按鈕橙色背景 */
+            color: white; /* 白色文字 */
+        }
+    
+        .container01 .button.inactive {
+            background-color: #FFECD9; /* 非活躍按鈕淺橙背景 */
+            color: #333; /* 深灰色文字 */
+        }
+    
+        .recommendation-section {
+
+            max-width: 412px;
+            display: flex;
+            flex-direction: column; /* 內容垂直排列 */
+            align-items: center;
+            text-align: center;
+            margin: 20px auto;
+            padding: 60px 10px;
+        }
+    
+        .recommendation-section .title {
+            font-size: 28px; /* 調整字體大小 */
+            line-height: 65px;
+            color:#fff;
+            font-weight: 650;
+            /* padding-top: 6px; */
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* 添加陰影效果 */
+        }
+    
+        .icon-text {
+            margin-top: 10px;
+            font-size: 14px; /* 調整文字大小 */
+        }
+    
+        .stats-section {
+            display: flex;
+            flex-direction: column; /* 改為垂直對齊 */
+            align-items: center;
+            gap: 20px; /* 元素之間的間距 */
+            padding: 5px 0;
+            margin-top: -80px;
+        }
+    
+        .stat-item {
+            text-align: center;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+    
+        .stat-number {
+            font-size: 52px; /* 縮小字體 */
+            font-weight: bold;
+            margin-bottom: 5px;
+            
+        }
+    
+        .stat-label {
+            font-size: 24px; /* 縮小字體 */
+        }
+    
+        .stat-date {
+            display: none
+        }
+    
+        .card-container {
+            display: flex;
+            flex-direction: column; /* 卡片垂直堆疊 */
+            align-items: center;
+            gap: 20px;
+            padding: 0 10px;
+        }
+    
+        .card {
+            width: 90%; /* 調整卡片寬度 */
+        }
+
+        .card:hover {
+            transform: none; /* 移除放大效果 */
+            box-shadow: none; /* 移除陰影效果 */
+        }
+        
+        .card-button:hover {
+            background-color: #FF7A45; /* 保持背景色不變 */
+            color: #fff; /* 保持文字顏色不變 */
+        }
+
+        /* Background Circles - 背景圓形樣式 */
+.background-circle {
+    position: absolute; /* 絕對定位，依據 .text-container 定位 */
+    border-radius: 50%; /* 設置為 50% 以形成圓形 */
+    background-color: #FFC966; /* 設置背景顏色為淺橙色 */
+}
+
+.background-circle.large {
+    width: 60px; /* 大圓的寬度 */
+    height: 60px; /* 大圓的高度 */
+    top: -20px; /* 調整上方位置 */
+    left: -45px; /* 調整左邊位置，使其更靠近標題 */
+    z-index: -1;
+    background-color: #FFC966;
+}
+
+.background-circle.small {
+    width: 60px; /* 小圓的寬度 */
+    height: 60px; /* 小圓的高度 */
+    background-color: #FFC966;; /* 橙色背景，覆蓋掉大圓的淺橙色 */
+    top: 30px; /* 向下移動 */
+    right: -50px; /* 調整右邊位置 */
+    z-index: -1;
+}
+
+
+/* Title Background - 標題背景矩形 */
+.title-background {
+    position: absolute; /* 絕對定位，確保背景矩形置於標題文字後 */
+    background-color:rgb(255, 136, 26, .8);/* 標題背景矩形的顏色為淺橙色 */
+    width: 415px; /* 背景矩形的寬度 */
+    height: 65px; /* 背景矩形的高度 */
+    top: 25%; /* 垂直位置為容器的 50% */
+    left: 50%; /* 水平位置為容器的 50% */
+    transform: translate(-50%, -50%); /* 使用 translate 將背景矩形置中 */
+    z-index: -3; /* 將背景矩形置於文字後面 */
+}
+
+/* Icon and Description Text - 圖示與描述文字 */
+.icon-text {
+    display: flex; /* 使用 flex 排版，讓圖示與文字在同一行 */
+    align-items: center; /* 圖示和文字垂直置中對齊 */
+    justify-content: center; /* 水平置中對齊 */
+    margin-top: 20px; /* 上方的間距 30px */
+    font-weight: 500px;
+}
+
+.icon {
+    font-size: 30px;
+    color: #FF7A45;
+    font-weight: 900;
+    text-shadow: 
+        1px 0 #FF7A45,  /* 右邊陰影 */
+       -1px 0 #FF7A45,  /* 左邊陰影 */
+        0 1px #FF7A45,  /* 下方陰影 */
+        0 -1px #FF7A45; /* 上方陰影 */
+        /* margin-top: 30px; */
+}
+
+.description {
+    font-size: 20px; /* 描述文字的字體大小 */
+    color: #FF7A45; /* 橙色文字 */
+    /* margin-top: 30px; */
+    
+}
+
+.back-to-top{
+    right:30px;
+    bottom:250px;
+    width: 30px;
+    height: 30px;
+    display: flex; /* 使用 Flexbox */
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+    background-color: #fff; /* 保持原本背景色 */
+   color:#FF881A ; /* 保持文字顏色 */
+   }  
+   
+   .back-to-top .fa {
+    font-size: 16px;
+  }
+
+  /* 清除 hover 效果 */
+.back-to-top:hover {
+background-color: #fff; /* 保持原本背景色 */
+color:#FF881A ; /* 保持文字顏色 */
+box-shadow: none; /* 移除陰影變化 */
+opacity: 1; /* 確保按鈕仍可見 */
+  }
+
+
+
+}
+
+/* ====================390px RWD========================= */
+
+/* 讓圖片置於畫面正中間 */
+@media screen and (max-width: 390px) {
+
+    .container01 {
+        display: flex;
+        justify-content: space-around; /* 四個按鈕水平對齊 */
+        flex-wrap: nowrap; /* 禁止按鈕換行 */
+        gap: 5px;
+        margin-bottom: -60px;
+    }
+
+    .container01 .button {
+        display: flex;
+        flex-direction: column; /* 縱向排列 */
+        align-items: center; /* 水平置中 */
+        justify-content: center; /* 垂直置中 */
+        width: 80px; /* 縮小按鈕尺寸 */
+        height: 80px;
+        font-size: 20px; /* 調整字體大小 */
+        border-radius: 50%; /* 圓形按鈕 */
+        text-align: center;
+    }
+
+    .container01 .button img {
+        width: 30px; /* 縮小圖標 */
+        height: 30px;
+        margin-bottom: 5px; /* 圖片和文字間距 */
+    }
+
+    .container01 .button span {
+        font-size: 10px; /* 調整文字大小 */
+    }
+
+    .container01 .button.active {
+        background-color: #FF7A45; /* 活躍按鈕橙色背景 */
+        color: white; /* 白色文字 */
+    }
+
+    .container01 .button.inactive {
+        background-color: #FFECD9; /* 非活躍按鈕淺橙背景 */
+        color: #333; /* 深灰色文字 */
+    }
+
+    .recommendation-section {
+
+        max-width: 390px;
+        display: flex;
+        flex-direction: column; /* 內容垂直排列 */
+        align-items: center;
+        text-align: center;
+        margin: 20px auto;
+        padding: 60px 10px;
+    }
+
+    .recommendation-section .title {
+        font-size: 28px; /* 調整字體大小 */
+        line-height: 65px;
+        color:#fff;
+        font-weight: 650;
+        /* padding-top: 6px; */
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* 添加陰影效果 */
+    }
+
+    .icon-text {
+        margin-top: 10px;
+        font-size: 14px; /* 調整文字大小 */
+    }
+
+    .stats-section {
+        display: flex;
+        flex-direction: column; /* 改為垂直對齊 */
+        align-items: center;
+        gap: 20px; /* 元素之間的間距 */
+        padding: 5px 0;
+        margin-top: -80px;
+    }
+
+    .stat-item {
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+
+    .stat-number {
+        font-size: 52px; /* 縮小字體 */
+        font-weight: bold;
+        margin-bottom: 5px;
+        
+    }
+
+    .stat-label {
+        font-size: 24px; /* 縮小字體 */
+    }
+
+    .stat-date {
+        display: none
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: column; /* 卡片垂直堆疊 */
+        align-items: center;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .card {
+        width: 90%; /* 調整卡片寬度 */
+    }
+
+    .card:hover {
+        transform: none; /* 移除放大效果 */
+        box-shadow: none; /* 移除陰影效果 */
+    }
+    
+    .card-button:hover {
+        background-color: #FF7A45; /* 保持背景色不變 */
+        color: #fff; /* 保持文字顏色不變 */
+    }
+
+    /* Background Circles - 背景圓形樣式 */
+.background-circle {
+position: absolute; /* 絕對定位，依據 .text-container 定位 */
+border-radius: 50%; /* 設置為 50% 以形成圓形 */
+background-color: #FFC966; /* 設置背景顏色為淺橙色 */
+}
+
+.background-circle.large {
+width: 60px; /* 大圓的寬度 */
+height: 60px; /* 大圓的高度 */
+top: -20px; /* 調整上方位置 */
+left: -45px; /* 調整左邊位置，使其更靠近標題 */
+z-index: -1;
+background-color: #FFC966;
+}
+
+.background-circle.small {
+width: 60px; /* 小圓的寬度 */
+height: 60px; /* 小圓的高度 */
+background-color: #FFC966;; /* 橙色背景，覆蓋掉大圓的淺橙色 */
+top: 30px; /* 向下移動 */
+right: -50px; /* 調整右邊位置 */
+z-index: -1;
+}
+
+
+/* Title Background - 標題背景矩形 */
+.title-background {
+position: absolute; /* 絕對定位，確保背景矩形置於標題文字後 */
+background-color:rgb(255, 136, 26, .8);/* 標題背景矩形的顏色為淺橙色 */
+width: 1440px; /* 背景矩形的寬度 */
+height: 65px; /* 背景矩形的高度 */
+top: 25%; /* 垂直位置為容器的 50% */
+left: 50%; /* 水平位置為容器的 50% */
+transform: translate(-50%, -50%); /* 使用 translate 將背景矩形置中 */
+z-index: -3; /* 將背景矩形置於文字後面 */
+}
+
+/* Icon and Description Text - 圖示與描述文字 */
+.icon-text {
+display: flex; /* 使用 flex 排版，讓圖示與文字在同一行 */
+align-items: center; /* 圖示和文字垂直置中對齊 */
+justify-content: center; /* 水平置中對齊 */
+margin-top: 20px; /* 上方的間距 30px */
+font-weight: 500px;
+}
+
+.icon {
+font-size: 30px;
+color: #FF7A45;
+font-weight: 900;
+text-shadow: 
+    1px 0 #FF7A45,  /* 右邊陰影 */
+   -1px 0 #FF7A45,  /* 左邊陰影 */
+    0 1px #FF7A45,  /* 下方陰影 */
+    0 -1px #FF7A45; /* 上方陰影 */
+    /* margin-top: 30px; */
+}
+
+.description {
+font-size: 20px; /* 描述文字的字體大小 */
+color: #FF7A45; /* 橙色文字 */
+/* margin-top: 30px; */
+
+}
+
+.back-to-top{
+right:30px;
+bottom:250px;
+width: 30px;
+height: 30px;
+display: flex; /* 使用 Flexbox */
+justify-content: center; /* 水平置中 */
+align-items: center; /* 垂直置中 */
+background-color: #fff; /* 保持原本背景色 */
+color:#FF881A ; /* 保持文字顏色 */
+}  
+
+.back-to-top .fa {
+font-size: 16px;
+}
+
+/* 清除 hover 效果 */
+.back-to-top:hover {
+background-color: #fff; /* 保持原本背景色 */
+color:#FF881A ; /* 保持文字顏色 */
+box-shadow: none; /* 移除陰影變化 */
+opacity: 1; /* 確保按鈕仍可見 */
+}
+      
+
+}
