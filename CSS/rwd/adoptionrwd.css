@@ -264,6 +264,7 @@
         left: 410px;
         margin: 0 auto;
         /* margin-top: -800px; */
+        bottom: 130px;
         
       }
 
@@ -300,6 +301,10 @@
     color:#FF881A ; /* 保持文字顏色 */
     box-shadow: none; /* 移除陰影變化 */
     opacity: 1; /* 確保按鈕仍可見 */
+      }
+
+      .footer{
+        margin-top: -100px;
       }
 
 }
@@ -540,21 +545,20 @@
             align-self: center; /* 水平置中，需在 flex 容器內 */
             left: 205px;
             margin: 0 auto;
-            /* margin-top: -800px; */
+            bottom: 130px;
             
           }
     
-          .back-home-button:hover,
-          .back-home-button:focus {
-              background: #FF881A; /* 保持原背景色 */
-              color: #FFFFFF; /* 保持原文字颜色 */
-          }
-      
-          .back-home-button span {
-              display: none; /* 移除内部动画效果 */
-          }
-
-          .back-to-top{
+        .back-home-button:hover,
+        .back-home-button:focus {
+            background: #FF881A; /* 保持原背景色 */
+            color: #FFFFFF; /* 保持原文字颜色 */
+        }
+    
+        .back-home-button span {
+            display: none; /* 移除内部动画效果 */
+        }
+        .back-to-top{
             right:30px;
             bottom:240px;
             width: 30px;
@@ -576,6 +580,10 @@
         color:#FF881A ; /* 保持文字顏色 */
         box-shadow: none; /* 移除陰影變化 */
         opacity: 1; /* 確保按鈕仍可見 */
+          }
+
+          .footer{
+            margin-top: -100px;
           }
     }
 
@@ -811,7 +819,7 @@
             align-self: center; /* 水平置中，需在 flex 容器內 */
             left: 200px;
             margin: 0 auto;
-            /* margin-top: -800px; */
+            bottom: 130px;
             
           }
     
@@ -846,6 +854,10 @@
         color:#FF881A ; /* 保持文字顏色 */
         box-shadow: none; /* 移除陰影變化 */
         opacity: 1; /* 確保按鈕仍可見 */
+          }
+
+          .footer{
+            margin-top: -100px;
           }
     
     }
@@ -1080,9 +1092,9 @@
             margin: 20px auto; /* 置中對齊 */
             position: absolute; /* 去掉絕對定位 */
             align-self: center; /* 水平置中，需在 flex 容器內 */
-            left: 180px;
+            left: 190px;
             margin: 0 auto;
-            /* margin-top: -800px; */
+            bottom: 130px;
             
           }
     
@@ -1119,4 +1131,9 @@
         box-shadow: none; /* 移除陰影變化 */
         opacity: 1; /* 確保按鈕仍可見 */
           }
+
+          .footer{
+            margin-top: -100px;
+          }
+    
     }
