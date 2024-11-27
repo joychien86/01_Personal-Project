@@ -6,6 +6,9 @@
     font-family: "DM Sans";
 }
 
+html{
+    cursor: none; /* 隱藏滑鼠游標 */}
+
 .wrapper{
     max-width: 1200px;
     margin: 0 auto;
@@ -340,3 +343,39 @@
     margin: 0 auto;
     height:auto ;
 }
+
+.follow {
+    position: absolute;
+    width: 20px; /* 縮小圓圈大小 */
+    height: 20px;
+    top: 0;
+    left: 0;
+    background: rgb(255, 250, 193, 0.8);
+    border-radius: 50%;
+    pointer-events: none; /* 避免干擾滑鼠事件 */
+    backface-visibility: hidden;
+  }
+
+  .follow2 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    background:rgb(255, 250, 193, 0.4);
+    border-radius: 50%;
+    pointer-events: none;
+    backface-visibility: hidden;
+  }
+
+  .follow3 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    pointer-events: none;
+    backface-visibility: hidden;
+  }

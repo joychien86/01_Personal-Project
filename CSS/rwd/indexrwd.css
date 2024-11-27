@@ -39,6 +39,11 @@
         display: block;
     }
 
+    .follow, .follow2, .follow3{
+        display:none;
+    }
+
+
     .back-to-top{
         display: block;
       }

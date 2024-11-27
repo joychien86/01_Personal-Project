@@ -28,6 +28,11 @@
 /* ====================820px RWD========================= */
 @media screen and (max-width: 820px) {
 
+    .follow, .follow2, .follow3{
+        display:none;
+    }
+
+
     .top > .fa {
         display: block;
     }
