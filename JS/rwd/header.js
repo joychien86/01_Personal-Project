@@ -1,35 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const burgerIcon = document.querySelector('.top > .fa'); // 漢堡選單圖示
-    const menu = document.querySelector('header nav ul'); // 主選單
+    const burgerIcon = document.querySelector('.hamburger'); // 获取汉堡按钮
+    const menu = document.querySelector('header nav ul'); // 获取菜单
 
-    // 點擊漢堡選單，切換選單顯示或隱藏
+    // 点击汉堡按钮，切换菜单
     burgerIcon.addEventListener('click', (e) => {
-        e.stopPropagation(); // 防止事件冒泡
-        menu.classList.toggle('open'); // 切換 .open 類名
+        e.stopPropagation(); // 阻止事件冒泡
+        burgerIcon.classList.toggle('active'); // 切换汉堡动画
+        menu.classList.toggle('open'); // 切换菜单滑动
     });
 
-    // 點擊主選單項目時展開或收起子選單
-    const menuItems = document.querySelectorAll('header nav ul > li');
-    menuItems.forEach(item => {
-        item.addEventListener('click', (e) => {
-            e.stopPropagation(); // 防止事件冒泡
-            const submenu = item.querySelector('.submenu'); // 找到子選單
-            if (submenu) {
-                submenu.classList.toggle('show'); // 切換子選單顯示狀態
-            }
-        });
-    });
-
-    // 點擊文檔其他地方時收起選單
+    // 点击页面其他区域时隐藏菜单
     document.addEventListener('click', (e) => {
-        // 如果點擊不在菜單或漢堡按鈕內部
         if (!menu.contains(e.target) && !burgerIcon.contains(e.target)) {
-            menu.classList.remove('open'); // 隱藏選單
+            menu.classList.remove('open'); // 隐藏菜单
+            burgerIcon.classList.remove('active'); // 恢复汉堡按钮状态
         }
     });
 
-    // 滑動時自動收起選單
+    // 滚动页面时隐藏菜单
     document.addEventListener('scroll', () => {
-        menu.classList.remove('open'); // 隱藏選單
+        menu.classList.remove('open'); // 隐藏菜单
+        burgerIcon.classList.remove('active'); // 恢复汉堡按钮状态
+    });
+
+    // 子菜单显示/隐藏逻辑
+    const menuItems = document.querySelectorAll('header nav ul > li');
+    menuItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.stopPropagation(); // 阻止事件冒泡
+            const submenu = item.querySelector('.submenu'); // 获取子菜单
+            if (submenu) {
+                submenu.classList.toggle('show'); // 切换子菜单显示状态
+            }
+        });
     });
 });

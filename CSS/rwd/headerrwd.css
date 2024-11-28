@@ -5,7 +5,7 @@
         margin: 0 auto;
         width: 100%;
     }
-    .top > .fa{
+    .top > .hamburger{
         display: none;
     }
 
@@ -18,7 +18,7 @@
         margin: 0 auto;
         width: 100%;
     }
-    .top > .fa{
+    .top > .hamburger{
         display: none;
     }
 
@@ -36,7 +36,9 @@
     margin: 0;
     padding: 0;
 }
-
+.top > .hamburger{
+    display: block;
+}
 
 
 /* 避免頁面內容觸發水平滾動 */
@@ -46,13 +48,57 @@
 }
     /* 漢堡選單樣式 */
 
-       /* 漢堡選單樣式 */
-       .top > .fa {
-        display: block;
-        font-size: 20px;
-        color: white;
-        cursor: pointer;
+    .top > .hamburger {
         position: absolute;
+        top: 35px; /* 調整位置到右上角 */
+        right: 70px;
+        width: 80px; /* 縮小按鈕大小 */
+        height: 30px;
+        cursor: pointer;
+    }
+    
+    .hamburger li {
+        list-style: none;
+        position: absolute;
+        left: 5%;
+        transform: translateY(-50%);
+        width: 50%;
+        height: 4px; /* 調整線條寬度 */
+        background: #fff;
+        border-radius: 40px;
+        transition: 0.5s ease;
+        opacity: 1;
+    }
+    
+    .hamburger li:nth-of-type(1) {
+        top: 15%;
+    }
+    
+    .hamburger li:nth-of-type(2),
+    .hamburger li:nth-of-type(3) {
+        top: 50%;
+    }
+    
+    .hamburger li:nth-of-type(4) {
+        top: 85%;
+    }
+    
+    .hamburger.active li:nth-of-type(1) {
+        top: -20%;
+        opacity: 0;
+    }
+    
+    .hamburger.active li:nth-of-type(2) {
+        transform: translateY(-50%) rotate(45deg);
+    }
+    
+    .hamburger.active li:nth-of-type(3) {
+        transform: translateY(-50%) rotate(-45deg);
+    }
+    
+    .hamburger.active li:nth-of-type(4) {
+        top: 120%;
+        opacity: 0;
     }
 
     header .container {
@@ -73,11 +119,6 @@
         display: block; /* 保證 logo 是塊級元素，居中生效 */
     }
 
-    .top > .fa {
-        position: absolute;
-        right: 30px; /* 調整漢堡按鈕的位置 */
-        top: 45px;
-    }
     /* 調整選單樣式 */
     header nav ul {
         margin: 0 auto;
@@ -184,7 +225,9 @@
     margin: 0;
     padding: 0;
 }
-
+.top > .hamburger{
+    display: block;
+}
 
 
 /* 避免頁面內容觸發水平滾動 */
@@ -193,14 +236,57 @@
     overflow-x: hidden; /* 禁止頁面水平滾動條 */
 }
     /* 漢堡選單樣式 */
-
-       /* 漢堡選單樣式 */
-       .top > .fa {
-        display: block;
-        font-size: 20px;
-        color: white;
-        cursor: pointer;
+    .top > .hamburger {
         position: absolute;
+        top: 45px; /* 調整位置到右上角 */
+        right: 20px;
+        width: 40px; /* 縮小按鈕大小 */
+        height: 20px;
+        cursor: pointer;
+    }
+    
+    .hamburger li {
+        list-style: none;
+        position: absolute;
+        left: 5%;
+        transform: translateY(-50%);
+        width: 50%;
+        height: 3px; /* 調整線條寬度 */
+        background: #fff;
+        border-radius: 40px;
+        transition: 0.5s ease;
+        opacity: 1;
+    }
+    
+    .hamburger li:nth-of-type(1) {
+        top: 15%;
+    }
+    
+    .hamburger li:nth-of-type(2),
+    .hamburger li:nth-of-type(3) {
+        top: 50%;
+    }
+    
+    .hamburger li:nth-of-type(4) {
+        top: 85%;
+    }
+    
+    .hamburger.active li:nth-of-type(1) {
+        top: -20%;
+        opacity: 0;
+    }
+    
+    .hamburger.active li:nth-of-type(2) {
+        transform: translateY(-50%) rotate(45deg);
+    }
+    
+    .hamburger.active li:nth-of-type(3) {
+        transform: translateY(-50%) rotate(-45deg);
+    }
+    
+    .hamburger.active li:nth-of-type(4) {
+        top: 120%;
+        opacity: 0;
     }
 
     header .container {
@@ -221,11 +307,10 @@
         display: block; /* 保證 logo 是塊級元素，居中生效 */
     }
 
-    .top > .fa {
-        position: absolute;
-        right: 30px; /* 調整漢堡按鈕的位置 */
-        top: 45px;
-    }
+ 
+
+
+    
     /* 調整選單樣式 */
     header nav ul {
         margin: 0 auto;
@@ -340,13 +425,61 @@
 }
     /* 漢堡選單樣式 */
 
-       /* 漢堡選單樣式 */
- .top > .fa {
+    .top > .hamburger{
         display: block;
-        font-size: 20px;
-        color: white;
-        cursor: pointer;
+    }
+
+    .top > .hamburger {
         position: absolute;
+        top: 45px; /* 調整位置到右上角 */
+        right: 20px;
+        width: 40px; /* 縮小按鈕大小 */
+        height: 20px;
+        cursor: pointer;
+    }
+    
+    .hamburger li {
+        list-style: none;
+        position: absolute;
+        left: 5%;
+        transform: translateY(-50%);
+        width: 50%;
+        height: 3px; /* 調整線條寬度 */
+        background: #fff;
+        border-radius: 40px;
+        transition: 0.5s ease;
+        opacity: 1;
+    }
+    
+    .hamburger li:nth-of-type(1) {
+        top: 15%;
+    }
+    
+    .hamburger li:nth-of-type(2),
+    .hamburger li:nth-of-type(3) {
+        top: 50%;
+    }
+    
+    .hamburger li:nth-of-type(4) {
+        top: 85%;
+    }
+    
+    .hamburger.active li:nth-of-type(1) {
+        top: -20%;
+        opacity: 0;
+    }
+    
+    .hamburger.active li:nth-of-type(2) {
+        transform: translateY(-50%) rotate(45deg);
+    }
+    
+    .hamburger.active li:nth-of-type(3) {
+        transform: translateY(-50%) rotate(-45deg);
+    }
+    
+    .hamburger.active li:nth-of-type(4) {
+        top: 120%;
+        opacity: 0;
     }
 
     header .container {
@@ -367,11 +500,6 @@
         display: block; /* 保證 logo 是塊級元素，居中生效 */
     }
 
-    .top > .fa {
-        position: absolute;
-        right: 30px; /* 調整漢堡按鈕的位置 */
-        top: 45px;
-    }
 
     /* 調整選單樣式 */
     header nav ul {
@@ -467,122 +595,92 @@
 
 /* ====================390px RWD========================= */
 @media screen and (max-width: 390px) {
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-    *,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-
-
-/* 避免頁面內容觸發水平滾動 */
- html,  body {
-    margin: 0;
-    overflow-x: hidden; /* 禁止頁面水平滾動條 */
-}
-    /* 漢堡選單樣式 */
-
-       /* 漢堡選單樣式 */
-       .top > .fa {
+    .top > .hamburger{
         display: block;
-        font-size: 20px;
-        color: white;
+    }
+
+    body {
+        overflow-x: hidden; /* 禁止水平滚动 */
+    }
+
+    /* 漢堡選單樣式 */
+    .hamburger {
+        position: absolute;
+        top: 20px; /* 菜单按钮位置 */
+        right: 20px;
+        width: 40px; /* 按钮宽度 */
+        height: 30px; /* 按钮高度 */
         cursor: pointer;
-        position: absolute;
+        z-index: 1000;
     }
 
-    header .container {
-        display: flex;
-        justify-content: center; /* 水平居中 */
-        align-items: center; /* 垂直居中 */
-        text-align: center;
+    .hamburger li {
+        list-style: none;
+        background: #fff;
+        height: 3px; /* 线条高度 */
+        margin: 6px 0; /* 线条间距 */
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        border-radius: 40px;
     }
 
-    header .logo {
-        margin: 0 auto; /* 自動調整邊距 */
-        text-align: center; /* 確保內部內容居中 */
+    .hamburger.active li:nth-child(1) {
+        transform: translateY(12px) rotate(45deg);
     }
 
-    header .logo img {
-        width: 200px; /* 根據需求調整 logo 大小 */
-        margin: 0 auto;
-        display: block; /* 保證 logo 是塊級元素，居中生效 */
+    .hamburger.active li:nth-child(2) {
+        opacity: 0;
     }
 
-    .top > .fa {
-        position: absolute;
-        right: 30px; /* 調整漢堡按鈕的位置 */
-        top: 45px;
+    .hamburger.active li:nth-child(3) {
+        transform: translateY(-12px) rotate(-45deg);
     }
-    /* 調整選單樣式 */
+
+    /* 主選單樣式 */
     header nav ul {
-    list-style: none;
-    flex-direction: column;
-    position: fixed;
-    top: 100px;
-    width: 100%;
-    height: 530px;
-    background-color: #fff;
-    color: #333;
-    transition: transform 0.5s ease;
-    transform: translateX(100%); /* 初始移出螢幕右側 */
-    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
-    border-radius: 30px;
-    text-align: center;
-    z-index: 999;
-    right: 0; /* 固定於右側，確保不溢出螢幕 */
-    overflow-x: hidden; /* 禁止水平滾動 */
-}
-    
-    /* 展開時 */
+        list-style: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 0; /* 初始宽度为0 */
+        height: 100vh; /* 占满整个屏幕高度 */
+        background-color: #fff;
+        overflow: hidden;
+        z-index: 999;
+        transition: width 0.5s ease; /* 菜单滑入效果 */
+        box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+    }
+
     header nav ul.open {
-        transform: translateX(0); /* 回到可視區域 */
+        width: 70%; /* 菜单展开宽度 */
     }
 
     header nav ul li {
-        position: relative;
-        padding: 10px 0; /* 調整上下內距 */
-        font-size: 20px;
+        margin: 15px 0;
         text-align: center;
-        line-height: 24px; /* 確保文字垂直置中 */
-        border-top: 1px dashed rgba(244, 180, 0, 0.5);
-        /* padding-right: 30%; */
-    
-    }
-    header nav ul li:nth-last-child() {
-
-        border-bottom: 0px
-    }
-
-    header nav ul li:nth-child(1) {
-
-        border-top: 0px
-    }
-
-    header nav ul > li > ul {
-        display: none; /* 初始隱藏子選單 */
-    }
-
-    header nav ul > li.open > ul {
-        display: block; /* 父選單展開時顯示子選單 */
     }
 
     header nav ul li a {
         text-decoration: none;
         color: #333;
-        display: inline-block;
-        /* padding: 10px 10px; */
-        width: 100%; /* 占滿整個 li 寬度 */
-        text-align: center; /* 水平置中 */
+        font-size: 20px;
+        transition: color 0.3s ease;
     }
 
-    /* 子選單的初始樣式 */
+    header nav ul li a:hover {
+        color: #f4b400; /* 悬停时变色 */
+    }
+
+    /* 子選單樣式 */
     .submenu {
-        display: none; /* 初始隱藏子選單 */
-        padding-left: 20px; /* 子選單內縮 */
+        display: none; /* 初始隐藏 */
+        padding-left: 20px;
         transition: max-height 0.3s ease, opacity 0.3s ease;
         max-height: 0;
         overflow: hidden;
@@ -591,20 +689,19 @@
 
     .submenu.show {
         display: block;
-        /* max-height: 100px; 足夠大的值支持展開 */
+        max-height: 100px; /* 子菜单展开高度 */
         opacity: 1;
     }
 
+    /* 防止其他内容覆盖菜单 */
+    #section199 {
+        position: relative;
+        z-index: -1;
+    }
 
-/* 確保 my purpose 的區塊不影響選單層級 */
-#section199 {
-    position: relative; /* 確保此區塊不會干擾選單 */
-    z-index: -1; /* 設置比選單低的 z-index */
-}
-
-/* 防止文字或其他內容蓋住選單 */
-#section199 h4, #section199 .purpose-items {
-    z-index: -1; /* 確保文字內容在較低層級 */
-    position: relative; /* 保持區塊布局不影響其他元素 */
-}
+    #section199 h4,
+    #section199 .purpose-items {
+        position: relative;
+        z-index: -1;
+    }
 }

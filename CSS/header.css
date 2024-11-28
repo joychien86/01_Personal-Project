@@ -2,8 +2,8 @@
 
 /*=====================上層選單===================*/
 
-.top > .fa {
-    display: none; /* 隱藏漢堡選單 */
+.top > .hamburger{
+    display: none;
 }
 
 header {
