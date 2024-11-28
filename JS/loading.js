@@ -2,24 +2,31 @@ document.addEventListener("DOMContentLoaded", () => {
     const loader = document.getElementById("loader");
     const body = document.body;
 
-    // 檢查 Local Storage 中是否有訪問過的標記
-    const hasVisited = sessionStorage.getItem("hasVisited"); // 使用 sessionStorage 代替 localStorage
+    // 判断是否首次访问
+    const hasVisited = sessionStorage.getItem("hasVisited");
 
-    if (!hasVisited) {
-        // 如果沒有訪問過，顯示 Loading 動畫
+    // 判断屏幕宽度是否小于等于 820px
+    const isSmallScreen = window.innerWidth <= 820;
+
+    if (isSmallScreen) {
+        // 小屏设备直接跳过加载动画
+        loader.style.display = "none";
+        body.classList.add("loaded");
+    } else if (!hasVisited) {
+        // 首次访问显示加载动画
         setTimeout(() => {
             loader.style.opacity = "0"; // 淡出效果
             loader.style.transition = "opacity 0.5s ease-in-out";
             setTimeout(() => {
-                loader.style.display = "none"; // 完全隱藏
-                body.classList.add("loaded"); // 啟用主頁動畫
+                loader.style.display = "none"; // 完全隐藏
+                body.classList.add("loaded"); // 启用主页面动画
             }, 500); // 等待淡出完成
-        }, 2000); // Loading 動畫持續時間 (2 秒)
+        }, 2000); // 动画持续 2 秒
 
-        // 設置標記，表示用戶已訪問過當前 Session
+        // 保存首次访问状态
         sessionStorage.setItem("hasVisited", "true");
     } else {
-        // 如果已訪問過，直接隱藏 Loader 並顯示主頁
+        // 非首次访问直接进入首页
         loader.style.display = "none";
         body.classList.add("loaded");
     }

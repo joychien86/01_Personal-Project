@@ -5,7 +5,7 @@
         margin: 0 auto;
         width: 100%;
     }
-    .top > .fa{
+    .top > .hamburger{
         display: none;
     }
     .back-to-top{
@@ -22,7 +22,7 @@
         margin: 0 auto;
         width: 100%;
     }
-    .top > .fa{
+    .top > .hamburger{
         display: none;
     }
     .back-to-top{
@@ -35,8 +35,12 @@
 
  /* 讓圖片置於畫面正中間 */
  @media screen and (max-width: 820px) {
-    .top > .fa {
+    .top > .hamburger {
         display: block;
+    }
+
+    #loader {
+        display: none !important;
     }
 
     .follow, .follow2, .follow3{
@@ -233,6 +237,10 @@ opacity: 1; /* 確保按鈕仍可見 */
 
     /* 讓圖片置於畫面正中間 */
     @media screen and (max-width: 430px) {
+
+        #loader {
+            display: none !important;
+        }
 
         * {
             animation: none !important; /* 全局取消动画 */
@@ -612,6 +620,10 @@ opacity: 1; /* 確保按鈕仍可見 */
     /* 讓圖片置於畫面正中間 */
     @media screen and (max-width: 412px) {
 
+        #loader {
+            display: none !important;
+        }
+
         * {
             animation: none !important; /* 全局取消动画 */
         }
@@ -984,6 +996,10 @@ opacity: 1; /* 確保按鈕仍可見 */
 
 /* 讓圖片置於畫面正中間 */
 @media screen and (max-width: 390px) {
+
+    #loader {
+        display: none !important;
+    }
 
     * {
         animation: none !important; /* 全局取消动画 */
