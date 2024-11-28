@@ -5,6 +5,96 @@
 html{
 cursor: none; /* 隱藏滑鼠游標 */}
 
+
+/* Loader Styles */
+#loader {
+    background-color: #2c3e50;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-in-out; /* 添加淡出效果 */
+}
+
+#loader.hidden {
+    opacity: 0;
+    pointer-events: none; /* 禁止互動 */
+}
+
+.sun {
+    background: radial-gradient(#ff0, #f90);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.orbit {
+    border-radius: 50%;
+    border: 1px solid #fff;
+    position: absolute;
+}
+
+.orbit1 {
+    height: 100px;
+    width: 100px;
+    animation: rotation 2s infinite linear;
+}
+
+.orbit2 {
+    height: 150px;
+    width: 150px;
+    animation: rotation 3s infinite linear;
+}
+
+.orbit3 {
+    height: 200px;
+    width: 200px;
+    animation: rotation 6s infinite linear;
+}
+
+.planetX {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.planet1 {
+    left: 20px;
+    height: 13px;
+    width: 13px;
+    background-color: rgb(233, 157, 85);
+}
+
+.planet2 {
+    left: 23px;
+    height: 20px;
+    width: 20px;
+    background: linear-gradient(#00ff00, #09f, #09f);
+    animation: rotation 1s infinite linear;
+}
+
+.planet3 {
+    left: 49px;
+    height: 17px;
+    width: 17px;
+    background: radial-gradient(#ff9900, #f77518);
+}
+
+
+/* Animation Keyframes */
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
 @keyframes fadeIn {
     from {
         opacity: 0;

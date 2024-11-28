@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,10 +27,23 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap">
+     <script src="./JS/loading.js"></script>
    
 </head>
     <body onload="document.body.classList.add('loaded')">
- 
+     <!-- Loader -->
+     <div id="loader" class="portfolio-loader">
+        <div class="sun"></div>
+        <div class="orbit orbit1">
+            <div class="planetX planet1"></div>
+        </div>
+        <div class="orbit orbit2">
+            <div class="planetX planet2"></div>
+        </div>
+        <div class="orbit orbit3">
+            <div class="planetX planet3"></div>
+        </div>
+    </div>
     <!-- 頁首的bar -->
     <header >
 
