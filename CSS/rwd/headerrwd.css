@@ -47,26 +47,36 @@
     /* 漢堡選單樣式 */
 
        /* 漢堡選單樣式 */
- .top > .fa {
+       .top > .fa {
         display: block;
         font-size: 20px;
         color: white;
         cursor: pointer;
         position: absolute;
-        right: 40px;
-        top: 40px;
+    }
+
+    header .container {
+        display: flex;
+        justify-content: center; /* 水平居中 */
+        align-items: center; /* 垂直居中 */
+        text-align: center;
     }
 
     header .logo {
-        margin: 0 auto;
-        text-align: center; 
-        margin-left: 180px;
+        margin: 0 auto; /* 自動調整邊距 */
+        text-align: center; /* 確保內部內容居中 */
     }
 
     header .logo img {
-        width: 200px; /* 縮小 logo */
-        /* margin: 0 auto; */
-        text-align: center; 
+        width: 200px; /* 根據需求調整 logo 大小 */
+        margin: 0 auto;
+        display: block; /* 保證 logo 是塊級元素，居中生效 */
+    }
+
+    .top > .fa {
+        position: absolute;
+        right: 30px; /* 調整漢堡按鈕的位置 */
+        top: 45px;
     }
     /* 調整選單樣式 */
     header nav ul {
@@ -185,26 +195,36 @@
     /* 漢堡選單樣式 */
 
        /* 漢堡選單樣式 */
- .top > .fa {
+       .top > .fa {
         display: block;
         font-size: 20px;
         color: white;
         cursor: pointer;
         position: absolute;
-        right: 40px;
-        top: 40px;
+    }
+
+    header .container {
+        display: flex;
+        justify-content: center; /* 水平居中 */
+        align-items: center; /* 垂直居中 */
+        text-align: center;
     }
 
     header .logo {
-        margin: 0 auto;
-        text-align: center; 
-        margin-left: 0px;
+        margin: 0 auto; /* 自動調整邊距 */
+        text-align: center; /* 確保內部內容居中 */
     }
 
     header .logo img {
-        width: 200px; /* 縮小 logo */
-        /* margin: 0 auto; */
-        text-align: center; 
+        width: 200px; /* 根據需求調整 logo 大小 */
+        margin: 0 auto;
+        display: block; /* 保證 logo 是塊級元素，居中生效 */
+    }
+
+    .top > .fa {
+        position: absolute;
+        right: 30px; /* 調整漢堡按鈕的位置 */
+        top: 45px;
     }
     /* 調整選單樣式 */
     header nav ul {
@@ -327,21 +347,32 @@
         color: white;
         cursor: pointer;
         position: absolute;
-        right: 40px;
-        top: 40px;
+    }
+
+    header .container {
+        display: flex;
+        justify-content: center; /* 水平居中 */
+        align-items: center; /* 垂直居中 */
+        text-align: center;
     }
 
     header .logo {
-        margin: 0 auto;
-        text-align: center; 
-        margin-left: 0px;
+        margin: 0 auto; /* 自動調整邊距 */
+        text-align: center; /* 確保內部內容居中 */
     }
 
     header .logo img {
-        width: 200px; /* 縮小 logo */
-        /* margin: 0 auto; */
-        text-align: center; 
+        width: 200px; /* 根據需求調整 logo 大小 */
+        margin: 0 auto;
+        display: block; /* 保證 logo 是塊級元素，居中生效 */
     }
+
+    .top > .fa {
+        position: absolute;
+        right: 30px; /* 調整漢堡按鈕的位置 */
+        top: 45px;
+    }
+
     /* 調整選單樣式 */
     header nav ul {
     list-style: none;
@@ -455,27 +486,36 @@
     /* 漢堡選單樣式 */
 
        /* 漢堡選單樣式 */
- .top > .fa {
+       .top > .fa {
         display: block;
         font-size: 20px;
         color: white;
         cursor: pointer;
         position: absolute;
-        right: 40px;
-        top: 40px;
+    }
+
+    header .container {
+        display: flex;
+        justify-content: center; /* 水平居中 */
+        align-items: center; /* 垂直居中 */
+        text-align: center;
     }
 
     header .logo {
-        margin: 0 auto;
-        text-align: center; 
-        margin-left: -10px;
-        margin-top: 2px;
+        margin: 0 auto; /* 自動調整邊距 */
+        text-align: center; /* 確保內部內容居中 */
     }
 
     header .logo img {
-        width: 200px; /* 縮小 logo */
-        /* margin: 0 auto; */
-        text-align: center; 
+        width: 200px; /* 根據需求調整 logo 大小 */
+        margin: 0 auto;
+        display: block; /* 保證 logo 是塊級元素，居中生效 */
+    }
+
+    .top > .fa {
+        position: absolute;
+        right: 30px; /* 調整漢堡按鈕的位置 */
+        top: 45px;
     }
     /* 調整選單樣式 */
     header nav ul {

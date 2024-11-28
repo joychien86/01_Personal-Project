@@ -20,24 +20,33 @@ header {
 header .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 100%;
     /* padding-right: 30px; */
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
 }
 
 header .logo {
     /* display: flex; */
     align-items: center;
-    margin-left: 40px;
+    margin: 0 auto;
     /* width: 300px; */
+    /* width:200px; */
+    text-align: center;
 }
 
 header .logo img {
-    width: 200px;
+    /* width: 200px; */
     height: auto;
-    margin-left: 120px;
+    margin: 0 auto;
+    width:200px;
+}
+
+header .logo img a {
+    display: none;
+    margin: 0 auto;
 }
 
 header nav ul {
