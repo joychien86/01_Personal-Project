@@ -51,7 +51,10 @@
         .animal{
             display: none;
         }
-
+        .follow, .follow2, .follow3{
+            display:none;
+        }
+    
 
       .pic1, .pic2, .pic3{
       display: none;}
