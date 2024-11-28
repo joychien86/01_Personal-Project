@@ -6,28 +6,25 @@ html{
 cursor: none; /* 隱藏滑鼠游標 */}
 
 
-/* Loader Styles */
+/* Loading Animation 基本樣式 */
 #loader {
-    background-color: #2c3e50;
-    height: 100vh;
-    width: 100%;
+    background-color: #2c3e50; /* 背景顏色 */
+    height: 100vh; /* 滿屏高度 */
+    width: 100%; /* 滿屏寬度 */
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9999;
-    display: flex;
+    z-index: 9999; /* 保證在最上層 */
+    display: flex; /* 水平和垂直居中 */
     justify-content: center;
     align-items: center;
+    opacity: 1; /* 初始全可見 */
     transition: opacity 0.5s ease-in-out; /* 添加淡出效果 */
 }
 
-#loader.hidden {
-    opacity: 0;
-    pointer-events: none; /* 禁止互動 */
-}
-
+/* Sun 和 Orbit 動畫 */
 .sun {
-    background: radial-gradient(#ff0, #f90);
+    background: radial-gradient(#ff0, #f90); /* 太陽漸變色 */
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -35,29 +32,37 @@ cursor: none; /* 隱藏滑鼠游標 */}
 }
 
 .orbit {
+    background: transparent;
     border-radius: 50%;
-    border: 1px solid #fff;
+    border: 1px solid #fff; /* 軌道顏色 */
     position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    animation: rotation 6s infinite linear; /* 默認旋轉 */
 }
 
 .orbit1 {
     height: 100px;
     width: 100px;
-    animation: rotation 2s infinite linear;
+    animation-duration: 2s; /* 第一層軌道速度 */
 }
 
 .orbit2 {
     height: 150px;
     width: 150px;
-    animation: rotation 3s infinite linear;
+    animation-duration: 3s; /* 第二層軌道速度 */
 }
 
 .orbit3 {
     height: 200px;
     width: 200px;
-    animation: rotation 6s infinite linear;
+    animation-duration: 6s; /* 第三層軌道速度 */
 }
 
+/* Planets 動畫 */
 .planetX {
     position: absolute;
     border-radius: 50%;
@@ -67,7 +72,7 @@ cursor: none; /* 隱藏滑鼠游標 */}
     left: 20px;
     height: 13px;
     width: 13px;
-    background-color: rgb(233, 157, 85);
+    background-color: #ff8;
 }
 
 .planet2 {
@@ -82,17 +87,16 @@ cursor: none; /* 隱藏滑鼠游標 */}
     left: 49px;
     height: 17px;
     width: 17px;
-    background: radial-gradient(#ff9900, #f77518);
+    background: radial-gradient(#ff9900, #ff4400);
 }
 
-
-/* Animation Keyframes */
+/* Keyframes for Rotation */
 @keyframes rotation {
     from {
         transform: rotate(0deg);
     }
     to {
-        transform: rotate(359deg);
+        transform: rotate(360deg);
     }
 }
 @keyframes fadeIn {
