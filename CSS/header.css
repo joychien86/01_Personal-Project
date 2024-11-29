@@ -2,7 +2,7 @@
 
 /*=====================上層選單===================*/
 
-.top > .hamburger{
+#menu-container {
     display: none;
 }
 

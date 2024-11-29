@@ -467,21 +467,47 @@
 /* ====================412px RWD========================= */
 @media screen and (max-width: 412px) {
 
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* 禁止水平滾動 */
+    scroll-behavior: smooth; /* 平滑滾動（現代瀏覽器支持） */
+}
 
-  .button {
-    font-size: 16px;}
-    .top > .fa {
-        display: block;
-    }
 
     .wrapper{
         max-width: 412px;
         margin: 0 auto;
         }
 
-        .button {
-            font-size: 20px;
-          }
+   .button-container {
+    display: flex;
+    gap: 20px; /* 按鈕之間的間距 */
+    justify-content: center; /* 中心對齊 */
+    /* border: 2px solid red; */
+    height:60px;
+    width: 200px;
+    margin:50px auto;
+    line-height: 60px;
+    background-color:#fff5ed; /* 標題背景矩形的顏色為淺橙色 */
+    border-radius: 50px;
+    pointer-events: auto; /* 確保可以點擊 */
+    z-index: 10;
+
+  }
+  
+  .button {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #716c6c; /* 默認文字顏色 */
+    font-family: "DM Sans";
+    position: relative;
+    padding-bottom: 15px;
+    transition: color 0.3s ease; /* 平滑的顏色變化 */
+    z-index: 11; /* 層級要高於其他干擾元素 */
+  }
+
 
           .circle-container {
             position: relative;
@@ -577,6 +603,7 @@
                 /* transition: all 0.3s ease; */
                 margin: 0 auto;
                 margin-left: 130px;
+                order:2;
               }
 
               .large-image02 {

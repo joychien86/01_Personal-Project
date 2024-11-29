@@ -34,14 +34,20 @@
 
  /* 讓圖片置於畫面正中間 */
  @media screen and (max-width: 820px) {
-    .top > .fa {
-        display: block;
-    }
+   
 
     .follow, .follow2, .follow3{
         display:none;
     }
-
+    #menu-container {
+        display: block;
+    }
+    
+    /* 同时隐藏导航栏 */
+    .container nav{
+        display: none;
+    }
+    
 
     .back-to-top{
         display: block;
@@ -289,6 +295,15 @@ opacity: 1; /* 確保按鈕仍可見 */
             gap: 5px;
             margin-bottom: -60px;
         }
+        #menu-container {
+            display: block;
+        }
+        
+        /* 同时隐藏导航栏 */
+        .container nav{
+            display: none;
+        }
+        
     
         .container01 .button {
             display: flex;
@@ -498,7 +513,16 @@ opacity: 1; /* 確保按鈕仍可見 */
 
     /* 讓圖片置於畫面正中間 */
     @media screen and (max-width: 412px) {
-
+        
+        #menu-container {
+            display: block !important;
+        }
+        
+        /* 同时隐藏导航栏 */
+        .container nav{
+            display: none;
+        }
+        
         .container01 {
             display: flex;
             justify-content: space-around; /* 四個按鈕水平對齊 */

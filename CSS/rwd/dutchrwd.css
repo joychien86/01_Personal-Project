@@ -4,9 +4,17 @@
         margin: 0 auto;
         width: 100%;
     }
-    .top > .fa{
+    /* 漢堡選單樣式 */
+
+    #menu-container {
         display: none;
     }
+
+    /* 同时隐藏导航栏 */
+    .container nav{
+        display: block;
+    }
+
     .wrapper.owl-carousel{
         display: none !important;
     }
@@ -20,8 +28,13 @@
         margin: 0 auto;
         width: 100%;
     }
-    .top > .fa{
+    #menu-container {
         display: none;
+    }
+
+    /* 同时隐藏导航栏 */
+    .container nav{
+        display: block;
     }
     .wrapper.owl-carousel{
         display: none !important;
@@ -31,9 +44,17 @@
 
 /* ====================820px RWD========================= */
 @media screen and (max-width: 820px) {
-    .top > .fa {
-        display: block ;
-    }
+   /* 漢堡選單樣式 */
+
+   #menu-container {
+    display: block;
+}
+
+/* 同时隐藏导航栏 */
+.container nav{
+    display: none;
+}
+
 
     .follow, .follow2, .follow3{
         display:none;
@@ -238,9 +259,17 @@
         transform: none;
     }
 
-    .top > .fa {
-        display: block;
-    }
+   /* 漢堡選單樣式 */
+
+   #menu-container {
+    display: block;
+}
+
+/* 同时隐藏导航栏 */
+.container nav{
+    display: none;
+}
+
     .wrapper{
         max-width: 430px;
         margin: 0 auto;
@@ -459,9 +488,16 @@ opacity: 1; /* 確保按鈕仍可見 */
 @media screen and (max-width: 412px) {
 
 
-    .top > .fa {
-        display: block ;
-    }
+   /* 漢堡選單樣式 */
+
+   #menu-container {
+    display: block;
+}
+
+/* 同时隐藏导航栏 */
+.container nav{
+    display: none;
+}
 
     .wrapper{
         max-width: 412px;
@@ -666,10 +702,17 @@ opacity: 1; /* 確保按鈕仍可見 */
 /* ====================390px RWD========================= */
 
 @media screen and (max-width: 390px) {
+/* 漢堡選單樣式 */
 
-    .top > .fa {
-        display: block ;
-    }
+#menu-container {
+    display: block;
+}
+
+/* 同时隐藏导航栏 */
+.container nav{
+    display: none;
+}
+
 
     .wrapper{
         max-width: 412px;

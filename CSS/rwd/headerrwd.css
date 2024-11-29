@@ -5,8 +5,11 @@
         margin: 0 auto;
         width: 100%;
     }
-    .top > .hamburger{
+    #menu-container {
         display: none;
+    }
+    .container nav{
+        display: block;
     }
 
     .toggle-submenu {
@@ -18,8 +21,11 @@
         margin: 0 auto;
         width: 100%;
     }
-    .top > .hamburger{
+    #menu-container {
         display: none;
+    }
+    .container nav{
+        display: block;
     }
 
     .toggle-submenu {
@@ -29,185 +35,229 @@
 /* ====================820px RWD=========================漢堡選單出現+++++++++ */
 @media screen and (max-width: 820px) {
 
-    *,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-.top > .hamburger{
-    display: block;
-}
 
-
-/* 避免頁面內容觸發水平滾動 */
- html,  body {
-    margin: 0;
-    overflow-x: hidden; /* 禁止頁面水平滾動條 */
-}
-    /* 漢堡選單樣式 */
-
-    .top > .hamburger {
-        position: absolute;
-        top: 35px; /* 調整位置到右上角 */
-        right: 70px;
-        width: 80px; /* 縮小按鈕大小 */
-        height: 30px;
-        cursor: pointer;
-    }
-    
-    .hamburger li {
-        list-style: none;
-        position: absolute;
-        left: 5%;
-        transform: translateY(-50%);
-        width: 50%;
-        height: 4px; /* 調整線條寬度 */
-        background: #fff;
-        border-radius: 40px;
-        transition: 0.5s ease;
-        opacity: 1;
-    }
-    
-    .hamburger li:nth-of-type(1) {
-        top: 15%;
-    }
-    
-    .hamburger li:nth-of-type(2),
-    .hamburger li:nth-of-type(3) {
-        top: 50%;
-    }
-    
-    .hamburger li:nth-of-type(4) {
-        top: 85%;
-    }
-    
-    .hamburger.active li:nth-of-type(1) {
-        top: -20%;
-        opacity: 0;
-    }
-    
-    .hamburger.active li:nth-of-type(2) {
-        transform: translateY(-50%) rotate(45deg);
-    }
-    
-    .hamburger.active li:nth-of-type(3) {
-        transform: translateY(-50%) rotate(-45deg);
-    }
-    
-    .hamburger.active li:nth-of-type(4) {
-        top: 120%;
-        opacity: 0;
-    }
-
-    header .container {
-        display: flex;
-        justify-content: center; /* 水平居中 */
-        align-items: center; /* 垂直居中 */
-        text-align: center;
-    }
-
-    header .logo {
-        margin: 0 auto; /* 自動調整邊距 */
-        text-align: center; /* 確保內部內容居中 */
-    }
-
-    header .logo img {
-        width: 200px; /* 根據需求調整 logo 大小 */
-        margin: 0 auto;
-        display: block; /* 保證 logo 是塊級元素，居中生效 */
-    }
-
-    /* 調整選單樣式 */
-    header nav ul {
-        margin: 0 auto;
-    list-style: none;
-    flex-direction: column;
-    position: fixed;
-    top: 100px;
-    width: 80%;
-    height: 470px;
-    background-color: #fff;
-    color: #333;
-    transition: transform 0.5s ease;
-    transform: translateX(100%); /* 初始移出螢幕右側 */
-    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
-    border-radius: 30px;
-    text-align: center;
-    z-index: 999;
-    right: 0; /* 固定於右側，確保不溢出螢幕 */
-    overflow-x: hidden; /* 禁止水平滾動 */
-}
-    
-    /* 展開時 */
-    header nav ul.open {
-        transform: translateX(0); /* 回到可視區域 */
-        /* width: 40%; */
-    }
-
-    /* header nav ul.open::after {
-        background-color: #333;
-    } */
-
-    header nav ul li {
-        position: relative; 
-        padding: 10px 0px;
-        font-size: 20px;
-        line-height: 16px;
-        text-align: center;
-        border-top: 1px dashed  rgba(244, 180, 0, .5);
-        width: 700px;
-    
-    }
-    header nav ul li:nth-last-child() {
-
-        border-bottom: 0px
-    }
-
-    header nav ul > li > ul {
-        display: none; /* 初始隱藏子選單 */
-    }
-
-    header nav ul > li.open > ul {
-        display: block; /* 父選單展開時顯示子選單 */
-    }
-
-    header nav ul li a {
-        text-decoration: none;
-        color: #333;
-        display: inline-block;
-        /* padding: 10px 10px; */
-    }
-
-    /* 子選單的初始樣式 */
-    .submenu {
-        display: none; /* 初始隱藏子選單 */
-        padding-left: 20px; /* 子選單內縮 */
-        transition: max-height 0.3s ease, opacity 0.3s ease;
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-    }
-
-    .submenu.show {
+    #menu-container {
         display: block;
-        /* max-height: 100px; 足夠大的值支持展開 */
-        opacity: 1;
     }
 
+    /* 同时隐藏导航栏 */
+    .container nav{
+        display: none;
+    }
 
-/* 確保 my purpose 的區塊不影響選單層級 */
-#section199 {
-    position: relative; /* 確保此區塊不會干擾選單 */
-    z-index: -1; /* 設置比選單低的 z-index */
-}
-
-/* 防止文字或其他內容蓋住選單 */
-#section199 h4, #section199 .purpose-items {
-    z-index: -1; /* 確保文字內容在較低層級 */
-    position: relative; /* 保持區塊布局不影響其他元素 */
-}
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    *{font-family: "DM Sans";}
+    
+    
+    /* 避免頁面內容觸發水平滾動 */
+     html,  body {
+        margin: 0;
+        overflow-x: hidden; /* 禁止頁面水平滾動條 */
+    }
+        /* 漢堡選單樣式 */
+    
+        #menu-container {
+            display: block;
+        }
+    
+        /* 同时隐藏导航栏 */
+        .container{
+            display: none;
+        }
+    
+    
+        #menu-container {
+            position: relative;
+        }
+        
+        #hamburger-menu {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            z-index: 1000;
+            transition: transform 0.5s ease; /* 平滑過渡 */
+        }
+        
+        #hamburger-menu.open {
+            transition: transform 0.5s ease; /* 平滑過渡 */
+            width: 30px;
+            height: 30px;
+        }
+        
+        #hamburger-menu span {
+            display: block;
+            background: #fff;
+            height: 4px;
+            margin: 5px 0;
+            width:25px;
+            border-radius: 5px;
+            transition: 0.4s ease;
+        }
+        
+        #hamburger-menu.open span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        #hamburger-menu.open span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        #hamburger-menu.open span:nth-child(3) {
+            transform: rotate(-45deg) translate(8px, -8px);
+        }
+        
+        .menu-list {
+            list-style: none;
+            flex-direction: column;
+            position: fixed;
+            top: 100px;
+            right: 0px;
+            width: 100%;
+            height: auto;
+            /* background: #fff; */
+            transform: translateX(100%); /* 初始狀態：從右側進入 */
+            transition: transform 0.5s ease; /* 添加平滑動畫 */
+            z-index: 999;
+            box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 50px; /* 菜單容器的圓角 */
+            overflow: hidden; /* 確保內部內容受限於圓角 */
+         
+        }
+        
+        .menu-list.open {
+            transform: translateX(0);
+          
+        }
+        
+        .menu-list li {
+            position: relative; /* 必須相對定位，便於 icon-toggle 絕對定位 */
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.4s ease;
+            transition-delay: var(--delay, 0s);
+            border-top: 1px dashed rgba(244, 180, 0, 0.5);
+             width: 100%;
+             font-size: 16px;
+             text-align: center;
+             line-height: 30px; /* 确保文字垂直置中 */
+             background-color: #fff;
+           
+        }
+        
+        .menu-submenu li{
+            background-color:#fdf0d7;
+            color:#fff;
+        }
+        
+        .menu-list .accordion{
+            border-radius: 90px;
+        }
+        
+        .menu-list li:last-child{
+            border-bottom:1px dashed rgba(244, 180, 0, 0.5); 
+           
+                border-bottom: none; /* 移除最後一個項目的邊框 */
+            }
+        
+        
+        .menu-list.open li {
+            opacity: 1;
+            transform: translateY(0);
+            transition: max-height 0.5s ease, opacity 0.5s ease; /* 平滑過渡 */}
+            
+        
+        .menu-list li a {
+            text-decoration: none;
+                color: #333;
+                display: inline-block;
+                width: 100%; /* 确保文字在 a 元素内居中 */
+                text-align: center;
+            padding-right: 20px; /* 留出空間給 icon-toggle */
+            font-size: 16px;
+            text-align: center;
+            line-height: 30px; /* 确保文字垂直置中 */
+        }
+        
+        .menu-container li{
+            border-radius:50px;
+            background-color: #f6b756 ;
+        }
+        
+        .icon-toggle {
+            position: absolute;
+            right: 100px; /* 固定在右側 */
+            font-size: 30px;
+            cursor: pointer;
+            margin-left: 0px;
+            color: #ff881a;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+         
+        ul.menu-submenu.accordion-content {
+            display: none;
+            /* padding-left: 20px; */
+            background-color: #f6b756 !important;
+            overflow: hidden;
+            text-align: center;
+            transition: max-height 0.5s ease, opacity 0.5s ease; /* 平滑過渡 */
+            margin: o auto;
+        }
+        
+        .accordion-content.open {
+                display: block;
+                width: 100%; /* 撐滿母選單寬度 */
+            }
+        
+        
+        .accordion-toggle.active .icon-toggle {
+            transform: rotate(180deg);
+        }
+    
+        header .container {
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            text-align: center;
+        }
+    
+        header .logo {
+            margin: 0 auto; /* 自動調整邊距 */
+            text-align: center; /* 確保內部內容居中 */
+        }
+    
+        header .logo img {
+            width: 200px; /* 根據需求調整 logo 大小 */
+            margin: 0 auto;
+            display: block; /* 保證 logo 是塊級元素，居中生效 */
+        }
+    
+    
+    /* 確保 my purpose 的區塊不影響選單層級 */
+    #section199 {
+        position: relative; /* 確保此區塊不會干擾選單 */
+        z-index: -1; /* 設置比選單低的 z-index */
+    }
+    
+    /* 防止文字或其他內容蓋住選單 */
+    #section199 h4, #section199 .purpose-items {
+        z-index: -1; /* 確保文字內容在較低層級 */
+        position: relative; /* 保持區塊布局不影響其他元素 */
+    }
 
 }
 
@@ -216,192 +266,219 @@
 
 @media screen and (max-width: 430px) {
 
-
-
     *,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-.top > .hamburger{
-    display: block;
-}
-
-
-/* 避免頁面內容觸發水平滾動 */
- html,  body {
-    margin: 0;
-    overflow-x: hidden; /* 禁止頁面水平滾動條 */
-}
-    /* 漢堡選單樣式 */
-    .top > .hamburger {
-        position: absolute;
-        top: 45px; /* 調整位置到右上角 */
-        right: 20px;
-        width: 40px; /* 縮小按鈕大小 */
-        height: 20px;
-        cursor: pointer;
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    *{font-family: "DM Sans";}
+    
+    
+    /* 避免頁面內容觸發水平滾動 */
+     html,  body {
+        margin: 0;
+        overflow-x: hidden; /* 禁止頁面水平滾動條 */
+    }
+        /* 漢堡選單樣式 */
+    
+        #menu-container {
+            display: block;
+        }
+    
+        /* 同时隐藏导航栏 */
+        .container nav{
+            display: none;
+        }
+    
+    
+        #menu-container {
+            position: relative;
+        }
+        
+        #hamburger-menu {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            z-index: 1000;
+            transition: transform 0.5s ease; /* 平滑過渡 */
+        }
+        
+        #hamburger-menu.open {
+            transition: transform 0.5s ease; /* 平滑過渡 */
+            width: 30px;
+            height: 30px;
+        }
+        
+        #hamburger-menu span {
+            display: block;
+            background: #fff;
+            height: 4px;
+            margin: 5px 0;
+            width:25px;
+            border-radius: 5px;
+            transition: 0.4s ease;
+        }
+        
+        #hamburger-menu.open span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        #hamburger-menu.open span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        #hamburger-menu.open span:nth-child(3) {
+            transform: rotate(-45deg) translate(8px, -8px);
+        }
+        
+        .menu-list {
+            list-style: none;
+            flex-direction: column;
+            position: fixed;
+            top: 100px;
+            right: 0px;
+            width: 100%;
+            height: auto;
+            /* background: #fff; */
+            transform: translateX(100%); /* 初始狀態：從右側進入 */
+            transition: transform 0.5s ease; /* 添加平滑動畫 */
+            z-index: 999;
+            box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+            border-radius: 50px; /* 菜單容器的圓角 */
+            overflow: hidden; /* 確保內部內容受限於圓角 */
+         
+        }
+        
+        .menu-list.open {
+            transform: translateX(0);
+          
+        }
+        
+        .menu-list li {
+            position: relative; /* 必須相對定位，便於 icon-toggle 絕對定位 */
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.4s ease;
+            transition-delay: var(--delay, 0s);
+            border-top: 1px dashed rgba(244, 180, 0, 0.5);
+             width: 100%;
+             font-size: 16px;
+             text-align: center;
+             line-height: 30px; /* 确保文字垂直置中 */
+             background-color: #fff;
+           
+        }
+        
+        .menu-submenu li{
+            background-color:#fdf0d7;
+            color:#fff;
+        }
+        
+        .menu-list .accordion{
+            border-radius: 90px;
+        }
+        
+        .menu-list li:last-child{
+            border-bottom:1px dashed rgba(244, 180, 0, 0.5); 
+           
+                border-bottom: none; /* 移除最後一個項目的邊框 */
+            }
+        
+        
+        .menu-list.open li {
+            opacity: 1;
+            transform: translateY(0);
+            transition: max-height 0.5s ease, opacity 0.5s ease; /* 平滑過渡 */}
+            
+        
+        .menu-list li a {
+            text-decoration: none;
+                color: #333;
+                display: inline-block;
+                width: 100%; /* 确保文字在 a 元素内居中 */
+                text-align: center;
+            padding-right: 20px; /* 留出空間給 icon-toggle */
+            font-size: 16px;
+            text-align: center;
+            line-height: 30px; /* 确保文字垂直置中 */
+        }
+        
+        .menu-container li{
+            border-radius:50px;
+            background-color: #f6b756 ;
+        }
+        
+        .icon-toggle {
+            position: absolute;
+            right: 100px; /* 固定在右側 */
+            font-size: 30px;
+            cursor: pointer;
+            margin-left: 0px;
+            color: #ff881a;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+         
+        ul.menu-submenu.accordion-content {
+            display: none;
+            /* padding-left: 20px; */
+            background-color: #f6b756 !important;
+            overflow: hidden;
+            text-align: center;
+            transition: max-height 0.5s ease, opacity 0.5s ease; /* 平滑過渡 */
+            margin: o auto;
+        }
+        
+        .accordion-content.open {
+                display: block;
+                width: 100%; /* 撐滿母選單寬度 */
+            }
+        
+        
+        .accordion-toggle.active .icon-toggle {
+            transform: rotate(180deg);
+        }
+    
+        header .container {
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            text-align: center;
+        }
+    
+        header .logo {
+            margin: 0 auto; /* 自動調整邊距 */
+            text-align: center; /* 確保內部內容居中 */
+        }
+    
+        header .logo img {
+            width: 200px; /* 根據需求調整 logo 大小 */
+            margin: 0 auto;
+            display: block; /* 保證 logo 是塊級元素，居中生效 */
+        }
+    
+    
+    /* 確保 my purpose 的區塊不影響選單層級 */
+    #section199 {
+        position: relative; /* 確保此區塊不會干擾選單 */
+        z-index: -1; /* 設置比選單低的 z-index */
     }
     
-    .hamburger li {
-        list-style: none;
-        position: absolute;
-        left: 5%;
-        transform: translateY(-50%);
-        width: 50%;
-        height: 3px; /* 調整線條寬度 */
-        background: #fff;
-        border-radius: 40px;
-        transition: 0.5s ease;
-        opacity: 1;
+    /* 防止文字或其他內容蓋住選單 */
+    #section199 h4, #section199 .purpose-items {
+        z-index: -1; /* 確保文字內容在較低層級 */
+        position: relative; /* 保持區塊布局不影響其他元素 */
     }
-    
-    .hamburger li:nth-of-type(1) {
-        top: 15%;
-    }
-    
-    .hamburger li:nth-of-type(2),
-    .hamburger li:nth-of-type(3) {
-        top: 50%;
-    }
-    
-    .hamburger li:nth-of-type(4) {
-        top: 85%;
-    }
-    
-    .hamburger.active li:nth-of-type(1) {
-        top: -20%;
-        opacity: 0;
-    }
-    
-    .hamburger.active li:nth-of-type(2) {
-        transform: translateY(-50%) rotate(45deg);
-    }
-    
-    .hamburger.active li:nth-of-type(3) {
-        transform: translateY(-50%) rotate(-45deg);
-    }
-    
-    .hamburger.active li:nth-of-type(4) {
-        top: 120%;
-        opacity: 0;
-    }
-
-    header .container {
-        display: flex;
-        justify-content: center; /* 水平居中 */
-        align-items: center; /* 垂直居中 */
-        text-align: center;
-    }
-
-    header .logo {
-        margin: 0 auto; /* 自動調整邊距 */
-        text-align: center; /* 確保內部內容居中 */
-    }
-
-    header .logo img {
-        width: 200px; /* 根據需求調整 logo 大小 */
-        margin: 0 auto;
-        display: block; /* 保證 logo 是塊級元素，居中生效 */
-    }
-
- 
-
-
-    
-    /* 調整選單樣式 */
-    header nav ul {
-        margin: 0 auto;
-    list-style: none;
-    flex-direction: column;
-    position: fixed;
-    top: 100px;
-    width: 100%;
-    height: 530px;
-    background-color: #fff;
-    color: #333;
-    transition: transform 0.5s ease;
-    transform: translateX(100%); /* 初始移出螢幕右側 */
-    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
-    border-radius: 30px;
-    text-align: center;
-    z-index: 999;
-    right: 0; /* 固定於右側，確保不溢出螢幕 */
-    overflow-x: hidden; /* 禁止水平滾動 */
-}
-    
-    /* 展開時 */
-    header nav ul.open {
-        transform: translateX(0); /* 回到可視區域 */
-    }
-
-    header nav ul li {
-        position: relative;
-        padding: 10px 0; /* 移除 padding-right */
-        font-size: 20px;
-        text-align: center;
-        line-height: 20px; /* 确保文字垂直置中 */
-        border-top: 1px dashed rgba(244, 180, 0, 0.5);
-        width: 430px;
-        text-align: center;
-    }
-
-    header nav ul li a {
-        text-decoration: none;
-        color: #333;
-        display: inline-block;
-        width: 100%; /* 确保文字在 a 元素内居中 */
-        text-align: center;
-    }
-    header nav ul li:nth-last-child() {
-
-        border-bottom: 0px
-    }
-
-    header nav ul li:nth-child(1) {
-
-        border-top: 0px
-    }
-
-    header nav ul > li > ul {
-        display: none; /* 初始隱藏子選單 */
-    }
-
-    header nav ul > li.open > ul {
-        display: block; /* 父選單展開時顯示子選單 */
-    }
-
-
-    /* 子選單的初始樣式 */
-    .submenu {
-        display: none; /* 初始隱藏子選單 */
-        padding-left: 20px; /* 子選單內縮 */
-        transition: max-height 0.3s ease, opacity 0.3s ease;
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-    }
-
-    .submenu.show {
-        display: block;
-        /* max-height: 100px; 足夠大的值支持展開 */
-        opacity: 1;
-    }
-
-
-/* 確保 my purpose 的區塊不影響選單層級 */
-#section199 {
-    position: relative; /* 確保此區塊不會干擾選單 */
-    z-index: -1; /* 設置比選單低的 z-index */
-}
-
-/* 防止文字或其他內容蓋住選單 */
-#section199 h4, #section199 .purpose-items {
-    z-index: -1; /* 確保文字內容在較低層級 */
-    position: relative; /* 保持區塊布局不影響其他元素 */
-}
 }
 
 
@@ -415,7 +492,7 @@
     margin: 0;
     padding: 0;
 }
-
+*{font-family: "DM Sans";}
 
 
 /* 避免頁面內容觸發水平滾動 */
@@ -425,61 +502,171 @@
 }
     /* 漢堡選單樣式 */
 
-    .top > .hamburger{
-        display: block;
+    #menu-container {
+        z-index: 9999; /* 確保選單位於頂層 */
+        position: relative;
     }
 
-    .top > .hamburger {
-        position: absolute;
-        top: 45px; /* 調整位置到右上角 */
-        right: 20px;
-        width: 40px; /* 縮小按鈕大小 */
-        height: 20px;
+    /* 同时隐藏导航栏 */
+    .container nav{
+        display: none;
+    }
+
+
+    #menu-container {
+        position: relative;
+    }
+    
+    #hamburger-menu {
         cursor: pointer;
-    }
-    
-    .hamburger li {
-        list-style: none;
+        width: 30px;
+        height: 30px;
         position: absolute;
-        left: 5%;
-        transform: translateY(-50%);
-        width: 50%;
-        height: 3px; /* 調整線條寬度 */
+        top: 40px;
+        right: 40px;
+        z-index: 1000;
+        transition: transform 0.5s ease; /* 平滑過渡 */
+    }
+    
+    #hamburger-menu.open {
+        transition: transform 0.5s ease; /* 平滑過渡 */
+        width: 30px;
+        height: 30px;
+    }
+    
+    #hamburger-menu span {
+        display: block;
         background: #fff;
-        border-radius: 40px;
-        transition: 0.5s ease;
+        height: 4px;
+        margin: 5px 0;
+        width:25px;
+        border-radius: 5px;
+        transition: 0.4s ease;
+    }
+    
+    #hamburger-menu.open span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    #hamburger-menu.open span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #hamburger-menu.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(8px, -8px);
+    }
+    
+    .menu-list {
+        list-style: none;
+        flex-direction: column;
+        position: fixed;
+        top: 100px;
+        right: 0px;
+        width: 100%;
+        height: auto;
+        /* background: #fff; */
+        transform: translateX(100%); /* 初始狀態：從右側進入 */
+        transition: transform 0.5s ease; /* 添加平滑動畫 */
+        z-index: 999;
+        box-shadow: 2px 5px 10px rgba(255, 136, 26, 0.2);
+        border-radius: 50px; /* 菜單容器的圓角 */
+        overflow: hidden; /* 確保內部內容受限於圓角 */
+     
+    }
+    
+    .menu-list.open {
+        transform: translateX(0);
+      
+    }
+    
+    .menu-list li {
+        position: relative; /* 必須相對定位，便於 icon-toggle 絕對定位 */
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.4s ease;
+        transition-delay: var(--delay, 0s);
+        border-top: 1px dashed rgba(244, 180, 0, 0.5);
+         width: 100%;
+         font-size: 16px;
+         text-align: center;
+         line-height: 30px; /* 确保文字垂直置中 */
+         background-color: #fff;
+       
+    }
+    
+    .menu-submenu li{
+        background-color:#fdf0d7;
+        color:#fff;
+    }
+    
+    .menu-list .accordion{
+        border-radius: 90px;
+    }
+    
+    .menu-list li:last-child{
+        border-bottom:1px dashed rgba(244, 180, 0, 0.5); 
+       
+            border-bottom: none; /* 移除最後一個項目的邊框 */
+        }
+    
+    
+    .menu-list.open li {
         opacity: 1;
+        transform: translateY(0);
+        transition: max-height 0.5s ease, opacity 0.5s ease; /* 平滑過渡 */}
+        
+    
+    .menu-list li a {
+        text-decoration: none;
+            color: #333;
+            display: inline-block;
+            width: 100%; /* 确保文字在 a 元素内居中 */
+            text-align: center;
+        padding-right: 20px; /* 留出空間給 icon-toggle */
+        font-size: 16px;
+        text-align: center;
+        line-height: 30px; /* 确保文字垂直置中 */
     }
     
-    .hamburger li:nth-of-type(1) {
-        top: 15%;
+    .menu-container li{
+        border-radius:50px;
+        background-color: #f6b756 ;
     }
     
-    .hamburger li:nth-of-type(2),
-    .hamburger li:nth-of-type(3) {
-        top: 50%;
+    .icon-toggle {
+        position: absolute;
+        right: 100px; /* 固定在右側 */
+        font-size: 30px;
+        cursor: pointer;
+        margin-left: 0px;
+        color: #ff881a;
+        font-weight: bold;
+        transition: transform 0.3s ease;
+    }
+     
+    ul.menu-submenu.accordion-content {
+        display: none;
+        /* padding-left: 20px; */
+        background-color: #f6b756 !important;
+        overflow: hidden;
+        text-align: center;
+        transition: max-height 0.5s ease, opacity 0.5s ease; /* 平滑過渡 */
+        margin: o auto;
     }
     
-    .hamburger li:nth-of-type(4) {
-        top: 85%;
-    }
+    .accordion-content.open {
+            display: block;
+            width: 100%; /* 撐滿母選單寬度 */
+        }
     
-    .hamburger.active li:nth-of-type(1) {
-        top: -20%;
-        opacity: 0;
-    }
     
-    .hamburger.active li:nth-of-type(2) {
-        transform: translateY(-50%) rotate(45deg);
-    }
-    
-    .hamburger.active li:nth-of-type(3) {
-        transform: translateY(-50%) rotate(-45deg);
-    }
-    
-    .hamburger.active li:nth-of-type(4) {
-        top: 120%;
-        opacity: 0;
+    .accordion-toggle.active .icon-toggle {
+        transform: rotate(180deg);
     }
 
     header .container {
@@ -498,85 +685,6 @@
         width: 200px; /* 根據需求調整 logo 大小 */
         margin: 0 auto;
         display: block; /* 保證 logo 是塊級元素，居中生效 */
-    }
-
-
-    /* 調整選單樣式 */
-    header nav ul {
-    list-style: none;
-    flex-direction: column;
-    position: fixed;
-    top: 100px;
-    width: 100%;
-    height: 530px;
-    background-color: #fff;
-    color: #333;
-    transition: transform 0.5s ease;
-    transform: translateX(100%); /* 初始移出螢幕右側 */
-    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
-    border-radius: 30px;
-    text-align: center;
-    z-index: 999;
-    right: 0; /* 固定於右側，確保不溢出螢幕 */
-    overflow-x: hidden; /* 禁止水平滾動 */
-}
-    
-    /* 展開時 */
-    header nav ul.open {
-        transform: translateX(0); /* 回到可視區域 */
-    }
-
- 
-    header nav ul li:nth-last-child() {
-
-        border-bottom: 0px
-    }
-
-    header nav ul li:nth-child(1) {
-
-        border-top: 0px
-    }
-
-    header nav ul > li > ul {
-        display: none; /* 初始隱藏子選單 */
-    }
-
-    header nav ul > li.open > ul {
-        display: block; /* 父選單展開時顯示子選單 */
-    }
-
-    header nav ul li {
-        position: relative;
-        padding: 10px 0; /* 移除 padding-right */
-        font-size: 20px;
-        text-align: center;
-        line-height: 24px; /* 确保文字垂直置中 */
-        border-top: 1px dashed rgba(244, 180, 0, 0.5);
-        width: 412px;
-    }
-
-    header nav ul li a {
-        text-decoration: none;
-        color: #333;
-        display: inline-block;
-        width: 100%; /* 确保文字在 a 元素内居中 */
-        text-align: center;
-    }
-
-    /* 子選單的初始樣式 */
-    .submenu {
-        display: none; /* 初始隱藏子選單 */
-        padding-left: 20px; /* 子選單內縮 */
-        transition: max-height 0.3s ease, opacity 0.3s ease;
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-    }
-
-    .submenu.show {
-        display: block;
-        /* max-height: 100px; 足夠大的值支持展開 */
-        opacity: 1;
     }
 
 
@@ -596,186 +704,216 @@
 /* ====================390px RWD========================= */
 @media screen and (max-width: 390px) {
     *,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-
-
-/* 避免頁面內容觸發水平滾動 */
- html,  body {
-    margin: 0;
-    overflow-x: hidden; /* 禁止頁面水平滾動條 */
-}
-    /* 漢堡選單樣式 */
-
-    .top > .hamburger{
-        display: block;
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
-
-    .top > .hamburger {
-        position: absolute;
-        top: 45px; /* 調整位置到右上角 */
-        right: 20px;
-        width: 40px; /* 縮小按鈕大小 */
-        height: 20px;
-        cursor: pointer;
+    *{font-family: "DM Sans";}
+    
+    
+    /* 避免頁面內容觸發水平滾動 */
+     html,  body {
+        margin: 0;
+        overflow-x: hidden; /* 禁止頁面水平滾動條 */
+    }
+        /* 漢堡選單樣式 */
+    
+        #menu-container {
+            display: block;
+        }
+    
+        /* 同时隐藏导航栏 */
+        .container nav{
+            display: none;
+        }
+    
+    
+        #menu-container {
+            position: relative;
+        }
+        
+        #hamburger-menu {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            z-index: 1000;
+            transition: transform 0.5s ease; /* 平滑過渡 */
+        }
+        
+        #hamburger-menu.open {
+            transition: transform 0.5s ease; /* 平滑過渡 */
+            width: 30px;
+            height: 30px;
+        }
+        
+        #hamburger-menu span {
+            display: block;
+            background: #fff;
+            height: 4px;
+            margin: 5px 0;
+            width:25px;
+            border-radius: 5px;
+            transition: 0.4s ease;
+        }
+        
+        #hamburger-menu.open span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        #hamburger-menu.open span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        #hamburger-menu.open span:nth-child(3) {
+            transform: rotate(-45deg) translate(8px, -8px);
+        }
+        
+        .menu-list {
+            list-style: none;
+            flex-direction: column;
+            position: fixed;
+            top: 100px;
+            right: 0px;
+            width: 100%;
+            height: auto;
+            /* background: #fff; */
+            transform: translateX(100%); /* 初始狀態：從右側進入 */
+            transition: transform 0.5s ease; /* 添加平滑動畫 */
+            z-index: 999;
+            box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+            border-radius: 50px; /* 菜單容器的圓角 */
+            overflow: hidden; /* 確保內部內容受限於圓角 */
+         
+        }
+        
+        .menu-list.open {
+            transform: translateX(0);
+          
+        }
+        
+        .menu-list li {
+            position: relative; /* 必須相對定位，便於 icon-toggle 絕對定位 */
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.4s ease;
+            transition-delay: var(--delay, 0s);
+            border-top: 1px dashed rgba(244, 180, 0, 0.5);
+             width: 100%;
+             font-size: 16px;
+             text-align: center;
+             line-height: 30px; /* 确保文字垂直置中 */
+             background-color: #fff;
+           
+        }
+        
+        .menu-submenu li{
+            background-color:#fdf0d7;
+            color:#fff;
+        }
+        
+        .menu-list .accordion{
+            border-radius: 90px;
+        }
+        
+        .menu-list li:last-child{
+            border-bottom:1px dashed rgba(244, 180, 0, 0.5); 
+           
+                border-bottom: none; /* 移除最後一個項目的邊框 */
+            }
+        
+        
+        .menu-list.open li {
+            opacity: 1;
+            transform: translateY(0);
+            transition: max-height 0.5s ease, opacity 0.5s ease; /* 平滑過渡 */}
+            
+        
+        .menu-list li a {
+            text-decoration: none;
+                color: #333;
+                display: inline-block;
+                width: 100%; /* 确保文字在 a 元素内居中 */
+                text-align: center;
+            padding-right: 20px; /* 留出空間給 icon-toggle */
+            font-size: 16px;
+            text-align: center;
+            line-height: 30px; /* 确保文字垂直置中 */
+        }
+        
+        .menu-container li{
+            border-radius:50px;
+            background-color: #f6b756 ;
+        }
+        
+        .icon-toggle {
+            position: absolute;
+            right: 100px; /* 固定在右側 */
+            font-size: 30px;
+            cursor: pointer;
+            margin-left: 0px;
+            color: #ff881a;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+         
+        ul.menu-submenu.accordion-content {
+            display: none;
+            /* padding-left: 20px; */
+            background-color: #f6b756 !important;
+            overflow: hidden;
+            text-align: center;
+            transition: max-height 0.5s ease, opacity 0.5s ease; /* 平滑過渡 */
+            margin: o auto;
+        }
+        
+        .accordion-content.open {
+                display: block;
+                width: 100%; /* 撐滿母選單寬度 */
+            }
+        
+        
+        .accordion-toggle.active .icon-toggle {
+            transform: rotate(180deg);
+        }
+    
+        header .container {
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            text-align: center;
+        }
+    
+        header .logo {
+            margin: 0 auto; /* 自動調整邊距 */
+            text-align: center; /* 確保內部內容居中 */
+        }
+    
+        header .logo img {
+            width: 200px; /* 根據需求調整 logo 大小 */
+            margin: 0 auto;
+            display: block; /* 保證 logo 是塊級元素，居中生效 */
+        }
+    
+    
+    /* 確保 my purpose 的區塊不影響選單層級 */
+    #section199 {
+        position: relative; /* 確保此區塊不會干擾選單 */
+        z-index: -1; /* 設置比選單低的 z-index */
     }
     
-    .hamburger li {
-        list-style: none;
-        position: absolute;
-        left: 5%;
-        transform: translateY(-50%);
-        width: 50%;
-        height: 3px; /* 調整線條寬度 */
-        background: #fff;
-        border-radius: 40px;
-        transition: 0.5s ease;
-        opacity: 1;
+    /* 防止文字或其他內容蓋住選單 */
+    #section199 h4, #section199 .purpose-items {
+        z-index: -1; /* 確保文字內容在較低層級 */
+        position: relative; /* 保持區塊布局不影響其他元素 */
     }
-    
-    .hamburger li:nth-of-type(1) {
-        top: 15%;
     }
-    
-    .hamburger li:nth-of-type(2),
-    .hamburger li:nth-of-type(3) {
-        top: 50%;
-    }
-    
-    .hamburger li:nth-of-type(4) {
-        top: 85%;
-    }
-    
-    .hamburger.active li:nth-of-type(1) {
-        top: -20%;
-        opacity: 0;
-    }
-    
-    .hamburger.active li:nth-of-type(2) {
-        transform: translateY(-50%) rotate(45deg);
-    }
-    
-    .hamburger.active li:nth-of-type(3) {
-        transform: translateY(-50%) rotate(-45deg);
-    }
-    
-    .hamburger.active li:nth-of-type(4) {
-        top: 120%;
-        opacity: 0;
-    }
-
-    header .container {
-        display: flex;
-        justify-content: center; /* 水平居中 */
-        align-items: center; /* 垂直居中 */
-        text-align: center;
-    }
-
-    header .logo {
-        margin: 0 auto; /* 自動調整邊距 */
-        text-align: center; /* 確保內部內容居中 */
-    }
-
-    header .logo img {
-        width: 200px; /* 根據需求調整 logo 大小 */
-        margin: 0 auto;
-        display: block; /* 保證 logo 是塊級元素，居中生效 */
-    }
-
-
-    /* 調整選單樣式 */
-    header nav ul {
-    list-style: none;
-    flex-direction: column;
-    position: fixed;
-    top: 100px;
-    width: 100%;
-    height: 530px;
-    background-color: #fff;
-    color: #333;
-    transition: transform 0.5s ease;
-    transform: translateX(100%); /* 初始移出螢幕右側 */
-    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
-    border-radius: 30px;
-    text-align: center;
-    z-index: 999;
-    right: 0; /* 固定於右側，確保不溢出螢幕 */
-    overflow-x: hidden; /* 禁止水平滾動 */
-}
-    
-    /* 展開時 */
-    header nav ul.open {
-        transform: translateX(0); /* 回到可視區域 */
-    }
-
- 
-    header nav ul li:nth-last-child() {
-
-        border-bottom: 0px
-    }
-
-    header nav ul li:nth-child(1) {
-
-        border-top: 0px
-    }
-
-    header nav ul > li > ul {
-        display: none; /* 初始隱藏子選單 */
-    }
-
-    header nav ul > li.open > ul {
-        display: block; /* 父選單展開時顯示子選單 */
-    }
-
-    header nav ul li {
-        position: relative;
-        padding: 10px 0; /* 移除 padding-right */
-        font-size: 20px;
-        text-align: center;
-        line-height: 24px; /* 确保文字垂直置中 */
-        border-top: 1px dashed rgba(244, 180, 0, 0.5);
-        width: 412px;
-    }
-
-    header nav ul li a {
-        text-decoration: none;
-        color: #333;
-        display: inline-block;
-        width: 100%; /* 确保文字在 a 元素内居中 */
-        text-align: center;
-    }
-
-    /* 子選單的初始樣式 */
-    .submenu {
-        display: none; /* 初始隱藏子選單 */
-        padding-left: 20px; /* 子選單內縮 */
-        transition: max-height 0.3s ease, opacity 0.3s ease;
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-    }
-
-    .submenu.show {
-        display: block;
-        /* max-height: 100px; 足夠大的值支持展開 */
-        opacity: 1;
-    }
-
-
-/* 確保 my purpose 的區塊不影響選單層級 */
-#section199 {
-    position: relative; /* 確保此區塊不會干擾選單 */
-    z-index: -1; /* 設置比選單低的 z-index */
-}
-
-/* 防止文字或其他內容蓋住選單 */
-#section199 h4, #section199 .purpose-items {
-    z-index: -1; /* 確保文字內容在較低層級 */
-    position: relative; /* 保持區塊布局不影響其他元素 */
-}
-}

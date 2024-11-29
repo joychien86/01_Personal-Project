@@ -31,9 +31,17 @@
 
 /* ====================820px RWD========================= */
 @media screen and (max-width: 820px) {
-    .top > .fa {
-        display: block ;
+    /* 漢堡選單樣式 */
+
+    #menu-container {
+        display: block;
     }
+
+    /* 同时隐藏导航栏 */
+    .container nav{
+        display: none;
+    }
+
 
     .follow, .follow2, .follow3{
         display:none;
@@ -239,9 +247,17 @@
         transform: none;
     }
 
-    .top > .fa {
-        display: block;
-    }
+   /* 漢堡選單樣式 */
+
+   #menu-container {
+    display: block;
+}
+
+/* 同时隐藏导航栏 */
+.container nav{
+    display: none;
+}
+
     .wrapper{
         max-width: 430px;
         margin: 0 auto;
@@ -461,9 +477,17 @@ opacity: 1; /* 確保按鈕仍可見 */
 @media screen and (max-width: 412px) {
 
 
-    .top > .fa {
-        display: block ;
-    }
+   /* 漢堡選單樣式 */
+
+   #menu-container {
+    display: block;
+}
+
+/* 同时隐藏导航栏 */
+.container nav{
+    display: none;
+}
+
 
     .wrapper{
         max-width: 412px;

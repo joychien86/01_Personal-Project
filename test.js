@@ -23,16 +23,8 @@ $(document).ready(function () {
     });
 
     // 點擊空白區域關閉菜單
-    $(document).on('click touchstart', function (e) {
+    $(document).click(function (e) {
         if (!$(e.target).closest('#menu-container').length && menu.hasClass('open')) {
-            menu.removeClass('open');
-            hamburger.removeClass('open');
-        }
-    });
-
-    // 滑動螢幕關閉菜單
-    $(document).on('touchmove', function (e) {
-        if (menu.hasClass('open')) {
             menu.removeClass('open');
             hamburger.removeClass('open');
         }
