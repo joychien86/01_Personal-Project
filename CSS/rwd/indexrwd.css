@@ -242,38 +242,7 @@ opacity: 1; /* 確保按鈕仍可見 */
             display: none !important;
         }
 
-        * {
-            animation: none !important; /* 全局取消动画 */
-        }
-    
-        header,
-        .circle-container1,
-        .hero,
-        .text-content h1,
-        .text-content h2,
-        .text-content h3,
-        .explore-button,
-        #section199, 
-        .purpose-items,
-        .logo-design-section, 
-        .footer  {
-            opacity: 1 !important; /* 确保直接显示 */
-        }
-    
-        body.loaded header,
-        body.loaded .hero,
-        body.loaded .circle-container1,
-        body.loaded .text-content h1,
-        body.loaded .text-content h2,
-        body.loaded .text-content h3
-        body.loaded #section199,
-        body.loaded .purpose-items,
-        body.loaded .logo-design-section
-        body.loaded .footer
-        {
-            opacity: 1 !important;
-        }
-        .top > .fa {
+        .hamburger {
             display: block;
         }
 
@@ -624,38 +593,8 @@ opacity: 1; /* 確保按鈕仍可見 */
             display: none !important;
         }
 
-        * {
-            animation: none !important; /* 全局取消动画 */
-        }
-    
-        header,
-        .circle-container1,
-        .hero,
-        .text-content h1,
-        .text-content h2,
-        .text-content h3,
-        .explore-button,
-        #section199, 
-        .purpose-items,
-        .logo-design-section, 
-        .footer {
-            opacity: 1 !important; /* 确保直接显示 */
-        }
-    
-        body.loaded header,
-        body.loaded .hero,
-        body.loaded .circle-container1,
-        body.loaded .text-content h1,
-        body.loaded .text-content h2,
-        body.loaded .text-content h3
-        body.loaded #section199,
-        body.loaded .purpose-items,
-        body.loaded .logo-design-section
-        body.loaded .footer
-  {
-            opacity: 1 !important;
-        }
-        .top > .fa {
+        
+        .hamburger {
             display: block;
         }
 
@@ -1001,41 +940,8 @@ opacity: 1; /* 確保按鈕仍可見 */
         display: none !important;
     }
 
-    * {
-        animation: none !important; /* 全局取消动画 */
-        transition: none !important; /* 全局取消过渡效果 */
-    }
 
-    header,
-    .circle-container1,
-    .hero,
-    .text-content h1,
-    .text-content h2,
-    .text-content h3,
-    .explore-button,
-    #section199, 
-    .purpose-items,
-    .logo-design-section, 
-    .footer
-    {
-        opacity: 1 !important; /* 确保直接显示 */
-    }
-
-    body.loaded header,
-    body.loaded .hero,
-    body.loaded .circle-container1,
-    body.loaded .text-content h1,
-    body.loaded .text-content h2,
-    body.loaded .text-content h3,
-    body.loaded .purpose-items,
-    body.loaded #section199,
-    body.loaded .purpose-items,
-    body.loaded .logo-design-section
-    body.loaded .footer
-   {
-        opacity: 1 !important;
-    }
-    .top > .fa {
+    .hamburger {
         display: block;
     }
 
