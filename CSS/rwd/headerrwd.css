@@ -117,19 +117,19 @@
         
         .menu-list {
             list-style: none;
-            flex-direction: column;
-            position: fixed;
-            top: 100px;
-            right: 0px;
-            width: 100%;
-            height: auto;
-            /* background: #fff; */
-            transform: translateX(100%); /* 初始狀態：從右側進入 */
-            transition: transform 0.5s ease; /* 添加平滑動畫 */
-            z-index: 999;
-            box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 50px; /* 菜單容器的圓角 */
-            overflow: hidden; /* 確保內部內容受限於圓角 */
+        flex-direction: column;
+        position: fixed;
+        top: 100px;
+        right: 0px;
+        width: 100%;
+        height: auto;
+        /* background: #fff; */
+        transform: translateX(100%); /* 初始狀態：從右側進入 */
+        transition: transform 0.5s ease; /* 添加平滑動畫 */
+        z-index: 999;
+        box-shadow: 5px 5px 10px rgba(251, 227, 173, 0.5);
+        border-radius: 50px; /* 菜單容器的圓角 */
+        overflow: hidden; /* 確保內部內容受限於圓角 */
          
         }
         
@@ -338,19 +338,19 @@
         
         .menu-list {
             list-style: none;
-            flex-direction: column;
-            position: fixed;
-            top: 100px;
-            right: 0px;
-            width: 100%;
-            height: auto;
-            /* background: #fff; */
-            transform: translateX(100%); /* 初始狀態：從右側進入 */
-            transition: transform 0.5s ease; /* 添加平滑動畫 */
-            z-index: 999;
-            box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
-            border-radius: 50px; /* 菜單容器的圓角 */
-            overflow: hidden; /* 確保內部內容受限於圓角 */
+        flex-direction: column;
+        position: fixed;
+        top: 100px;
+        right: 0px;
+        width: 100%;
+        height: auto;
+        /* background: #fff; */
+        transform: translateX(100%); /* 初始狀態：從右側進入 */
+        transition: transform 0.5s ease; /* 添加平滑動畫 */
+        z-index: 999;
+        box-shadow: 5px 5px 10px rgba(251, 227, 173, 0.5);
+        border-radius: 50px; /* 菜單容器的圓角 */
+        overflow: hidden; /* 確保內部內容受限於圓角 */
          
         }
         
@@ -568,7 +568,7 @@
         transform: translateX(100%); /* 初始狀態：從右側進入 */
         transition: transform 0.5s ease; /* 添加平滑動畫 */
         z-index: 999;
-        box-shadow: 2px 5px 10px rgba(255, 136, 26, 0.2);
+        box-shadow: 5px 5px 10px rgba(251, 227, 173, 0.5);
         border-radius: 50px; /* 菜單容器的圓角 */
         overflow: hidden; /* 確保內部內容受限於圓角 */
      
@@ -785,7 +785,7 @@
             transform: translateX(100%); /* 初始狀態：從右側進入 */
             transition: transform 0.5s ease; /* 添加平滑動畫 */
             z-index: 999;
-            box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 5px 5px 10px rgba(251, 227, 173, 0.5);
             border-radius: 50px; /* 菜單容器的圓角 */
             overflow: hidden; /* 確保內部內容受限於圓角 */
          
