@@ -555,7 +555,7 @@ opacity: 1; /* 確保按鈕仍可見 */
 
     .back-to-top{
         right:30px;
-        bottom:260px;
+        bottom:80px;
         width: 30px;
         height: 30px;
         display: flex; /* 使用 Flexbox */
@@ -906,7 +906,7 @@ opacity: 1; /* 確保按鈕仍可見 */
 
     .back-to-top{
         right:30px;
-        bottom:260px;
+        bottom:80px;
         width: 30px;
         height: 30px;
         display: flex; /* 使用 Flexbox */
@@ -1253,7 +1253,7 @@ opacity: 1; /* 確保按鈕仍可見 */
 
 .back-to-top{
     right:30px;
-    bottom:280px;
+    bottom:80px;
     width: 30px;
     height: 30px;
     display: flex; /* 使用 Flexbox */
