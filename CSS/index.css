@@ -15,20 +15,66 @@ cursor: none; /* 隱藏滑鼠游標 */}
     top: 0;
     left: 0;
     z-index: 9999; /* 保證在最上層 */
-    display: flex; /* 水平和垂直居中 */
-    justify-content: center;
-    align-items: center;
-    opacity: 1; /* 初始全可見 */
-    transition: opacity 0.5s ease-in-out; /* 添加淡出效果 */
+    display: flex; /* 使用 flexbox 居中內容 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    flex-direction: column; /* 讓內容垂直排列 */
+    opacity: 0; /* 初始透明 */
+    visibility: hidden; /* 隱藏元素 */
+    transition: opacity 1s ease-in-out; /* 添加淡入效果 */
+}
+/* 當元素被激活時（顯示 loading 畫面） */
+#loader.show {
+    opacity: 1; /* 顯示 */
+    visibility: visible; /* 確保元素可見 */
 }
 
+
+/* 主內容 */
+#main-content {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+/* 當 body 被添加 loaded class */
+body.loaded #main-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.brand{
+    position: absolute;
+    font-family: "DM Sans";
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 48px;
+    text-align: center;
+    margin: 0; /* 避免預設 margin 影響布局 */
+    margin-top: 350px;
+    /* border: 2px solid red; */
+    width: 100%;
+    color: #fff;
+    z-index: 1;
+}
 /* Sun 和 Orbit 動畫 */
 .sun {
-    background: radial-gradient(#ff0, #f90); /* 太陽漸變色 */
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
     position: absolute;
+    top: 50%; /* 父容器垂直居中 */
+    left: 50%; /* 父容器水平居中 */
+    transform: translate(-50%, -50%); /* 將中心點移動至元素中心 */
+    display: flex; /* 使用 flexbox 排列 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+}
+
+.sun img {
+    max-width: 100%; /* 防止圖片超出父容器 */
+    max-height: 100%;
 }
 
 .orbit {
@@ -36,10 +82,10 @@ cursor: none; /* 隱藏滑鼠游標 */}
     border-radius: 50%;
     border: 1px solid #fff; /* 軌道顏色 */
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
     margin: auto;
     animation: rotation 6s infinite linear; /* 默認旋轉 */
 }
