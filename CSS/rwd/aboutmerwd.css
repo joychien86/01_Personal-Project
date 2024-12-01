@@ -36,6 +36,13 @@
 .container09{
     display:none;
 }
+.wrapper09{
+    display:none;
+}
+.flair .flair--4b{
+    display:none;
+}
+ 
     .wrapper{
         margin: 0 auto;
         width: 100%;
@@ -223,6 +230,15 @@
     .top > .fa {
         display: block;
     }
+    .container09{
+        display:none;
+    }
+    .wrapper09{
+        display:none;
+    }
+    .flair .flair--4b{
+        display:none;
+    }
     .wrapper{
         max-width: 430px;
         margin: 0 auto;
@@ -409,6 +425,12 @@
     .container09{
         display:none;
     }
+    .wrapper09{
+        display:none;
+    }
+    .flair .flair--4b{
+        display:none;
+    }
 
     .wrapper{
         max-width: 412px;
@@ -588,7 +610,14 @@
     .top > .fa {
         display: block;
     }
+
     .container09{
+        display:none;
+    }
+    .wrapper09{
+        display:none;
+    }
+    .flair .flair--4b{
         display:none;
     }
     .wrapper{
