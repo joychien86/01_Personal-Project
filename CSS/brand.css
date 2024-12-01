@@ -141,6 +141,8 @@ width: 100%;
     color:#fff;
     background-color:  rgb(255, 136, 25,0.9);
     top: 200px;
+    padding-bottom:30px;
+    padding-right: 15px;
 }
 
 /* 將右側按鈕固定到右邊 */
@@ -149,6 +151,8 @@ width: 100%;
     color:#fff;
     background-color:  rgb(255, 136, 25,0.9);
     top: 200px;
+    padding-left:15px;
+    padding-bottom:30px;
 
 }
 
@@ -185,6 +189,10 @@ width: 100%;
     text-align: left;
     margin-bottom: 50px;
 } */
+
+.text-slide .active{
+    margin-bottom: 0px;
+}
 
 
 /* 動畫背景 */
