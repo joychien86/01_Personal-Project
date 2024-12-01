@@ -4,7 +4,10 @@
 *{
     font-family: "DM Sans";
 }
-
+body {
+    overscroll-behavior: none;
+    touch-action: pan-y;
+  }
 html{
     cursor: none; /* 隱藏滑鼠游標 */}
 

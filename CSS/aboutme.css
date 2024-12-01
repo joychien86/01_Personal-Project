@@ -5,6 +5,11 @@
     padding-bottom: 100px;
 } */
 
+body {
+  overscroll-behavior: none;
+  touch-action: pan-y;
+}
+
 *{
     font-family: "DM Sans";
 }
