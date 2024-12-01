@@ -1,5 +1,6 @@
-FURRY PLANT 毛絨星球 | 鼠兔同樂，幸福毛絨的療癒家園！探索一個由兔子和天竺鼠共同築起的夢幻世界，無論是陪伴還是冒險，毛絨星球都為你帶來最純粹的快樂與幸福！
 
+
+This project uses GSAP (GreenSock Animation Platform), which is free for non-commercial use and adheres to the GreenSock No Charge License.
 
 
 
