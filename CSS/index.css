@@ -73,8 +73,8 @@ body.loaded #main-content {
 }
 
 .sun img {
-    max-width: 100%; /* 防止圖片超出父容器 */
-    max-height: 100%;
+    width: 90px; /* 防止圖片超出父容器 */
+    height: 90px;
 }
 
 .orbit {

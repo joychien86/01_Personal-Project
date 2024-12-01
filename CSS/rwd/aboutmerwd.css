@@ -33,7 +33,9 @@
     .follow, .follow2, .follow3{
         display:none;
     }
-
+.container09{
+    display:none;
+}
     .wrapper{
         margin: 0 auto;
         width: 100%;
@@ -213,6 +215,9 @@
     *{
         transition: none;
         transform: none;
+    }
+    .container09{
+        display:none;
     }
 
     .top > .fa {
@@ -401,6 +406,9 @@
     .top > .fa {
         display: block;
     }
+    .container09{
+        display:none;
+    }
 
     .wrapper{
         max-width: 412px;
@@ -580,7 +588,9 @@
     .top > .fa {
         display: block;
     }
-
+    .container09{
+        display:none;
+    }
     .wrapper{
         max-width: 390px;
         margin: 0 auto;

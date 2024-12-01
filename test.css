@@ -1,165 +1,56 @@
-
-
 @import url(./CSS/reset.css);
 /* Reset */
-body {
-    font-family: 'Arial', sans-serif;
-    background: #FF5722;
+html, body {
     margin: 0;
     padding: 0;
-}
-
-#menu-container {
-    position: relative;
-}
-
-
-
-#hamburger-menu {
-    cursor: pointer;
-    width: 30px;
-    height: 25px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-        transition: transform 0.5s ease; /* 平滑過渡 */
-}
-
-#hamburger-menu.open {
-    transition: transform 0.5s ease; /* 平滑過渡 */
-}
-
-#hamburger-menu span {
-    display: block;
-    background: #fff;
-    height: 3px;
-    margin: 5px 0;
-    border-radius: 2px;
-    transition: 0.4s ease;
-}
-
-#hamburger-menu.open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-#hamburger-menu.open span:nth-child(2) {
-    opacity: 0;
-}
-
-#hamburger-menu.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-}
-
-.menu-list {
-     list-style: none;
-    flex-direction: column;
-    position: fixed;
-    top: 60px;
-    right: 0px;
-    width: 300px;
-    height: auto;
-    /* background: #fff; */
-    transform: translateX(100%); /* 初始狀態：從右側進入 */
-    transition: transform 0.5s ease; /* 添加平滑動畫 */
-    z-index: 999;
-    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
-    border-radius: 50px; /* 菜單容器的圓角 */
-    overflow: hidden; /* 確保內部內容受限於圓角 */
- 
-
-}
-
-.menu-list.open {
-    transform: translateX(0);
-  
-}
-
-.menu-list li {
-    position: relative; /* 必須相對定位，便於 icon-toggle 絕對定位 */
-    padding: 15px 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.4s ease;
-    transition-delay: var(--delay, 0s);
-    border-top: 1px dashed rgba(244, 180, 0, 0.5);
-     width: 300px;
-     font-size: 16px;
-     text-align: center;
-     line-height: 30px; /* 确保文字垂直置中 */
-     background-color: #fff;
-   
+    justify-content: center;
+    min-height: 100vh;
+    background: #f5f5f5;
 }
 
-.menu-submenu li{
-    background-color:#fdf0d7;
-    color:#fff;
+/* Container Styles */
+.container09 {
+    position: relative;
+    width: 90vw;
+    height: 90vh;
+    max-width: 90vh;
+    max-height: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 9px;
+    border: 2px dashed #ccc; /* 用於測試 */
 }
 
-.menu-list .accordion{
-    border-radius: 90px;
-}
 
-.menu-list li:last-child{
-    border-bottom:1px dashed rgba(244, 180, 0, 0.5); 
-   
-        border-bottom: none; /* 移除最後一個項目的邊框 */
-    }
-
-
-.menu-list.open li {
-    opacity: 1;
-    transform: translateY(0);
-    transition: max-height 0.5s ease, opacity 0.5s ease; /* 平滑過渡 */}
-    
-
-.menu-list li a {
-    text-decoration: none;
-        color: #333;
-        display: inline-block;
-        width: 100%; /* 确保文字在 a 元素内居中 */
-        text-align: center;
-    padding-right: 20px; /* 留出空間給 icon-toggle */
-    font-size: 16px;
-    text-align: center;
-    line-height: 30px; /* 确保文字垂直置中 */
-}
-
-.menu-container li{
-    border-radius:50px;
-    background-color: #f6b756 ;
-}
-
-.icon-toggle {
-    position: absolute;
-    right: 90px; /* 固定在右側 */
-    font-size: 20px;
+/* Flair Elements */
+.flair {
     cursor: pointer;
-    margin-left: 0px;
-    color: #ff881a;
-    transition: transform 0.3s ease;
-}
- 
-ul.menu-submenu.accordion-content {
-    display: none;
-    /* padding-left: 20px; */
-    background-color: #f6b756 !important;
-    overflow: hidden;
-    text-align: center;
-    transition: max-height 0.5s ease, opacity 0.5s ease; /* 平滑過渡 */
-    margin: o auto;
+    width: 50px;
+    height: 50px;
+    max-height: 15vh;
+    max-width: 15vh;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
 }
 
-.accordion-content.open {
-        display: block;
-        width: 100%; /* 撐滿母選單寬度 */
-    }
+/* Individual Flair Styles */
+.flair--4b {
+   width: 10px;
+}
+.flair--4b img {
+    position: absolute; /* 絕對定位 */
+    top: 50px; /* 初始位置 */
+    left: 50px; /* 初始位置 */
+    width: 200px; /* 圖片寬度 */
+    height: auto; /* 自動調整高度 */
+    z-index: 1000; /* 保證在其他內容之上 */
+    cursor: grab; /* 拖動時顯示手型圖標 */
+}
 
-
-.accordion-toggle.active .icon-toggle {
-    transform: rotate(180deg);
+.flair--4b img:active {
+    cursor: grabbing; /* 拖動過程中的圖標 */
 }

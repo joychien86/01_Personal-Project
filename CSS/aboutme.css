@@ -270,6 +270,20 @@ html{
 }
 
 
+.flair--4b img {
+  position: absolute; /* 絕對定位 */
+  top: 120px; /* 初始位置 */
+  left: 770px; /* 初始位置 */
+  width: 200px; /* 圖片寬度 */
+  height: auto; /* 自動調整高度 */
+  z-index: 1000; /* 保證在其他內容之上 */
+  cursor: grab; /* 拖動時顯示手型圖標 */
+}
+
+.flair--4b img:active {
+  cursor: grabbing; /* 拖動過程中的圖標 */
+}
+
 
 
 

@@ -1,32 +1,32 @@
-$(document).ready(function () {
-    const menu = $('.menu-list');
-    const hamburger = $('#hamburger-menu');
+// 確保插件載入成功
+gsap.registerPlugin(Draggable, InertiaPlugin);
 
-    // 點擊漢堡選單
-    hamburger.click(function () {
-        if (menu.hasClass('open')) {
-            menu.removeClass('open'); // 收回菜單 (向右移出)
-        } else {
-            menu.addClass('open'); // 展開菜單 (向左進入)
-        }
-        hamburger.toggleClass('open'); // 切換漢堡按鈕狀態
-    });
-
-    // 點擊子選單的 `+` 號展開/收回
-    $('.accordion-toggle').click(function (e) {
-        e.stopPropagation(); // 防止冒泡影響父級事件
-        const submenu = $(this).next('.accordion-content');
-        submenu.slideToggle(300); // 平滑展開/收回子選單
-        $(this).toggleClass('active'); // 切換激活狀態
-        const toggleIcon = $(this).find('.icon-toggle');
-        toggleIcon.text(toggleIcon.text() === '+' ? '-' : '+'); // 切換符號
-    });
-
-    // 點擊空白區域關閉菜單
-    $(document).click(function (e) {
-        if (!$(e.target).closest('#menu-container').length && menu.hasClass('open')) {
-            menu.removeClass('open');
-            hamburger.removeClass('open');
-        }
-    });
+// 設定 Draggable 效果
+Draggable.create(".flair--1", {
+    type: "x", // 僅允許水平拖動
+    bounds: ".container", // 限制拖動範圍在 container 內
+    onDrag: function () {
+        console.log("flair--1 正在拖動");
+    }
 });
+
+Draggable.create(".flair--3b", {
+    type: "rotation", // 旋轉效果
+    inertia: true, // 惯性效果
+    onDrag: function () {
+        console.log("flair--3b 正在旋轉");
+    }
+});
+
+Draggable.create(".flair--4b", {
+    bounds: ".container09", // 限制拖動範圍
+    inertia: true, // 惯性效果
+    onDrag: function () {
+        console.log("flair--4b 正在拖動");
+    }
+});
+
+console.log("JavaScript 加載成功");
+
+
+
