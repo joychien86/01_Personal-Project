@@ -32,8 +32,133 @@
         display: none; /* 預設隱藏 */}
 }
 
-/* ====================1138px RWD========================= */
-@media screen and (max-width:1138px){
+/* ====================1140px RWD========================= */
+@media screen and (max-width:1140px){
+    .wrapper{
+        margin: 0 auto;
+        width: 100%;
+    }
+    #menu-container {
+        display: none;
+    }
+    .container nav{
+        display: block;
+        width: 100%;
+    }
+
+    .toggle-submenu {
+        display: none; /* 預設隱藏 */}
+
+}
+
+
+/* ====================1112px RWD========================= */
+@media screen and (max-width:1140px){
+    .wrapper{
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    #menu-container {
+        display: none;
+        /* border:1px solid green; */
+    }
+    .container nav{
+        display: block;
+        width: 100%;
+        padding-left: 10px;
+        /* border: 1px solid red; */
+    }
+    .container nav ul{
+
+        /* border: 1px solid green; */
+        width: 100%;
+    }
+
+    .toggle-submenu {
+        display: none; /* 預設隱藏 */}
+
+}
+
+/* ====================996px RWD========================= */
+@media screen and (max-width:996px){
+    .wrapper{
+        margin: 0 auto;
+        width: 100%;
+    }
+    #menu-container {
+        display: none;
+    }
+    .container nav{
+        display: block;
+        width: 100%;
+        /* padding-left: 50px; */
+        margin-left: 10px;
+        /* border: 1px solid red; */
+    }
+    .container nav ul{
+
+        /* border: 1px solid green; */
+        width: 100%;
+    }
+
+    .toggle-submenu {
+        display: none; /* 預設隱藏 */}
+}
+/* ====================980px RWD========================= */
+@media screen and (max-width:996px){
+    .wrapper{
+        margin: 0 auto;
+        width: 100%;
+    }
+    #menu-container {
+        display: none;
+    }
+    .container nav{
+        display: block;
+        width: 100%;
+        /* padding-left: 50px; */
+        margin-left: 10px;
+        /* border: 1px solid red; */
+    }
+    .container nav ul{
+
+        /* border: 1px solid green; */
+        width: 100%;
+    }
+
+    .toggle-submenu {
+        display: none; /* 預設隱藏 */}
+}
+
+/* ====================965px RWD========================= */
+@media screen and (max-width:965px){
+    .wrapper{
+        margin: 0 auto;
+        width: 100%;
+    }
+    #menu-container {
+        display: none;
+    }
+    .container nav{
+        display: block;
+        width: 100%;
+        /* padding-left: 50px; */
+        margin-left: 10px;
+        /* border: 1px solid red; */
+    }
+    .container nav ul{
+
+        /* border: 1px solid green; */
+        width: 100%;
+    }
+
+    .toggle-submenu {
+        display: none; /* 預設隱藏 */}
+}
+
+/* ====================946px RWD========================= */
+@media screen and (max-width:946px){
     .wrapper{
         margin: 0 auto;
         width: 100%;
@@ -49,6 +174,7 @@
     .toggle-submenu {
         display: none; /* 預設隱藏 */}
 }
+
 
 /* ====================827px RWD========================= */
 @media screen and (max-width:827px){
