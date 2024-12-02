@@ -1,29 +1,39 @@
-// 修復頁面高度不足問題
-function fixBodyHeight() {
-    const viewportHeight = window.innerHeight; // 獲取視窗高度
-    const bodyHeight = document.body.scrollHeight; // 獲取內容總高度
+// 初始化滾動與高度修復
+function initializeScrollAndHeightFix() {
+    document.body.style.overscrollBehavior = "none"; // 禁用邊界反彈
+    document.body.style.touchAction = "pan-y"; // 僅允許垂直滾動
+    document.body.style.margin = "0"; // 移除外邊距
+    adjustBodyHeight(); // 校正高度
+    console.log("滾動與高度修復完成");
+}
 
-    // 如果內容高度小於視窗高度，則設置最小高度
-    if (bodyHeight <= viewportHeight) {
+// 修正頁面高度
+function adjustBodyHeight() {
+    const viewportHeight = window.innerHeight; // 視窗高度
+    const contentHeight = document.body.scrollHeight; // 內容總高度
+
+    if (contentHeight < viewportHeight) {
         document.body.style.minHeight = `${viewportHeight}px`;
     } else {
-        document.body.style.minHeight = ""; // 清除先前設置的最小高度
+        document.body.style.minHeight = '';
     }
+    console.log("頁面高度已校正");
 }
 
-// 禁用邊界反彈滾動效果
-function fixScrollBounce() {
-    document.body.style.overscrollBehavior = "contain"; // 禁止滾動彈性效果
-    document.documentElement.style.overscrollBehavior = "contain"; // 禁用根元素的彈性
-    document.body.style.touchAction = "manipulation"; // 限制手勢操作
+// 禁用 GSAP 的滾動動畫
+function disableGsapScrollEffects() {
+    gsap.config({ nullTargetWarn: false });
+    document.body.addEventListener('scroll', () => {
+        gsap.killTweensOf(document.body); // 禁用 GSAP 動畫
+    });
+    console.log("GSAP 滾動動畫已禁用");
 }
 
-// 禁用小螢幕的拖曳功能
+// 禁用小螢幕上的拖曳功能
 function disableDraggableOnMobile() {
     const isMobile = window.innerWidth <= 1200; // 定義行動裝置條件
 
     if (isMobile) {
-        // 禁用 Draggable 功能
         const draggableInstances = Draggable.get(".flair--4b img");
         if (draggableInstances) {
             draggableInstances.forEach((instance) => instance.disable());
@@ -84,14 +94,7 @@ function simulateInertia(draggable) {
         duration: 0.5,
         ease: "power2.out",
     });
-}
-
-// 綁定事件以修正滾動和高度問題
-function initialize() {
-    fixBodyHeight(); // 修復高度
-    fixScrollBounce(); // 禁用滾動彈性
-    disableDraggableOnMobile(); // 禁用小螢幕的拖曳功能
-    initializeDraggable(); // 初始化拖曳功能
+    console.log("模擬慣性效果完成");
 }
 
 // 更新 Draggable 的邊界（當視窗大小改變時）
@@ -103,12 +106,20 @@ function updateDraggableBounds() {
     }
 }
 
-// 監聽視窗事件
-window.addEventListener("resize", () => {
-    fixBodyHeight(); // 更新頁面高度
+// 綜合初始化函數
+function initialize() {
+    initializeScrollAndHeightFix(); // 初始化滾動與高度修復
+    disableDraggableOnMobile(); // 禁用小螢幕的拖曳功能
+    initializeDraggable(); // 初始化拖曳功能
+    disableGsapScrollEffects(); // 禁用 GSAP 滾動動畫
+}
+
+// 綁定事件
+window.addEventListener('DOMContentLoaded', initialize);
+window.addEventListener('resize', () => {
+    adjustBodyHeight(); // 更新頁面高度
     updateDraggableBounds(); // 更新 Draggable 邊界
 });
-window.addEventListener("DOMContentLoaded", initialize); // 頁面加載完成後初始化
 
 // 初始化完成提示
 console.log("功能初始化完成，滾動與拖曳問題解決");

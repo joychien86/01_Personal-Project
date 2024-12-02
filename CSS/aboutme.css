@@ -405,10 +405,12 @@ html{
     margin: 0;
     padding: 0;
     touch-action: manipulation; /* 允許滾動和手勢操作 */
+    height: 100%; /* 確保頁面高度填滿視窗 */
 }
 
 .footer {
     margin: 0; /* 確保 footer 沒有多餘的外邊距 */
     padding-bottom: 0; /* 確保沒有多餘空間 */
 }
+
   

@@ -431,6 +431,10 @@
     .flair .flair--4b{
         display:none;
     }
+    html, body {
+        overscroll-behavior: none; /* 禁用邊界反彈 */
+        touch-action: pan-y; /* 僅允許垂直滾動 */
+    }
 
     .wrapper{
         max-width: 412px;
