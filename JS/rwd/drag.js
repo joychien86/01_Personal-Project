@@ -1,12 +1,29 @@
-// 確保 GSAP 插件載入成功
-gsap.registerPlugin(Draggable);
+// 修復頁面高度不足問題
+function fixBodyHeight() {
+    const viewportHeight = window.innerHeight; // 獲取視窗高度
+    const bodyHeight = document.body.scrollHeight; // 獲取內容總高度
 
-// 取得視窗寬度
-const isMobile = window.innerWidth <= 1200;
+    // 如果內容高度小於視窗高度，則設置最小高度
+    if (bodyHeight <= viewportHeight) {
+        document.body.style.minHeight = `${viewportHeight}px`;
+    } else {
+        document.body.style.minHeight = ""; // 清除先前設置的最小高度
+    }
+}
 
-// 新功能：禁用小螢幕上的 Draggable 和拖曳相關功能
+// 禁用邊界反彈滾動效果
+function fixScrollBounce() {
+    document.body.style.overscrollBehavior = "contain"; // 禁止滾動彈性效果
+    document.documentElement.style.overscrollBehavior = "contain"; // 禁用根元素的彈性
+    document.body.style.touchAction = "manipulation"; // 限制手勢操作
+}
+
+// 禁用小螢幕的拖曳功能
 function disableDraggableOnMobile() {
+    const isMobile = window.innerWidth <= 1200; // 定義行動裝置條件
+
     if (isMobile) {
+        // 禁用 Draggable 功能
         const draggableInstances = Draggable.get(".flair--4b img");
         if (draggableInstances) {
             draggableInstances.forEach((instance) => instance.disable());
@@ -17,7 +34,25 @@ function disableDraggableOnMobile() {
     }
 }
 
-// 舊功能：模擬慣性效果的函數
+// 初始化 Draggable 功能（僅在桌面模式啟用）
+function initializeDraggable() {
+    const isMobile = window.innerWidth <= 1200; // 定義行動裝置條件
+
+    if (!isMobile) {
+        Draggable.create(".flair--4b img", {
+            type: "x,y", // 允許水平與垂直方向拖動
+            bounds: document.body, // 限制拖曳範圍為 body
+            onDragEnd: function () {
+                simulateInertia(this); // 模擬慣性效果
+                console.log("停止拖曳，慣性模擬完成");
+            },
+            edgeResistance: 0.5, // 增加邊界阻力
+        });
+        console.log("拖曳功能已啟用");
+    }
+}
+
+// 模擬慣性效果的函數
 function simulateInertia(draggable) {
     const velocity = draggable.getVelocity(); // 獲取當前速度
     const target = draggable.target;
@@ -51,49 +86,29 @@ function simulateInertia(draggable) {
     });
 }
 
-// 初始化 Draggable 功能（僅在桌面模式啟用）
-function initializeDraggable() {
-    if (!isMobile) {
-        Draggable.create(".flair--4b img", {
-            type: "x,y", // 允許水平與垂直方向拖動
-            bounds: document.body, // 限制拖曳範圍為 body
-            onDragEnd: function () {
-                simulateInertia(this); // 模擬慣性效果
-                console.log("停止拖曳，慣性模擬完成");
-            },
-            edgeResistance: 0.5, // 增加邊界阻力
-        });
-        console.log("拖曳功能已啟用");
-    }
+// 綁定事件以修正滾動和高度問題
+function initialize() {
+    fixBodyHeight(); // 修復高度
+    fixScrollBounce(); // 禁用滾動彈性
+    disableDraggableOnMobile(); // 禁用小螢幕的拖曳功能
+    initializeDraggable(); // 初始化拖曳功能
 }
 
-// 更新 Draggable 邊界（當視窗大小或內容變化時）
+// 更新 Draggable 的邊界（當視窗大小改變時）
 function updateDraggableBounds() {
-    if (!isMobile) {
-        Draggable.get(".flair--4b img").forEach((instance) => {
-            instance.applyBounds(document.body);
-        });
+    const draggableInstances = Draggable.get(".flair--4b img");
+    if (draggableInstances) {
+        draggableInstances.forEach((instance) => instance.applyBounds(document.body));
         console.log("邊界已更新，覆蓋整個 body");
     }
 }
 
-// 解決彈性滾動震動問題
-function fixScrollBounce() {
-    document.body.style.overscrollBehavior = "none";
-    document.body.style.touchAction = "pan-y";
-    console.log("彈性滾動效果已禁用");
-}
+// 監聽視窗事件
+window.addEventListener("resize", () => {
+    fixBodyHeight(); // 更新頁面高度
+    updateDraggableBounds(); // 更新 Draggable 邊界
+});
+window.addEventListener("DOMContentLoaded", initialize); // 頁面加載完成後初始化
 
-// 初始化功能
-function initialize() {
-    disableDraggableOnMobile(); // 行動裝置禁用功能
-    initializeDraggable(); // 初始化 Draggable 功能
-    fixScrollBounce(); // 禁用彈性滾動
-}
-
-// 綁定事件
-window.addEventListener("resize", updateDraggableBounds);
-window.addEventListener("DOMContentLoaded", initialize);
-
-// 初始化成功提示
-console.log("功能初始化完成，拖曳與滾動問題解決");
+// 初始化完成提示
+console.log("功能初始化完成，滾動與拖曳問題解決");

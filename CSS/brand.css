@@ -328,3 +328,16 @@ width: 100%;
     pointer-events: none;
     backface-visibility: hidden;
   }
+
+  html, body {
+    overscroll-behavior: contain; /* 禁用邊界反彈行為 */
+    overflow-x: hidden; /* 禁止水平滾動 */
+    margin: 0;
+    padding: 0;
+    touch-action: manipulation; /* 允許滾動和手勢操作 */
+}
+
+.footer {
+    margin: 0; /* 確保 footer 沒有多餘的外邊距 */
+    padding-bottom: 0; /* 確保沒有多餘空間 */
+}
