@@ -670,7 +670,7 @@ opacity: 1; /* 確保按鈕仍可見 */
 .title-background {
     position: absolute; /* 絕對定位，確保背景矩形置於標題文字後 */
     background-color:rgb(255, 136, 26, .8);/* 標題背景矩形的顏色為淺橙色 */
-    width: 415px; /* 背景矩形的寬度 */
+    width: 1440px; /* 背景矩形的寬度 */
     height: 65px; /* 背景矩形的高度 */
     top: 25%; /* 垂直位置為容器的 50% */
     left: 50%; /* 水平位置為容器的 50% */
