@@ -1,7 +1,6 @@
 @import url(./reset.css);
 
-html{
-  cursor: none; /* 隱藏滑鼠游標 */}
+
 
 .wrapper{
 max-width: 1200px;

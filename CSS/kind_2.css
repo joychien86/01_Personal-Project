@@ -14,8 +14,7 @@ body {
   color: #333;
 }
 
-html{
-  cursor: none; /* 隱藏滑鼠游標 */}
+
 .wrapper{
   margin: 0 auto;
   max-width: 1200px;

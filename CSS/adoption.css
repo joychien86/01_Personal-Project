@@ -14,8 +14,7 @@
     margin: 0 auto;
     width: 100%;
 }
-html{
-    cursor: none; /* 隱藏滑鼠游標 */}
+
 /* 圓形裝飾 */
 .circle-container {
     position: relative;

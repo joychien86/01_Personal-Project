@@ -106,6 +106,9 @@
         font-style: italic;
         color: var(--Text_Black, #333);
     }
+    #chatbot{
+        display: none;
+    }
 
 
 

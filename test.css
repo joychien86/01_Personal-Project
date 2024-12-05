@@ -1,56 +1,171 @@
 @import url(./CSS/reset.css);
 /* Reset */
-html, body {
-    margin: 0;
-    padding: 0;
+      .collapsed {
+        width: 48px !important;
+        height: 48px !important;
+        border-radius: 24px !important;
+        margin: 16px!important;
+        font-family: "DM Sans";
+      }
+  
+      .main-card {
+        background: white;
+        color: white;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        border-radius: 0px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        transition: all 0.5s;
+        box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        font-family: "DM Sans";
+      }
+  #chatbot_toggle {
+    position: absolute;
+    right: 0;
+    border: none;
+    height: 48px;
+    width: 48px;
+    background:#FF881A;
+    padding: 14px;
+    color:white;
+  }
+  #chatbot_toggle:hover {
+    background:#FF881A;
+  }
+  .line {
+    height: 1px;
+    background-color: #FF881A;
+    width: 100%;
+    opacity: 0.2;
+  }
+  .main-title113 {
+    background-color: #FF881A;
+    font-size: large;
+    font-weight: normal;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: #f5f5f5;
-}
+    height: 48px;
+    font-family: "DM Sans";
+  }
 
-/* Container Styles */
-.container09 {
-    position: relative;
-    width: 90vw;
-    height: 90vh;
-    max-width: 90vh;
-    max-height: 90vw;
+  .main-title113>div{
+    height:48px;
+    width:48px;
+    display:flex;
+    margin-left:4px;
+    margin-top: 10px;
+  }
+  .main-title113 svg {
+    height: 16px;
+    margin: auto;
+    /* margin-top: 8px; */
+  }
+
+  .main-title113 > span {
+    margin: auto auto auto 8px;
+    font-family: "DM Sans";
+    margin-top: 16px;
+  }
+  .chat-area {
+    flex-grow: 1;
+    overflow: auto;
+    border-radius: 8px;
+    padding: 16px;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 9px;
-    border: 2px dashed #ccc; /* 用於測試 */
-}
-
-
-/* Flair Elements */
-.flair {
+    flex-direction: column;
+    font-family: "DM Sans";
+  }
+  .input-message {
+    padding: 8px 48px 8px 16px;
+    flex-grow: 1;
+    border: none;
+    font-family: "DM Sans";
+  }
+  .input-message:focus {
+    outline: none;
+  }
+  .input-div {
+    height: 48px;
+    display: flex;
+  }
+  
+  .input-send {
+    background: transparent;
+    width: 48px;
+    height: 48px;
+    right: 0%;
+    border: none;
     cursor: pointer;
-    width: 50px;
-    height: 50px;
-    max-height: 15vh;
-    max-width: 15vh;
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-}
+    text-align: center;
+    font-family: "DM Sans";
+  }
+  .input-send:hover {
+    background: lavender;
+  }
+  .input-send svg {
+    fill:#FF881A;
+    margin: 10px 8px;
 
-/* Individual Flair Styles */
-.flair--4b {
-   width: 10px;
-}
-.flair--4b img {
-    position: absolute; /* 絕對定位 */
-    top: 50px; /* 初始位置 */
-    left: 50px; /* 初始位置 */
-    width: 200px; /* 圖片寬度 */
-    height: auto; /* 自動調整高度 */
-    z-index: 1000; /* 保證在其他內容之上 */
-    cursor: grab; /* 拖動時顯示手型圖標 */
-}
-
-.flair--4b img:active {
-    cursor: grabbing; /* 拖動過程中的圖標 */
-}
+  }
+  .chat-message-div {
+    display: flex;
+  }
+  
+  .chat-message-sent {
+    background-color: rgba(244, 180, 0, .8);
+    margin: 8px 16px 8px 64px;
+    padding: 8px 16px;
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 100ms;
+    color: #fff;
+    border-radius: 8px 8px 2px 8px;
+    background-color: lavender;
+    font-family: "DM Sans";
+  }
+  
+  .chat-message-received {
+    background-color: white;
+    margin: 8px 64px 8px 16px;
+    padding: 8px 16px;
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 100ms;
+    color: #333;
+    border-radius: 8px 8px 8px 2px;
+    background-color: lavender;
+    font-family: "DM Sans";
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  

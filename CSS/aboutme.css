@@ -14,8 +14,6 @@ body {
     font-family: "DM Sans";
 }
 
-html{
-  cursor: none; /* 隱藏滑鼠游標 */}
 
 /* 針對 About Me 和 關於作者的 h1 標題 */
 
@@ -414,3 +412,215 @@ html{
 }
 
   
+.collapsed {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 24px !important;
+  margin: 16px!important;
+  font-family: "DM Sans";
+}
+
+.main-card {
+  background: white;
+  color: white;
+  width: 30%;
+  height: 50%;
+  margin: 0px;
+  border-radius: 0px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: fixed; /* 固定定位 */
+ bottom: 160px; /* 距離底部 20px */
+ right: 250px; /* 距離右側 20px */
+ z-index: 1000; /* 保證在最上層 */
+  transition: all 0.5s;
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-family: "DM Sans";
+  visibility: hidden; /* 初始不可見 */
+  opacity: 0; /* 初始透明 */
+  transition: opacity 0.5s ease, visibility 0.5s ease; /* 淡入淡出效果 */
+  border-radius: 30px;
+}
+.main-card:hover{
+  cursor: pointer;
+}
+
+#collapse_icon {
+    display: block;
+}
+
+#expand_icon {
+    display: none;
+}
+
+.expanded #collapse_icon {
+    display: block;
+}
+
+.expanded #expand_icon {
+    display: none;
+}
+
+.collapsed #collapse_icon {
+    display: none;
+}
+
+.collapsed #expand_icon {
+    display: block;
+}
+
+#chatbot.show {
+  opacity: 1; /* 显示时完全不透明 */
+  visibility: visible; /* 確保可見 */
+  transition: height 0.5s ease, width 0.5s ease, border-radius 0.5s ease;
+}
+#chatbot_toggle {
+position: absolute;
+right: 0;
+border: none;
+height: 48px;
+width: 48px;
+background:#FF881A;
+padding: 14px;
+color:white;
+transition: all 0.5s;
+border-radius: 50px;
+}
+#chatbot_toggle:hover {
+background:#FF881A;
+cursor: pointer;
+}
+#chatbot:hover{
+cursor: pointer;
+}
+.line {
+height: 1px;
+background-color: #FF881A;
+width: 100%;
+opacity: 0.2;
+}
+.main-title113 {
+background-color: #FF881A;
+font-size: large;
+font-weight: normal;
+display: flex;
+height: 48px;
+font-family: "DM Sans";
+}
+
+.main-title113>div{
+height:48px;
+width:48px;
+display:flex;
+margin-left:4px;
+margin-top: 10px;
+}
+.main-title113 svg {
+height: 16px;
+margin: auto;
+/* margin-top: 8px; */
+}
+
+.main-title113 > span {
+margin: auto auto auto 8px;
+font-family: "DM Sans";
+margin-top: 16px;
+}
+.chat-area {
+flex-grow: 1;
+overflow: auto;
+border-radius: 8px;
+padding: 16px;
+display: flex;
+flex-direction: column;
+font-family: "DM Sans";
+}
+.input-message {
+padding: 8px 48px 8px 16px;
+flex-grow: 1;
+border: none;
+font-family: "DM Sans";
+}
+.input-message:focus {
+outline: none;
+}
+.input-div {
+height: 48px;
+display: flex;
+}
+
+.input-send {
+background: transparent;
+width: 48px;
+height: 48px;
+right: 0%;
+border: none;
+cursor: pointer;
+text-align: center;
+font-family: "DM Sans";
+}
+.input-send:hover {
+background: lavender;
+}
+.input-send svg {
+fill:#FF881A;
+margin: 10px 8px;
+
+}
+.chat-message-div {
+display: flex;
+}
+
+.chat-message-sent {
+  color:#333;
+  border-radius: 8px 8px 2px 8px;
+  padding: 8px 16px;
+  margin: 8px 0 8px auto; /* 靠右對齊 */
+  max-width: 70%; /* 限制訊息框寬度 */
+  text-align: left;
+  word-break: break-word;
+  background-color: #fff;
+  font-family: "DM Sans";
+  animation: fadeIn 0.1s ease-in;
+  border: #d9d7d7 solid 1px;
+}
+
+.chat-message-received {
+  color: #FF881A;
+  border-radius: 8px 8px 8px 2px;
+  padding: 8px 16px;
+  margin: 8px auto 8px 0; /* 靠左對齊 */
+  max-width: 70%; /* 限制訊息框寬度 */
+  text-align: left;
+  word-break: break-word;
+  background-color: #fff;
+  border:rgba(255, 136, 26,0.15) solid 1px;
+  font-family: "DM Sans";
+  animation: fadeIn 0.1s ease-in;
+}
+
+@keyframes fadeIn {
+from {
+opacity: 0;
+}
+
+to {
+opacity: 1;
+}
+}
+
+::-webkit-scrollbar {
+width: 10px;
+}
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}

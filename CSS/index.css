@@ -4,9 +4,6 @@
 /* =============================================================== */
 
 
-html{
-cursor: none; /* 隱藏滑鼠游標 */
-}
 
 /* *{
     outline: 1px solid red;
@@ -184,11 +181,13 @@ header,
 .purpose-items,
 .logo-design-section, 
 .back-to-top,
+.main-card,
 .footer
 
  {
     opacity: 0;
     animation: none; /* 初始狀態無動畫 */
+    
 }
 
 /* 當頁面加載完成後，應用動畫 */
@@ -230,9 +229,10 @@ body.loaded #section199 {
    
 }
 
-body.loaded .purpose-items{animation: fadeIn 1s ease-in-out 4s forwards;}
-body.loaded .logo-design-section {animation: fadeIn 1s ease-in-out 4.5s forwards;}
-body.loaded .footer{animation: fadeIn 1s ease-in-out 5.5s forwards;}
+body.loaded .purpose-items{animation: fadeIn 1s ease-in-out 5s forwards;}
+body.loaded .logo-design-section {animation: fadeIn 1s ease-in-out 5.5s forwards;}
+body.loaded .footer{animation: fadeIn 1s ease-in-out 7s forwards;}
+
 
 
 /* 當頁面載入完成，footer 顯示動畫 */
@@ -819,3 +819,295 @@ text-align: center;
     pointer-events: none;
     backface-visibility: hidden;
   }
+
+  .collapsed {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 24px !important;
+    margin: 16px!important;
+    font-family: "DM Sans";
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    margin: 16px;
+    overflow: hidden;
+    transform: scale(0.9); /* 收縮效果 */
+    opacity: 0.8;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .main-card {
+    background: white;
+    color: white;
+    width: 30%;
+    height: 50%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: fixed; /* 固定定位 */
+   bottom: 150px; /* 距離底部 20px */
+   right: 130px; /* 距離右側 20px */
+   z-index: 1000; /* 保證在最上層 */
+    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: "DM Sans";
+    visibility: hidden;
+    opacity: 0; /* 初始透明 */
+    border-radius: 30px;
+    transform: translateY(20px); /* 初始位置稍微向下 */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* 平滑過渡效果 */
+   
+  }
+
+  /* 當 body.loaded 添加後，觸發動畫 */
+body.loaded .main-card {
+    transform: translateY(0); /* 從下方移動到原位 */
+    transform: scale(1); /* 恢復正常大小 */
+    visibility: visible; /* 確保可見 */
+    animation: fadeIn 1s ease-in-out 6.5s forwards;
+}
+
+.main-card.expanded {
+    transform: translateY(0); /* 展開時回到原位置 */
+    opacity: 1;
+    visibility: visible; /* 確保展開時可見 */
+    transition: all 0.5s ease-in-out; /* 平滑過渡效果 */
+}
+
+.main-card.collapsed {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px); /* 收起時稍微下移 */
+    transition: all 0.5s ease-in-out; /* 平滑過渡效果 */
+}
+  .main-card:hover{
+    cursor: pointer;
+  }
+  
+  #collapse_icon {
+      display: block;
+  }
+  
+  #expand_icon {
+      display: none;
+  }
+  
+  .expanded #collapse_icon {
+      display: block;
+  }
+  
+  .expanded #expand_icon {
+      display: none;
+  }
+  
+  .collapsed #collapse_icon {
+      display: none;
+  }
+  
+  .collapsed #expand_icon {
+      display: block;
+  }
+  
+  #chatbot.show {
+    opacity: 1; /* 显示时完全不透明 */
+    visibility: visible; /* 確保可見 */
+    transition: height 0.5s ease, width 0.5s ease, border-radius 0.5s ease;
+  }
+
+
+  #chatbot_toggle {
+position: absolute;
+right: 0;
+border: none;
+height: 48px;
+width: 48px;
+background:#FF881A;
+padding: 14px;
+color:white;
+transition: all 0.5s;
+border-radius: 50px;
+transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* 平滑過渡效果 */
+transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+visibility: hidden; /* 初始隱藏 */
+opacity: 0; /* 初始透明 */
+   
+
+}
+
+  #chatbot_toggle:hover {
+  background:#FF881A;
+  cursor: pointer;
+  }
+  #chatbot:hover{
+  cursor: pointer;
+  }
+
+  #chatbot_toggle.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0); /* 回到正常位置 */
+}
+
+#chatbot_toggle.hide {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(20px); /* 向下隱藏 */
+}
+
+
+  .line {
+  height: 1px;
+  background-color: #FF881A;
+  width: 100%;
+  opacity: 0.2;
+  }
+  .main-title113 {
+  background-color: #FF881A;
+  font-size: large;
+  font-weight: normal;
+  display: flex;
+  height: 48px;
+  font-family: "DM Sans";
+  }
+  
+  .main-title113>div{
+  height:48px;
+  width:48px;
+  display:flex;
+  margin-left:4px;
+  margin-top: 10px;
+  }
+  .main-title113 svg {
+  height: 16px;
+  margin: auto;
+  /* margin-top: 8px; */
+  }
+  
+  .main-title113 > span {
+  margin: auto auto auto 8px;
+  font-family: "DM Sans";
+  margin-top: 16px;
+  }
+  .chat-area {
+  flex-grow: 1;
+  overflow: auto;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  font-family: "DM Sans";
+  }
+  .input-message {
+  padding: 8px 48px 8px 16px;
+  flex-grow: 1;
+  border: none;
+  font-family: "DM Sans";
+  }
+  .input-message:focus {
+  outline: none;
+  }
+  .input-div {
+  height: 48px;
+  display: flex;
+  }
+  
+  .input-send {
+  background: transparent;
+  width: 48px;
+  height: 48px;
+  right: 0%;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-family: "DM Sans";
+  }
+  .input-send:hover {
+  background: #fff;
+  }
+  .input-send svg {
+  fill:#FF881A;
+  margin: 10px 8px;
+  
+  }
+  .chat-message-div {
+  display: flex;
+  }
+
+  
+#collapse_icon {
+    display: block;
+}
+
+#expand_icon {
+    display: none;
+}
+
+.expanded #collapse_icon {
+    display: block;
+}
+
+.expanded #expand_icon {
+    display: none;
+}
+
+.collapsed #collapse_icon {
+    display: none;
+}
+
+.collapsed #expand_icon {
+    display: block;
+}
+  
+  .chat-message-sent {
+    color:#333;
+    border-radius: 8px 8px 2px 8px;
+    padding: 8px 16px;
+    margin: 8px 0 8px auto; /* 靠右對齊 */
+    max-width: 70%; /* 限制訊息框寬度 */
+    text-align: left;
+    word-break: break-word;
+    background-color: #fff;
+    font-family: "DM Sans";
+    animation: fadeIn 0.1s ease-in;
+    border: #d9d7d7 solid 1px;
+  }
+  
+  .chat-message-received {
+    color: #FF881A;
+    border-radius: 8px 8px 8px 2px;
+    padding: 8px 16px;
+    margin: 8px auto 8px 0; /* 靠左對齊 */
+    max-width: 70%; /* 限制訊息框寬度 */
+    text-align: left;
+    word-break: break-word;
+    background-color: #fff;
+    border:rgba(255, 136, 26,0.15) solid 1px;
+    font-family: "DM Sans";
+    animation: fadeIn 0.1s ease-in;
+  }
+  
+  @keyframes fadeIn {
+  from {
+  opacity: 0;
+  }
+  
+  to {
+  opacity: 1;
+  }
+  }
+  
+  ::-webkit-scrollbar {
+  width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+  background: #888;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  }
+  

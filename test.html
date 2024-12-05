@@ -5,18 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FURRY PLANET</title>
     <link rel="stylesheet" href="test.css">
-    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-    <script src="https://unpkg.com/gsap@3/dist/Draggable.min.js"></script>
-    <script src="https://assets.codepen.io/16327/InertiaPlugin.min.js"></script>
 </head>
 <body>
-    <div class="container09">
-        <div class="wrapper09">
-            <div class="flair flair--4b">
-                <img src="./website/dutch/1269411new.png" alt="">
-            </div>
+      <div id="chatbot" class="main-card collapsed">
+        <button id="chatbot_toggle">
+          <svg xmlns="file:///C:/Users/joy86/OneDrive/%E6%A1%8C%E9%9D%A2/01_Personal%20Project/LOGO/Group%209.svg"  viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15 4v7H5.17l-.59.59-.58.58V4h11m1-2H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm5 4h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </svg>
+        </button>
+        <div class="main-title113">
+          <div>
+            <svg viewBox="0 0 640 512" title="robot">
+                <img src="./LOGO/Group 9.svg" alt="Furry Plant Icon" style="width: 25px; height: 25px;">
+            </svg>
+          </div>
+          <span>FURRY PLANET 毛絨星球 </span>
+      
         </div>
-    </div>
-    <script src="test.js"></script>
+        <div class="chat-area" id="message-box">
+        </div>
+        <div class="line"></div>
+        <div class="input-div">
+          <input class="input-message" name="message" type="text" id="message" placeholder="歡迎交流發問..." />
+          <button class="input-send" onclick="send()">
+            <svg style="width:24px;height:24px">
+              <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+            </svg>
+          </button>
+        </div>
+      <script src="./test.js"></script>
 </body>
 </html>
