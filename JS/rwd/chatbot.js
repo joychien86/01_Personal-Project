@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         running = true;
         addMsg(msg);
-        setTimeout(() => addResponseMsg(msg), 1000);
+        setTimeout(() => generateResponse(msg), 1000);
     }
 
     // 添加使用者訊息
@@ -54,6 +54,20 @@ document.addEventListener("DOMContentLoaded", function () {
         messageBox.appendChild(div);
         scrollToBottom();
         running = false;
+    }
+
+    // 根據使用者輸入生成回應
+    function generateResponse(msg) {
+        const greetingKeywords = ["你好", "hi", "hello", "嗨", "安安", "嗨嗨", "test"];
+        const byeKeywords = ["掰掰","拜拜", "bye", "再見", "byebye","謝謝"];
+
+        if (greetingKeywords.some(keyword => msg.toLowerCase().includes(keyword))) {
+            addResponseMsg("Hi~親愛的朋友~歡迎降落 FURRY PLANET 毛絨星球，有任何關於鼠兔的疑難雜症都可以問我喔~");
+        } else if (byeKeywords.some(keyword => msg.toLowerCase().includes(keyword))) {
+            addResponseMsg("感謝您的參訪！毛絨星球期待您下次蒞臨！");
+        } else {
+            addResponseMsg("抱歉星球管理人員外出巡航中，等宇宙巡航回來就立刻回覆您！歡迎您先在本星球到處走走逛逛～謝謝～");
+        }
     }
 
     // 滾動到底部
@@ -77,4 +91,3 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleButton.classList.add("show");
     toggleButton.classList.remove("hide");
 });
-
