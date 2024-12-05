@@ -200,6 +200,7 @@
 
     #menu-container {
         display: block;
+        z-index: 9999999999;
     }
 
     /* 同时隐藏导航栏 */
